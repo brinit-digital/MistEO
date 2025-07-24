@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.link-home{
+    text-decoration: none;
+    color: white;
+}
+.link-home-span{
+    padding: .6rem;
+}
+
+/* navbar */
+/* Initial transparent navbar */
+.navbar {
+    padding: 1rem;
+    background-color: transparent !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Navbar on scroll */
+.navbar.scrolled {
+    background-color: #ffffffea !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Change link color on scroll */
+.navbar.scrolled .nav-link {
+    color: #000 !important;
+}
+
+.navbar .nav-link {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+.logo{
+    width: 150px !important;
+}
+img{
+    vertical-align: auto !important;
+}
+
+
+
+@media(min-width:1261px){
+    .container-fluid.navbar-con{
+    gap: 50rem;
+}
+}
+@media(min-width:1200px){
+    .container-fluid.navbar-con{
+    /* gap: 30rem; */
+     align-items: flex-end !important;
+}
+}
+/* footer */
+
+ body {
+     
+      font-family: 'Manrope', sans-serif;
+    }
+
+    /* Top overlapping banner */
+    .top-banner {
+      background-color: #0a4b73;
+      /* border: 2px solid white; */
+      /* background-image: url("../images/footer-bg.png"); */
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+      padding: 0 0 0 40px;
+      position: relative;
+      z-index: 2;
+      border-radius: 20px;
+      margin-left: 9rem;
+      margin-right: 9rem;
+      top: 2rem;
+    }
+
+    .banner-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .banner-content .text h1 {
+      font-size: 40px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .banner-content button {
+      background: #fff;
+      color: #000;
+      padding: 12px 20px;
+      font-weight: 600;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .banner-img img {
+      max-width: 550px;
+      border-radius: 20px;
+    }
+
+    /* Footer */
+    footer {
+      color: #ccc;
+      position: relative;
+      background: #0A4B73;
+      /* background-image: url("../images/footer-bottom-bg.png"); */
+      padding: 100px 40px 20px;
+      overflow: hidden;
+      margin-top: -60px;
+      z-index: 1;
+    }
+
+    .footer-bg {
+      background: url("../images/footer-bottom-bg.png") no-repeat center;
+      background-size: cover;
+      position: absolute;
+      inset: 0;
+      opacity: 0.25;
+      z-index: 0;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 40px;
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: auto;
+      margin-top: 3rem;
+    }
+
+    .footer-column h4 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+     .footer-column ul a{
+        text-decoration: none;
+     }
+
+    .footer-column ul li {
+
+      margin-bottom: 10px;
+      font-size: 15px;
+       color: #ccc !important;
+    }
+
+    .logo-col .logo {
+      width: 120px;
+      margin-bottom: 15px;
+    }
+
+    .logo-col p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .badges img {
+      width: 60px;
+      margin-right: 10px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .newsletter-form input {
+      padding: 10px;
+      flex: 1;
+      border: 1px solid #ccc;
+      border-radius: 6px 0 0 6px;
+      outline: none;
+    }
+
+    .newsletter-form button {
+      background-color: #0c5078;
+      border: none;
+      padding: 0 16px;
+      border-radius: 0 6px 6px 0;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .terms {
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    .terms input {
+      margin-right: 6px;
+    }
+
+    .new-badge {
+      background: #007770;
+      color: white;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 10px;
+      margin-left: 6px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: #ccc;
+      margin-top: 40px;
+      position: relative;
+      z-index: 1;
+      padding: 10px 0 0 0;
+      border-top: 1px solid #ccc;
+    }
+
+    .footer-bottom i {
+      margin-right: 5px;
+      margin-left: 9px;
+    }
+
+    .footer-bottom .right a {
+      margin-left: 10px;
+      color: #ccc;
+    }
+
+    .fbottom {
+      margin-top: 20px;
+     text-align: center;
+      font-size: 13px;
+      color: #ccc;
+      position: relative;
+      z-index: 1;
+    }
+    .fbottom a{
+        color: white;
+        text-decoration: none;
+    } 
+
+    .scroll-top {
+      background: #007770;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .scroll-top i {
+      font-size: 14px;
+    }
+    .fsocial a{
+        color: #ffffff;
+        font-size: 1.3rem;
+        
+    }
+    .fsocial{
+        display: flex;
+        gap: 2rem !important;
+    }
+    .left{
+        gap: 1rem;
+    }
+    .right{
+        font-size: .8rem;
+    }
+
+      footer video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+
+    @media (max-width: 867px) {
+   
+      .top-banner{
+        margin: auto;
+      }
+       .badges img {
+      width: 30px;
+    }
+    .banner-content .text h1{
+        font-size: 30px;
+    }
+    }
+
+    @media (max-width: 789px){
+    .badges img {
+      width: 25px;
+    }
+    .banner-content .text h1{
+        font-size: 22px;
+    }
+    }
+
+     @media (max-width: 727px){
+        .banner-img{
+            display: none;
+        }
+        .top-banner{
+            background-image: url('../images/footer-bg.png');
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .banner-content button{
+        font-weight: 100;
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+     }

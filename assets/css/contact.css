@@ -425,3 +425,30 @@ textarea {
             padding: 0.45rem 1.2rem;
         }
     }
+
+    .contact-sec-2{
+        display: flex;
+        justify-content: center;
+        height: 40vh;
+        /* margin: 6rem; */
+    }
+    .contact-left{
+        padding: 4rem;
+    }
+    .contact-left h3{
+        color: #0a4b73;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .contact-left p{
+        font-size: 1.3rem;
+    }
+    .contact-left p span{
+        font-size: 1.3rem;
+        color: #0a4b73;
+        font-weight:700;
+    }
+     .contact-right{
+        padding: 4rem;
+        font-size: 1.2rem;
+    }

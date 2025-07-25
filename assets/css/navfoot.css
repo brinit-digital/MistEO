@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+ body {
+     
+      font-family: 'Manrope', sans-serif;
+    }
 .link-home{
     text-decoration: none;
     color: white;
@@ -55,17 +59,12 @@ img{
 }
 }
 /* footer */
-
- body {
-     
-      font-family: 'Manrope', sans-serif;
-    }
-
+.foot{
+    position: fixed
+}
     /* Top overlapping banner */
     .top-banner {
       background-color: #0a4b73;
-      /* border: 2px solid white; */
-      /* background-image: url("../images/footer-bg.png"); */
       background-repeat: no-repeat;
       background-size: cover;
       color: white;

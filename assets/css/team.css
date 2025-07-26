@@ -34,6 +34,7 @@
 }
 body{
     font-family: "DM Sans", sans-serif !important;
+   
 }
 
 img {
@@ -48,6 +49,7 @@ img {
   place-items: center;
   /* margin-inline: 1.5rem; */
   padding-block: 5rem;
+
 
 }
 

@@ -1,0 +1,139 @@
+ 
+ /* HERO SECTION */
+.hero-banner {
+  /* position: relative; */
+  background: url('../images/blog-bg.jpg') no-repeat  center/cover fixed;
+  height: 80vh;
+  margin-bottom: 6rem;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #0a4b7373; 
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+
+
+.hero-title{
+  font-size: 60px;
+  margin-top: 12rem;
+}
+
+
+        .blog-container {
+            display: flex;
+            padding: 0 20px;
+            gap: 30px;
+            margin-right: 320px;
+            /* Add this so sidebar doesn't overlap content */
+        }
+
+
+        .main-content {
+            flex: 2;
+            /* overflow-y: auto;
+            max-height: 100vh; */
+            padding: 20px;
+        }
+
+        .main-content img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .meta-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 14px;
+            margin: 20px 0;
+            opacity: 0.8;
+        }
+
+        .blog-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 20px 0;
+            padding-top: 10px;
+        }
+
+        .blog-text {
+            line-height: 1.8;
+            opacity: 0.95;
+            text-align: justify;
+        }
+
+        .sidebar {
+            flex: 1;
+            position: sticky;
+            top: 0;
+            height: fit-content;
+        }
+
+
+        .sidebar-section {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            margin-top: 2.5rem;
+
+        }
+
+        .sidebar-section h5 {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .recent-post {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .recent-post img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-right: 10px;
+        }
+
+        .recent-post a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .social-icons i {
+            font-size: 18px;
+            margin-right: 10px;
+            color: #000000;
+            transition: 0.3s;
+        }
+
+        .social-icons i:hover {
+            color: #0a4b73;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 762px) {
+            .blog-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: static;
+            }
+        }

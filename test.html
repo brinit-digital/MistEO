@@ -2,34 +2,141 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>Real-World Success Stories – A Deep Dive into Rangers Valley</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/blogs.css" />
-    <link rel="stylesheet" href="../assets/css/navfoot.css" />
+    <style>
+        body {
+            background: #ffffff;
+            color: #000000;
+            font-family: 'Poppins', sans-serif;
+        }
 
+        .blog-container {
+            display: flex;
+            padding: 40px 20px;
+            gap: 30px;
+            margin-right: 320px;
+            /* Add this so sidebar doesn't overlap content */
+        }
+
+
+        .main-content {
+            flex: 2;
+            /* overflow-y: auto;
+            max-height: 100vh; */
+            padding: 20px;
+        }
+
+        .main-content img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .meta-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 14px;
+            margin: 20px 0;
+            opacity: 0.8;
+        }
+
+        .blog-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 20px 0;
+            padding-top: 10px;
+        }
+
+        .blog-text {
+            line-height: 1.8;
+            opacity: 0.95;
+            text-align: justify;
+        }
+
+        .sidebar {
+            flex: 1;
+            position: sticky;
+            top: 0;
+            height: fit-content;
+        }
+
+
+        .sidebar-section {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+
+        }
+
+        .sidebar-section h5 {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .recent-post {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .recent-post img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-right: 10px;
+        }
+
+        .recent-post a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .social-icons i {
+            font-size: 18px;
+            margin-right: 10px;
+            color: #000000;
+            transition: 0.3s;
+        }
+
+        .social-icons i:hover {
+            color: #0a4b73;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 762px) {
+            .blog-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: static;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Navigation bar -->
-    <section class="hero-banner">
-        <div class="hero-overlay">
-            <div id="navbar"></div>
-            <div class="container text-center text-white">
-                <h1 class="hero-title">Real-World Success Stories – A Deep Dive into Rangers Valley</h1>
-            </div>
-        </div>
-    </section>
-    <!-- blog1-content section -->
     <div class="container-fluid blog-container">
 
         <!-- LEFT SIDE: Main Blog -->
         <div class="main-content">
-            <img src="../assets/images/COW.png" alt="Blog Image" style="width: 900px;" />
+            <img src="assets/images/COW.png" alt="Blog Image" style="width: 900px;" />
 
             <h1 class="blog-title">Real-World Success Stories – A Deep Dive into Rangers Valley</h1>
             <p class="blog-text">
@@ -146,19 +253,19 @@
             <div class="sidebar-section">
                 <h5>What you can read next</h5>
                 <div class="recent-post">
-                    <a href="#"><img src="../assets/images/blog-2.jpg" /></a>
+                    <a href="#"><img src="assets/images/blog-2.jpg" /></a>
                     <div>
                         <a href="#">The impacts of heat stress on feedlot cattle</a>
                     </div>
                 </div>
                 <div class="recent-post">
-                    <img src="../assets/images/blog-2.jpg" />
+                    <img src="assets/images/blog-2.jpg" />
                     <div>
                         <a href="#">Simplifying Climate Credit Decisions with CDI Livestock</a>
                     </div>
                 </div>
                 <div class="recent-post">
-                    <a href="#"><img src="../assets/images/blog-2.jpg" /></a>
+                    <a href="#"><img src="assets/images/blog-2.jpg" /></a>
                     <div>
                         <a href="#">The Technology Behind CDI Livestock – IndraWeather and Beyond</a>
                     </div>
@@ -178,17 +285,12 @@
             </div>
         </div>
     </div>
-
-    <!-- footer -->
-    <div id="footer"></div>
-
-    
-    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
-        <!-- external js -->
-    <script src="../assets/js/script.js"></script>
+
 </body>
 
 </html>

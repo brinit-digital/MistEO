@@ -1,18 +1,13 @@
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-body,
-input,
-textarea {
-  font-family: 'Manrope', sans-serif;
-}
- 
- 
- 
+ body {
+     
+      font-family: 'DM Sans', sans-serif;
+    }
  /* HERO SECTION */
 .hero-banner {
   /* position: relative; */

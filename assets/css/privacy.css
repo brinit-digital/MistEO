@@ -1,8 +1,8 @@
   /* HERO SECTION */
 .hero-banner {
   /* position: relative; */
-  background: url('../images/contact-bg.jpg') no-repeat  center/cover fixed;
-  height: 80vh;
+  background: url('../images/hero/bg.jpg') no-repeat  center/cover fixed;
+  height: 70vh;
   margin-bottom: 6rem;
 }
 
@@ -16,8 +16,6 @@
   flex-direction: column;
 }
 
-
-
 .hero-title{
   font-size: 110px;
   margin-top: 12rem;
@@ -26,7 +24,7 @@
 }
  .privacy-policy {
     font-family: 'DM Sans', sans-serif;
-    background: #f9f9f9;
+    /* background: #f9f9f9; */
     /* padding: 60px 20px; */
     color: #333;
   }

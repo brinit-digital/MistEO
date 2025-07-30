@@ -99,13 +99,13 @@ img {
 }
 
 .home__parallax-img2 {
-  background-image: url("/assets/images/M1.png");
+  /* background-image: url("/assets/images/M1.png"); */
   /* z-index: var(--z-tooltip); */
 }
 
 .home__parallax-img3 {
   background-image: url("/assets/images/Mountain.png");
-  /* z-index: var(--z-fixed); */
+  z-index: var(--z-fixed);
 }
 
 .home__parallax-img4 {
@@ -128,14 +128,14 @@ img {
 .home__title {
   top: 32%;
   font-size: var(--biggest-font-size);
-  z-index: var(--z-normal);
+  z-index: var(--z-fixed);
 }
 
 .home__subtitle {
   top: 44%;
   font-size: var(--h2-font-size);
   font-weight: bold;
-  z-index: var(--z-tooltip);
+  z-index: var(--z-fixed);
 }
 
 .home__scroll {

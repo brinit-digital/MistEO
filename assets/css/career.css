@@ -37,7 +37,7 @@
       max-width: 1200px;
       margin: 3rem auto;
       background: #fff;
-      background-image: url(../images/career-form-bg-2.png);
+      background-image: url(../images/elements/career-form-bg-2.png);
       background-repeat: no-repeat;
       background-size: cover;
       border-radius: 12px;
@@ -116,36 +116,16 @@
       }
     }
 
-    .section-1{
-        padding: 30px 20px ;
-      max-width: 1200px;
-      margin: auto;
-        text-align: right;
-    }
-
-       .section-1 h2 {
-        color: #083f62;
-      font-size: 2rem;
-      font-weight: 600;
-      margin: 0 0 20px;
-    }
-
-    .section-1 p {
-      font-size: 1.1rem;
-      margin: auto;
-      color: #666;
-    }
-
     .section-2 {
       padding: 30px 20px ;
       max-width: 1200px;
       margin: auto;
+      text-align: center;
     }
 
     .section-2 h2 {
-      font-size: 3rem;
-      font-weight: 600;
-      margin-bottom: 10px;
+      font-size: 2.2rem;
+      margin-bottom: 3rem;
       color: #093e60;
     }
 
@@ -153,6 +133,7 @@
       font-size: 1.1rem;
       color: #666;
       margin-bottom: 40px;
+      text-align: justify;
     }
 
     .second-col{

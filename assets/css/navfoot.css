@@ -9,7 +9,7 @@
     }
 .link-home{
     text-decoration: none;
-    color: white;
+    color: rgb(209, 209, 209);
 }
 .link-home-span{
     padding: .6rem;
@@ -35,7 +35,7 @@
 }
 
 .navbar .nav-link {
-    color: #fff;
+    color: #929292;
     transition: color 0.3s ease;
 }
 .logo{

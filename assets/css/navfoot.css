@@ -120,7 +120,7 @@ img{
     }
 
     .footer-bg {
-      background: url("../images/footer-bottom-bg.png") no-repeat center;
+      background: url("../assets/images/footer-cta-bg.png") no-repeat center;
       background-size: cover;
       position: absolute;
       inset: 0;
@@ -321,7 +321,7 @@ img{
             display: none;
         }
         .top-banner{
-            background-image: url('../images/footer-bg.png');
+            background-image: url('../assets/images/footer-cta-bg.png');
             padding: 10px;
             border-radius: 20px;
         }

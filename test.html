@@ -1,296 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <style>
-        body {
-            background: #ffffff;
-            color: #000000;
-            font-family: 'Poppins', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career at MistEO</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
 
-        .blog-container {
-            display: flex;
-            padding: 40px 20px;
-            gap: 30px;
-            margin-right: 320px;
-            /* Add this so sidebar doesn't overlap content */
-        }
+    .hero {
+      background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px 80px;
+    }
 
+    .hero h1 {
+      font-size: 2.8rem;
+      margin: 0 0 20px;
+    }
 
-        .main-content {
-            flex: 2;
-            /* overflow-y: auto;
-            max-height: 100vh; */
-            padding: 20px;
-        }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
 
-        .main-content img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-        .meta-info {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            font-size: 14px;
-            margin: 20px 0;
-            opacity: 0.8;
-        }
+    .section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #1f1f1f;
+    }
 
-        .blog-title {
-            font-size: 28px;
-            font-weight: 600;
-            margin: 20px 0;
-            padding-top: 10px;
-        }
+    .section p.subtitle {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 40px;
+    }
 
-        .blog-text {
-            line-height: 1.8;
-            opacity: 0.95;
-            text-align: justify;
-        }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
 
-        .sidebar {
-            flex: 1;
-            position: sticky;
-            top: 0;
-            height: fit-content;
-        }
+    .col {
+      flex: 1 1 300px;
+    }
 
+    .col p {
+      line-height: 1.6;
+    }
 
-        .sidebar-section {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-
-        }
-
-        .sidebar-section h5 {
-            margin-bottom: 15px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-        }
-
-        .recent-post {
-            display: flex;
-            margin-bottom: 15px;
-        }
-
-        .recent-post img {
-            width: 60px;
-            height: 60px;
-            object-fit: cover;
-            border-radius: 6px;
-            margin-right: 10px;
-        }
-
-        .recent-post a {
-            color: #000000;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 30px;
-            margin-top: 10px;
-        }
-
-        .social-icons i {
-            font-size: 18px;
-            margin-right: 10px;
-            color: #000000;
-            transition: 0.3s;
-        }
-
-        .social-icons i:hover {
-            color: #0a4b73;
-        }
-
-        /* Responsive Layout */
-        @media (max-width: 762px) {
-            .blog-container {
-                flex-direction: column;
-            }
-
-            .sidebar {
-                position: static;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .row {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-    <div class="container-fluid blog-container">
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>JOIN THE MISTEO MISSION</h1>
+    <p>We’re on the hunt for like-minded people to help build a sustainable future with us.</p>
+  </section>
 
-        <!-- LEFT SIDE: Main Blog -->
-        <div class="main-content">
-            <img src="assets/images/COW.png" alt="Blog Image" style="width: 900px;" />
-
-            <h1 class="blog-title">Real-World Success Stories – A Deep Dive into Rangers Valley</h1>
-            <p class="blog-text">
-                When I first heard about Rangers Valley, I was intrigued. What makes it a standout name in the world of
-                premium beef? Why do so many chefs and food enthusiasts rave about their products? Today, I’m sharing
-                everything I’ve uncovered about this iconic beef producer, their commitment to excellence, and how
-                they’re setting the gold standard in the industry.
-
-                If you’re in the food business, this isn’t just a story—it’s a case study in success. Stick around, and
-                I’ll show you how mistEO can help you unlock similar outcomes for your own enterprise.</p>
-
-            <h3>Where is Rangers Valley? A Story Rooted in Precision and Passion</h3>
-            <p class="blog-text">Rangers Valley is nestled in the pristine highlands of Glen Innes, New South Wales,
-                Australia. This location isn’t just picturesque—it’s integral to their success. The cool climate and
-                fertile pastures create the ideal environment for raising their cattle with care and precision.
-
-                What sets Rangers Valley apart is their unwavering commitment to producing world-class beef. They
-                specialize in high-marbling Wagyu and Black Angus cattle, raised with a focus on sustainability and
-                quality. This dedication has earned them a reputation as a global leader in premium beef production.</p>
-
-            <h3>What Makes Rangers Valley Beef Exceptional?</h3><br>
-            <p class="blog-text">Rangers Valley beef is all about quality. The cattle are raised on a carefully managed
-                diet to ensure
-                exceptional marbling, tenderness, and flavor. Their flagship product, Rangers Valley WX, is renowned for
-                its
-                rich, buttery taste and consistent marbling. This level of quality doesn’t happen by chance—it’s the
-                result
-                of meticulous planning and execution.
-
-                Restaurants and retailers worldwide seek out Rangers Valley beef for its unparalleled consistency and
-                taste.
-                Whether it’s a high-end steakhouse in Tokyo or a boutique butcher shop in New York, the demand remains
-                strong.
-
-                If you’re curious about replicating such success with your own brand, mistEO’s expertise in precision
-                planning can guide you. Reach out to learn how we can elevate your operations.</p>
-
-            <h3>The Price of Excellence: Understanding Rangers Valley Wagyu Price</h3><br>
-            <p class="blog-text">Premium quality comes with a premium price tag. Rangers Valley Wagyu price reflects the
-                time, effort, and
-                resources invested in every step of their production process. While it’s not the cheapest beef on the
-                market, consumers and chefs agree it’s worth every cent.
-
-                The price points make Rangers Valley beef a luxury item, yet one that delivers exceptional value.
-                Transparency in their operations builds trust and justifies their pricing. This is a masterclass in
-                turning
-                a product into an aspirational brand.</p>
-
-            <h3>Rangers Valley WX: The Crown Jewel of Wagyu</h3><br>
-            <p class="blog-text">Rangers Valley WX is more than just a product—it’s a promise. Every cut reflects the
-                brand’s dedication to
-                excellence. The WX range stands out for its intense marbling, which delivers a flavor and texture
-                unmatched
-                by ordinary beef.
-
-                This product has found its way onto menus at Michelin-starred restaurants and high-end retail shelves
-                worldwide. It’s not just about the beef; it’s about the story, the legacy, and the trust that comes with
-                the
-                Rangers Valley name.</p>
-
-            <h3>Where to Buy Rangers Valley Beef?</h3><br>
-            <p class="blog-text">If you’re wondering where to buy Rangers Valley beef, you’re not alone. Consumers
-                around the world actively
-                seek out their products. Their distribution network spans across continents, ensuring chefs and
-                retailers
-                have access to this premium beef. From specialty meat stores to upscale grocery chains, finding Rangers
-                Valley beef has never been easier.
-
-                For businesses, their partnership opportunities are equally impressive. Collaborating with Rangers
-                Valley
-                can elevate your brand and attract discerning customers.</p>
-
-            <h3>Who Owns Rangers Valley?</h3><br>
-            <p class="blog-text">Rangers Valley is owned by Marubeni Corporation, a Japanese multinational conglomerate.
-                Their ownership
-                brings a unique fusion of Japanese precision and Australian expertise to the brand. This partnership
-                ensures
-                that Rangers Valley remains at the forefront of innovation while maintaining its deep roots in
-                sustainable
-                Australian agriculture.
-
-                Ownership matters when it comes to trust and reputation. Marubeni’s global presence and commitment to
-                quality have helped Rangers Valley expand its reach without compromising its values.
-
-                Is ownership alignment a challenge for your business? Discover how mistEO can help you navigate complex
-                dynamics and achieve strategic alignment. Start your journey with us today.</p>
-
-            <h3>Your Turn: Time to Act</h3><br>
-            <p class="blog-text">Rangers Valley’s story is more than an inspiration—it’s a roadmap for success. Their
-                unwavering focus on
-                quality, strategic partnerships, and commitment to sustainability have made them a global leader in
-                premium
-                beef.
-
-                If you’re ready to take your own business to the next level, mistEO has the tools and expertise to help.
-                Let’s work together to create your own success story.</p>
-
-
-            </p>
-        </div>
-
-        <!-- RIGHT SIDE: Fixed Sidebar -->
-        <div class="sidebar">
-            <!-- Categories -->
-            <div class="sidebar-section">
-                <div class="meta-info">
-                    <span><i class="fa-solid fa-user"></i> Gabriel</span>
-                    <span><i class="fa-solid fa-calendar"></i> Thursday, 05 December 2024 </span>
-                    <span><i class="bi bi-journals"></i>Published in Climate Adaptation, Livestock</span>
-                </div>
-            </div>
-
-            <!-- Recent Posts -->
-            <div class="sidebar-section">
-                <h5>What you can read next</h5>
-                <div class="recent-post">
-                    <a href="#"><img src="assets/images/blog-2.jpg" /></a>
-                    <div>
-                        <a href="#">The impacts of heat stress on feedlot cattle</a>
-                    </div>
-                </div>
-                <div class="recent-post">
-                    <img src="assets/images/blog-2.jpg" />
-                    <div>
-                        <a href="#">Simplifying Climate Credit Decisions with CDI Livestock</a>
-                    </div>
-                </div>
-                <div class="recent-post">
-                    <a href="#"><img src="assets/images/blog-2.jpg" /></a>
-                    <div>
-                        <a href="#">The Technology Behind CDI Livestock – IndraWeather and Beyond</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Social Icons -->
-            <div class="sidebar-section">
-                <h5>Share</h5>
-                <div class="social-icons">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-linkedin-in"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </div>
-            </div>
-        </div>
+  <!-- CAREER DETAILS SECTION -->
+  <section class="section">
+    <h2>WE'RE HIRING!</h2>
+    <p class="subtitle">We don't hire often, but we are growing. And it takes a certain type of person, driven by a desire to change the world, to help mistEO achieve our mission.</p>
+    
+    <div class="row">
+      <div class="col">
+        <p>At mistEO, we're passionate about building a more resilient future. We're a team of innovators and problem-solvers dedicated to tackling the challenges posed by climate change. By joining mistEO, you'll have the opportunity to work on cutting-edge projects that make a real difference in the world.</p>
+      </div>
+      <div class="col">
+        <p>We offer a dynamic and collaborative work environment where your ideas are valued and your growth is encouraged. Our team is composed of diverse individuals who share a common goal: to create a sustainable future. If you're passionate about technology, climate change, and making a positive impact, mistEO is the place for you.</p>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
+  </section>
 
 </body>
-
 </html>

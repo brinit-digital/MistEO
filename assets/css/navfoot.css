@@ -9,7 +9,7 @@
     }
 .link-home{
     text-decoration: none;
-    color: white;
+    color: rgb(209, 209, 209);
 }
 .link-home-span{
     padding: .6rem;
@@ -35,7 +35,7 @@
 }
 
 .navbar .nav-link {
-    color: #fff;
+    color: #929292;
     transition: color 0.3s ease;
 }
 .logo{
@@ -47,17 +47,24 @@ img{
 
 
 
-@media(min-width:1261px){
+/* @media(min-width:1241px){
     .container-fluid.navbar-con{
-    gap: 50rem;
+    gap: 35rem;
 }
 }
-@media(min-width:1200px){
+
+@media(min-width:1500px){
     .container-fluid.navbar-con{
-    /* gap: 30rem; */
-     align-items: flex-end !important;
+    gap: 55rem;
+     
 }
 }
+@media(max-width:1499px){
+    .container-fluid.navbar-con{
+    gap: 45rem;
+     
+}
+} */
 /* footer */
 .foot{
     position: fixed

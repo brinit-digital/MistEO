@@ -37,7 +37,7 @@ font-family: 'DM Sans', sans-serif;
 
 .main-container {
   display: grid;
-  grid-template-columns: 1fr 340px; /* Cards area first, Sidebar second */
+  grid-template-columns: 340px 1fr; /* Cards area first, Sidebar second */
   gap: 50px;
   max-width: 1500px;
   margin: auto auto 5rem auto;

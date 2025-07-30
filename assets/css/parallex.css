@@ -94,22 +94,22 @@ img {
 }
 
 .home__parallax-img1 {
-  background-image: url("/assets/images/Sky.png");
+  background-image: url("/assets/images/home/Sky.png");
   z-index: var(--z-normal);
 }
 
-.home__parallax-img2 {
-  /* background-image: url("/assets/images/M1.png"); */
-  /* z-index: var(--z-tooltip); */
-}
+/* .home__parallax-img2 {
+  background-image: url("/assets/images/M1.png");
+  z-index: var(--z-tooltip);
+} */
 
 .home__parallax-img3 {
-  background-image: url("/assets/images/Mountain.png");
+  background-image: url("/assets/images/home/Mountain.png");
   z-index: var(--z-fixed);
 }
 
 .home__parallax-img4 {
-  background-image: url("/assets/images/Trees1.png");
+  background-image: url("/assets/images/home/Trees1.png");
   z-index: var(--z-fixed);
 }
 
@@ -129,6 +129,7 @@ img {
   top: 32%;
   font-size: var(--biggest-font-size);
   z-index: var(--z-fixed);
+  filter: drop-shadow(0 0.9rem 0.25rem rgba(0, 0, 0, 0.2));
 }
 
 .home__subtitle {
@@ -225,5 +226,14 @@ img {
   .bd-grid {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media screen and (max-width: 760px) {
+ 
+  .home__title {
+    top: 43%;
+  }
+  .home__subtitle {
+    top: 57%;
   }
 }

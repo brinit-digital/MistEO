@@ -6,7 +6,7 @@
  /* HERO SECTION */
 .hero-banner {
   /* position: relative; */
-  background: url('../images/career-bg.jpg') no-repeat  center/cover fixed;
+  background: url('../images/hero/career-bg.jpg') no-repeat  center/cover fixed;
   height: 80vh;
   margin-bottom: 6rem;
 }
@@ -153,4 +153,9 @@
       .row {
         flex-direction: column;
       }
+    }
+
+    .note span{
+        color: #0a4b73;
+        font-weight: 600;
     }

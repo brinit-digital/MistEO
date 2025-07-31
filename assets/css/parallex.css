@@ -161,11 +161,11 @@ img {
 
 
 .section {
-  height: 100vh;
-  max-width: 950px;
+  /* height: 100vh; */
+  max-width: 1050px;
   margin-left: 1rem;
   margin-right: 1rem;
-  padding: 2rem 0;
+  padding: 5rem 0;
   color: var(--dark-color);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,9 +192,8 @@ img {
   margin-bottom: 1rem;
 }
 
-.section__img {
-  width: 285px;
-  border-radius: .5rem;
+.sec-img img{
+  width: 900px;
 }
 
 /*===== MEDIA QUERIES =====*/

@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | mistEO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://unpkg.com/split-type"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+        /* General Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Arial", sans-serif;
+            color: #1f2937;
+            background-color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            background-color: #1f2937;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #preloader .preloader-inner {
+            width: 16rem;
+            height: 16rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        #preloader .preloader-inner .ping {
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            box-shadow: 0 0 60px 30px rgba(110, 231, 183, 0.3);
+            animation: ping 4s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+        #preloader .preloader-inner svg {
+            width: 8rem;
+            height: 8rem;
+            color: #34d399;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        #preloader .text-center {
+            text-align: center;
+        }
+        #preloader .text-center .title {
+            color: transparent;
+            background-clip: text;
+            background-image: linear-gradient(to right, #6ee7b7, #2dd4bf);
+            font-size: 1.875rem;
+            font-weight: 300;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        #preloader .text-center .progress-bar {
+            width: 12rem;
+            height: 0.25rem;
+            background-image: linear-gradient(to right, rgba(110, 231, 183, 0.2), #34d399, rgba(110, 231, 183, 0.2));
+            border-radius: 9999px;
+            overflow: hidden;
+            position: relative;
+        }
+        #preloader .text-center .progress {
+            height: 100%;
+            background-color: #34d399;
+            animation: progress 2.5s linear forwards;
+        }
+        @keyframes ping {
+            100% { transform: scale(1.4); opacity: 0; }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        @keyframes progress {
+            0% { width: 0; opacity: 0; }
+            50% { opacity: 1; }
+            100% { width: 100%; opacity: 0; }
+        }
+
+        /* Navigation Styles */
+        nav {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+            z-index: 50;
+        }
+        nav .container {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        nav .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a.logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        nav a.logo svg {
+            width: 2.5rem;
+            height: 2.5rem;
+            color: #34d399;
+        }
+        nav a.logo span {
+            font-size: 1.25rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        nav a.logo span .highlight {
+            font-weight: 700;
+            color: #34d399;
+        }
+        nav .hidden.md\:flex {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            nav .hidden.md\:flex {
+                display: flex;
+            }
+        }
+        nav .menu-items {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+        nav .menu-items a {
+            color: #1f2937;
+            font-weight: 500;
+            font-size: 0.875rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        nav .menu-items a:hover {
+            color: #34d399;
+        }
+        nav .menu-items a.active {
+            color: #34d399;
+            border-bottom-width: 2px;
+            border-bottom-color: #34d399;
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+        }
+        nav button.get-started {
+            background-image: linear-gradient(to right, #34d399, #3b82f6);
+            color: #ffffff;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+        nav button.get-started:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-0.25rem);
+        }
+        nav button.get-started span {
+            position: relative;
+            z-index: 10;
+        }
+        nav button.get-started .gradient-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(to right, #3b82f6, #34d399);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        nav button.get-started:hover .gradient-overlay {
+            opacity: 1;
+        }
+        nav button.mobile-menu {
+            display: block;
+        }
+        @media (min-width: 768px) {
+            nav button.mobile-menu {
+                display: none;
+            }
+        }
+        nav button.mobile-menu svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: #1f2937;
+        }
+        nav #mobile-menu {
+            display: none;
+            margin-top: 1rem;
+        }
+        nav #mobile-menu.active {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        nav #mobile-menu a {
+            color: #1f2937;
+            font-weight: 500;
+            font-size: 0.875rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        nav #mobile-menu a:hover {
+            color: #34d399;
+        }
+        nav #mobile-menu a.active {
+            color: #34d399;
+            border-bottom-width: 2px;
+            border-bottom-color: #34d399;
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+        }
+        nav #mobile-menu button {
+            background-image: linear-gradient(to right, #34d399, #3b82f6);
+            color: #ffffff;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+        nav #mobile-menu button:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hero Section Styles */
+        section.hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        section.hero .gradient-overlay-1 {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(to bottom, rgba(31, 41, 55, 0.8), rgba(31, 41, 55, 0.3), rgba(31, 41, 55, 0.8));
+            z-index: 10;
+        }
+        section.hero .gradient-overlay-2 {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(to right, rgba(6, 78, 59, 0.1), rgba(30, 64, 175, 0.1));
+            z-index: 10;
+        }
+        section.hero video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        section.hero #particles-js {
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+        }
+        section.hero .container {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            position: relative;
+            z-index: 20;
+        }
+        section.hero .content {
+            max-width: 56rem;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        section.hero h1 {
+            font-size: 3.75rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+        @media (min-width: 768px) {
+            section.hero h1 {
+                font-size: 4.5rem;
+            }
+        }
+        section.hero h1 span.block {
+            margin-top: 1rem;
+            background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #6ee7b7, #2dd4bf);
+            font-weight: 400;
+        }
+        section.hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 3rem;
+            line-height: 1.625;
+        }
+        section.hero .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        @media (min-width: 640px) {
+            section.hero .buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        section.hero .buttons a {
+            position: relative;
+        }
+        section.hero .buttons .gradient-blur {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(to right, #34d399, #2dd4bf);
+            border-radius: 9999px;
+            filter: blur(10px);
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        section.hero .buttons a:hover .gradient-blur {
+            opacity: 1;
+        }
+        section.hero .buttons button {
+            position: relative;
+            background-image: linear-gradient(to right, #34d399, #2dd4bf);
+            color: #ffffff;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-radius: 9999px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+        section.hero .buttons button:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-0.25rem);
+        }
+        section.hero .buttons button.secondary {
+            background: none;
+            color: #ffffff;
+        }
+        section.hero .buttons button.secondary .overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        section.hero .buttons button.secondary:hover .overlay {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        section.hero .buttons button.secondary svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 0.5rem;
+        }
+        section.hero .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+            animation: bounce 2s infinite;
+        }
+        section.hero .scroll-indicator .inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        section.hero .scroll-indicator span {
+            width: 1.5rem;
+            height: 2.5rem;
+            border: 2px solid #ffffff;
+            border-radius: 9999px;
+            position: relative;
+        }
+        section.hero .scroll-indicator span .scroll-wheel {
+            position: absolute;
+            top: 0.25rem;
+            left: 50%;
+            width: 0.25rem;
+            height: 0.5rem;
+            background-color: #ffffff;
+            border-radius: 9999px;
+            transform: translateX(-50%);
+            animation: scroll 1.5s infinite;
+        }
+        section.hero .scroll-indicator .text {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 0.5rem;
+            letter-spacing: 0.15em;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-0.5rem); }
+        }
+        @keyframes scroll {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(0.5rem); opacity: 0; }
+        }
+
+        /* Climate Crisis Section */
+        section.climate-crisis {
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+            background-color: #f9fafb;
+            position: relative;
+            overflow: hidden;
+        }
+        section.climate-crisis .gradient-blob {
+            position: absolute;
+            right: -10rem;
+            top: -10rem;
+            width: 24rem;
+            height: 24rem;
+            background-image: linear-gradient(to right, #d1fae5, #93c5fd);
+            border-radius: 9999px;
+            filter: blur(24px);
+            opacity: 0.2;
+            z-index: -1;
+        }
+        section.climate-crisis .container {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+        section.climate-crisis .content {
+            max-width: 56rem;
+            margin-left: auto;
+            margin-right: auto;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 1.875rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        section.climate-crisis .content .quote-icon {
+            position: absolute;
+            right: 2.5rem;
+            top: 1.25rem;
+            font-size: 10rem;
+            color: rgba(52, 211, 153, 0.1);
+        }
+        section.climate-crisis .content .inner {
+            position: relative;
+            z-index: 10;
+        }
+        section.climate-crisis .content .subtitle {
+            font-size: 0.875rem;
+            letter-spacing: 0.3em;
+            color: #34d399;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        section.climate-crisis .content h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #1f2937;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+            letter-spacing: 0.15em;
+        }
+        section.climate-crisis .content h2 .highlight {
+            font-weight: 500;
+        }
+        section.climate-crisis .content blockquote {
+            font-size: 1.25rem;
+            color: #4b5563;
+            margin-bottom: 2rem;
+            line-height: 1.625;
+            padding-left: 1rem;
+            border-left-width: 4px;
+            border-left-color: #34d399;
+        }
+        section.climate-crisis .content .source {
+            text-align: right;
+            font-size: 1.125rem;
+            color: #34d399;
+            letter-spacing: 0.15em;
+        }
+
+        /* Our Focus Section */
+        div.focus-section {
+            background-image: linear-gradient(to bottom, #ffffff, #f9fafb);
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+            overflow: hidden;
+            position: relative;
+        }
+        div.focus-section .gradient-blob-1 {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 33.3333%;
+            height: 50%;
+            background-color: rgba(167, 243, 208, 0.3);
+            border-radius: 9999px;
+            filter: blur(24px);
+            transform: translateX(-33.3333%) translateY(-50%);
+        }
+        div.focus-section .gradient-blob-2 {
+            position: absolute;
+            right: 0;
+            bottom: 25%;
+            width: 33.3333%;
+            height: 50%;
+            background-color: rgba(147, 197, 253, 0.3);
+            border-radius: 9999px;
+            filter: blur(24px);
+            transform: translateX(33.3333%);
+        }
+        div.focus-section .container {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        div.focus-section .header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        div.focus-section .header .subtitle {
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: #047857;
+            text-transform: uppercase;
+        }
+        div.focus-section .header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-top: 0.5rem;
+        }
+        div.focus-section .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            div.focus-section .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        div.focus-section .card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        div.focus-section .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+        }
+        div.focus-section .card .content {
+            padding: 2rem;
+        }
+        div.focus-section .card .icon {
+            width: 4rem;
+            height: 4rem;
+            background-color: rgba(167, 243, 208, 0.1);
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        div.focus-section .card .icon i {
+            font-size: 1.5rem;
+            color: #34d399;
+        }
+        div.focus-section .card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        div.focus-section .card ul {
+            list-style: none;
+            gap: 0.75rem;
+        }
+        div.focus-section .card ul li {
+            display: flex;
+            align-items: flex-start;
+            color: #4b5563;
+        }
+        div.focus-section .card ul li svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: #34d399;
+            margin-top: 0.125rem;
+            margin-right: 0.5rem;
+        }
+        div.focus-section .card .footer {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+        }
+        div.focus-section .card .footer a {
+            color: #34d399;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        div.focus-section .card .footer a svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-left: 0.25rem;
+            transition: transform 0.3s ease;
+        }
+        div.focus-section .card .footer a:hover svg {
+            transform: translateX(0.25rem);
+        }
+
+        /* What We Do Section */
+        div.what-we-do {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+            background-color: #1f2937;
+            color: #ffffff;
+        }
+        div.what-we-do .container {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        div.what-we-do .header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        div.what-we-do .header .subtitle {
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: #34d399;
+            text-transform: uppercase;
+        }
+        div.what-we-do .header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        div.what-we-do .header h2 span {
+            background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #34d399, #3b82f6);
+        }
+        div.what-we-do .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            div.what-we-do .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            div.what-we-do .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        div.what-we-do .card {
+            background-color: #374151;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        div.what-we-do .card:hover {
+            background-color: #4b5563;
+            transform: translateY(-0.5rem);
+        }
+        div.what-we-do .card .icon {
+            width: 3rem;
+            height: 3rem;
+            background-color: rgba(52, 211, 153, 0.1);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        div.what-we-do .card .icon i {
+            font-size: 1.25rem;
+            color: #34d399;
+        }
+        div.what-we-do .card:hover .icon {
+            background-color: rgba(52, 211, 153, 0.2);
+        }
+        div.what-we-do .card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+        }
+        div.what-we-do .card p {
+            color: #9ca3af;
+        }
+
+        /* Stats Counter Section */
+        div.stats {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            background-color: #1f2937;
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+        div.stats .background {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1519751138087-5e79fecd02c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1280&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+        div.stats .container {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            position: relative;
+            z-index: 10;
+        }
+        div.stats .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width: 768px) {
+            div.stats .grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        div.stats .item {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            text-align: center;
+        }
+        div.stats .item .value {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        div.stats .item .label {
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+        div.stats .item .label.emerald { color: #6ee7b7; }
+        div.stats .item .label.blue { color: #93c5fd; }
+        div.stats .item .label.purple { color: #a78bfa; }
+        div.stats .item .label.amber { color: #f59e0b; }
+
+        /* Industries We Serve Section */
+        div.industries {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+            background-image: linear-gradient(to bottom, #ffffff, #f9fafb);
+        }
+        div.industries .container {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        div.industries .header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        div.industries .header .subtitle {
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: #047857;
+            text-transform: uppercase;
+        }
+        div.industries .header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-top: 0.5rem;
+        }
+        div.industries .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            div.industries .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            div.industries .grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        div.industries .card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        div.industries .card:hover {
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-0.5rem);
+        }
+        div.industries .card .icon {
+            margin-left: auto;
+            margin-right: auto;
+            width: 5rem;
+            height: 5rem;
+            background-color: rgba(167, 243, 208, 0.1);
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        div.industries .card .icon i {
+            font-size: 1.5rem;
+            color: #34d399;
+        }
+        div.industries .card h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+        div.industries .card p {
+            color: #4b5563;
+        }
+
+        /* Testimonials Section */
+        div.testimonials {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+            background-color: #f9fafb;
+        }
+        div.testimonials .container {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        div.testimonials .header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        div.testimonials .header .subtitle {
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: #047857;
+            text-transform: uppercase;
+        }
+        div.testimonials .header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-top: 0.5rem;
+        }
+        div.testimonials .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            div.testimonials .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        div.testimonials .card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            transform: perspective(0px) translateZ(0);
+            transition: all 0.5s ease;
+        }
+        div.testimonials .card:hover {
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+            transform: perspective(0px) translateZ(0) translateY(-0.5rem) rotate(2deg);
+        }
+        div.testimonials .card .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        div.testimonials .card .header img {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 9999px;
+            object-fit: cover;
+        }
+        div.testimonials .card .header .info {
+            margin-left: 1rem;
+        }
+        div.testimonials .card .header h4 {
+            font-weight: 700;
+            color: #1f2937;
+        }
+        div.testimonials .card .header p {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+        div.testimonials .card p.quote {
+            font-style: italic;
+            color: #4b5563;
+        }
+        div.testimonials .card .stars {
+            display: flex;
+            margin-top: 1rem;
+            color: #f59e0b;
+        }
+        div.testimonials .card .stars i {
+            margin-right: 0.25rem;
+        }
+
+        /* Mission Section */
+        div.mission {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        div.mission .content {
+            position: relative;
+            background-image: linear-gradient(to right, #d1fae5, #93c5fd);
+            border-radius: 1.5rem;
+            padding: 2rem;
+        }
+        @media (min-width: 768px) {
+            div.mission .content {
+                padding: 3rem;
+            }
+        }
+        div.mission .content .gradient-blob-1 {
+            position: absolute;
+            right: -2.5rem;
+            top: -2.5rem;
+            width: 18rem;
+            height: 18rem;
+            background-color: #d1fae5;
+            border-radius: 9999px;
+            mix-blend-mode: multiply;
+            filter: blur(24px);
+            opacity: 0.3;
+        }
+        div.mission .content .gradient-blob-2 {
+            position: absolute;
+            left: -2.5rem;
+            bottom: -2.5rem;
+            width: 18rem;
+            height: 18rem;
+            background-color: #93c5fd;
+            border-radius: 9999px;
+            mix-blend-mode: multiply;
+            filter: blur(24px);
+            opacity: 0.3;
+        }
+        div.mission h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        div.mission .inner {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        div.mission p {
+            font-size: 1.125rem;
+            color: #4b5563;
+        }
+
+        /* Why We Exist Section */
+        div.why-we-exist {
+            position: relative;
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+            overflow: hidden;
+        }
+        div.why-we-exist .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 24rem;
+            background-image: linear-gradient(to bottom, #f9fafb, #ffffff);
+            z-index: -10;
+        }
+        div.why-we-exist .container {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        div.why-we-exist .header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        div.why-we-exist .header .subtitle {
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: #047857;
+            text-transform: uppercase;
+        }
+        div.why-we-exist .header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-top: 0.5rem;
+        }
+        div.why-we-exist .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+        @media (min-width: 1024px) {
+            div.why-we-exist .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        div.why-we-exist .column h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #047857;
+            margin-bottom: 1.5rem;
+        }
+        div.why-we-exist .column ul {
+            list-style: none;
+            gap: 1.5rem;
+        }
+        div.why-we-exist .column ul li {
+            display: flex;
+            align-items: flex-start;
+        }
+        div.why-we-exist .column ul li .icon {
+            flex-shrink: 0;
+            height: 1.5rem;
+            width: 1.5rem;
+            color: #047857;
+        }
+        div.why-we-exist .column ul li p {
+            margin-left: 0.75rem;
+            color: #4b5563;
+        }
+        div.why-we-exist .column ul li p span {
+            font-weight: 600;
+        }
+        div.why-we-exist .column .quote {
+            margin-top: 2.5rem;
+            background-color: #d1fae5;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            border: 1px solid #a7f3d0;
+            position: relative;
+        }
+        div.why-we-exist .column .quote i {
+            position: absolute;
+            left: 1.5rem;
+            top: 1.5rem;
+            font-size: 3rem;
+            color: #a7f3d0;
+        }
+        div.why-we-exist .column .quote blockquote {
+            font-size: 1.125rem;
+            color: #065f46;
+            padding-left: 2rem;
+            font-style: italic;
+        }
+        div.why-we-exist .column .quote p.source {
+            text-align: right;
+            font-weight: 500;
+            color: #047857;
+            margin-top: 1rem;
+        }
+        div.why-we-exist .column .mission {
+            margin-top: 2.5rem;
+        }
+        div.why-we-exist .column .mission h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        div.why-we-exist .column .mission p {
+            color: #4b5563;
+        }
+
+        /* Work With Us Section */
+        div.work-with-us {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+        div.work-with-us h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+        }
+        div.work-with-us p {
+            font-size: 1.25rem;
+            color: #4b5563;
+            max-width: 48rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2rem;
+        }
+        div.work-with-us .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        div.work-with-us button {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-radius: 0.375rem;
+            font-size: 1.125rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        div.work-with-us button.primary {
+            background-color: #047857;
+            color: #ffffff;
+        }
+        div.work-with-us button.primary:hover {
+            background-color: #065f46;
+        }
+        div.work-with-us button.secondary {
+            border: 1px solid #047857;
+            color: #047857;
+        }
+        div.work-with-us button.secondary:hover {
+            background-color: #d1fae5;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #f9fafb;
+        }
+        footer .container {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+        footer .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            footer .grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        footer .column h3 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1f2937;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        footer .column ul {
+            list-style: none;
+            gap: 0.5rem;
+        }
+        footer .column ul li a {
+            color: #4b5563;
+            transition: all 0.3s ease;
+        }
+        footer .column ul li a:hover {
+            color: #34d399;
+        }
+        footer .column ul li a:hover .dot {
+            opacity: 1;
+        }
+        footer .column ul li a .dot {
+            width: 0.25rem;
+            height: 0.25rem;
+            background-color: #34d399;
+            border-radius: 9999px;
+            margin-right: 0.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        footer .column ul li a:hover {
+            padding-left: 0.5rem;
+        }
+        footer .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (min-width: 768px) {
+            footer .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        footer .footer-bottom p {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+        footer .footer-bottom .social {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        @media (min-width: 768px) {
+            footer .footer-bottom .social {
+                margin-top: 0;
+            }
+        }
+        footer .footer-bottom .social a {
+            color: #9ca3af;
+            transition: all 0.3s ease;
+        }
+        footer .footer-bottom .social a:hover {
+            color: #34d399;
+        }
+    </style>
+</head>
+<body data-scroll-container>
+    <!-- <div id="preloader">
+        <div class="preloader-inner">
+            <div class="ping"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+        </div>
+        <div class="text-center">
+            <div class="title">mistEO</div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <section class="hero">
+        <div class="gradient-overlay-1"></div>
+        <div class="gradient-overlay-2"></div>
+        <video autoplay muted loop playsinline>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-beautiful-clear-water-4279-large.mp4" type="video/mp4">
+        </video>
+        <div id="particles-js"></div>
+        <div class="container">
+            <div class="content">
+                <h1>
+                    <span>Climate Intelligence</span>
+                    <span class="block">For A Resilient Future</span>
+                </h1>
+                <p>Harnessing cutting-edge climate technology to safeguard your operations against uncertainty.</p>
+                <div class="buttons">
+                    <a href="#">
+                        <div class="gradient-blur"></div>
+                        <button>Request Demo →</button>
+                    </a>
+                    <a href="#">
+                        <div class="overlay"></div>
+                        <button class="secondary">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Watch Overview
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="inner">
+                <span><span class="scroll-wheel"></span></span>
+                <span class="text">SCROLL</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="climate-crisis">
+        <div class="gradient-blob"></div>
+        <div class="container">
+            <div class="content">
+                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                <div class="inner">
+                    <span class="subtitle">The Challenge</span>
+                    <h2>THE CLIMATE <span class="highlight">CRISIS</span></h2>
+                    <blockquote>"The projected warming under current global emissions reduction policies would leave many of the region's human and natural systems at very high risk and beyond adaptation limits..."</blockquote>
+                    <p class="source">— IPCC SPECIAL REPORT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="focus-section">
+        <div class="gradient-blob-1"></div>
+        <div class="gradient-blob-2"></div>
+        <div class="container">
+            <div class="header">
+                <span class="subtitle">Strategic Priorities</span>
+                <h2>Our Climate Focus Areas</h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="content">
+                        <div class="icon"><i class="fas fa-leaf"></i></div>
+                        <h3>Climate Mitigation</h3>
+                        <ul>
+                            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span>GHG emission reduction strategies</span></li>
+                            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span>Climate policy advisory</span></li>
+                        </ul>
+                    </div>
+                    <div class="footer">
+                        <a href="#">Learn more<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <div class="icon"><i class="fas fa-recycle"></i></div>
+                        <h3>Decarbonization</h3>
+                        <ul>
+                            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span>Carbon removal technologies</span></li>
+                            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span>Net-zero transition planning</span></li>
+                        </ul>
+                    </div>
+                    <div class="footer">
+                        <a href="#">Learn more<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Climate Adaptation</h3>
+                        <ul>
+                            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span>Risk assessment modeling</span></li>
+                            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span>Resilience planning services</span></li>
+                        </ul>
+                    </div>
+                    <div class="footer">
+                        <a href="#">Learn more<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="what-we-do">
+        <div class="container">
+            <div class="header">
+                <span class="subtitle">Our Solutions</span>
+                <h2><span>What We Do</span></h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Hyper-local Weather Forecasting</h3>
+                    <p>Precision forecasts at 1km resolution with 90%+ accuracy within 72 hours.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-bell"></i></div>
+                    <h3>Climate Risk Alerts & Early Warning Systems</h3>
+                    <p>Timely notifications for extreme weather events, allowing proactive response.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Climate Risk Modeling</h3>
+                    <p>Scenario-based projections quantifying financial impacts of climate variability.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-shield-virus"></i></div>
+                    <h3>Parametric Insurance Solutions</h3>
+                    <p>Weather-indexed policies that automatically trigger when thresholds are met.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Climate-Based Financial Tools</h3>
+                    <p>Derivatives and hedging instruments to manage weather-related volatility.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Operational Risk Management</h3>
+                    <p>Actionable insights to optimize operations based on weather conditions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="background"></div>
+        <div class="container">
+            <div class="grid">
+                <div class="item">
+                    <div class="value"><span class="counter" data-target="95">0</span>%</div>
+                    <div class="label emerald">Forecast Accuracy</div>
+                </div>
+                <div class="item">
+                    <div class="value"><span class="counter" data-target="72">0</span>hrs</div>
+                    <div class="label blue">Early Warning Lead Time</div>
+                </div>
+                <div class="item">
+                    <div class="value">$<span class="counter" data-target="2.5">0</span>B</div>
+                    <div class="label purple">Climate Risk Mitigated</div>
+                </div>
+                <div class="item">
+                    <div class="value"><span class="counter" data-target="200">0</span>+</div>
+                    <div class="label amber">Global Partners</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="industries">
+        <div class="container">
+            <div class="header">
+                <span class="subtitle">Impact Sectors</span>
+                <h2>Industries We Serve</h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon"><i class="fas fa-tractor"></i></div>
+                    <h3>Agriculture & Livestock</h3>
+                    <p>Optimize planting cycles and protect yields against climate volatility.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-umbrella-beach"></i></div>
+                    <h3>Insurance</h3>
+                    <p>Price risk accurately and develop climate-resilient products.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-piggy-bank"></i></div>
+                    <h3>Banking & Finance</h3>
+                    <p>Assess climate risks in lending portfolios and investments.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Energy & Renewables</h3>
+                    <p>Forecast energy demand and optimize renewable generation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <div class="container">
+            <div class="header">
+                <span class="subtitle">Trusted By</span>
+                <h2>What Our Partners Say</h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="header">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Testimonial">
+                        <div class="info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Agricultural Director</p>
+                        </div>
+                    </div>
+                    <p class="quote">"mistEO's forecasting helped us reduce crop losses by 35% last season. Their hyper-local data is incredibly accurate."</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Testimonial">
+                        <div class="info">
+                            <h4>Michael Chen</h4>
+                            <p>Insurance Executive</p>
+                        </div>
+                    </div>
+                    <p class="quote">"The parametric insurance solutions from mistEO have streamlined our claims process, saving us significant time and resources."</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Testimonial">
+                        <div class="info">
+                            <h4>Emily Rodriguez</h4>
+                            <p>Energy Sector Analyst</p>
+                        </div>
+                    </div>
+                    <p class="quote">"mistEO's climate risk modeling has been instrumental in optimizing our renewable energy investments."</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mission">
+        <div class="content">
+            <div class="gradient-blob-1"></div>
+            <div class="gradient-blob-2"></div>
+            <h2>OUR MISSION</h2>
+            <div class="inner">
+                <p>mistEO is on a mission to empower businesses, communities, and governments with innovative solutions that navigate the challenges of a changing climate. We are committed to providing accurate, data-driven insights, fostering resilience, and driving sustainable decision-making to secure a more climate-resilient future for all.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="why-we-exist">
+        <div class="background"></div>
+        <div class="container">
+            <div class="header">
+                <span class="subtitle">Our Purpose</span>
+                <h2>Why mistEO Exists</h2>
+            </div>
+            <div class="grid">
+                <div class="column">
+                    <h3>1. The Climate Reality We're Facing</h3>
+                    <ul>
+                        <li><div class="icon"><i class="fas fa-exclamation-circle"></i></div><p><span>Escalating Climate Threats:</span> Rising frequency of extreme weather events costing global economies billions annually</p></li>
+                        <li><div class="icon"><i class="fas fa-chart-line-down"></i></div><p><span>Data Deficiency:</span> 78% of businesses lack access to localized climate risk intelligence</p></li>
+                    </ul>
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <blockquote>"Climate change now represents the single greatest threat to global economic stability, with projected losses of up to $23 trillion by 2050."</blockquote>
+                        <p class="source">— World Economic Forum</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>2. Our Strategic Response</h3>
+                    <ul>
+                        <li><div class="icon"><i class="fas fa-bolt"></i></div><p><span>Precision Intelligence:</span> Delivering hyper-local climate forecasts with 90%+ accuracy</p></li>
+                        <li><div class="icon"><i class="fas fa-shield-alt"></i></div><p><span>Proactive Protection:</span> 72-hour early warning systems reduce climate-related losses by up to 65%</p></li>
+                    </ul>
+                    <div class="mission">
+                        <h4>Our Mission</h4>
+                        <p>To transform climate uncertainty into actionable intelligence, equipping enterprises and governments with the tools to anticipate, adapt, and thrive amid environmental change.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="work-with-us">
+        <h2>WORK WITH US</h2>
+        <p>We're experts in helping organisations continue to thrive in the face of changing climate conditions.</p>
+        <div class="buttons">
+            <button class="primary">Contact Our Team</button>
+            <button class="secondary">Learn About Our Solutions</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="grid">
+                <div class="column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#"><span class="dot"></span>About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="#">Agriculture</a></li>
+                        <li><a href="#">Finance</a></li>
+                        <li><a href="#">Government</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Research</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 mistEO. All rights reserved.</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // AOS.init();
+
+        // const mobileMenuButton = document.getElementById('mobile-menu-button');
+        // const mobileMenu = document.getElementById('mobile-menu');
+        // mobileMenuButton.addEventListener('click', () => {
+        //     mobileMenu.classList.toggle('active');
+        // });
+
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            gsap.to(preloader, {
+                duration: 2.5,
+                opacity: 0,
+                ease: 'power4.out',
+                onComplete: function() {
+                    preloader.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                    // const scroll = new LocomotiveScroll({
+                    //     el: document.querySelector('[data-scroll-container]'),
+                    //     smooth: true,
+                    //     smoothMobile: true,
+                    //     inertia: 0.8
+                    // });
+                    // SplitType.create("h1, h2, h3", { types: 'words,chars' });
+                    // gsap.from(".char", {
+                    //     y: 100,
+                    //     opacity: 0,
+                    //     stagger: 0.05,
+                    //     duration: 1,
+                    //     ease: "power4.out"
+                    // });
+                }
+            });
+        });
+
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText.replace(/[^0-9.-]+/g, '');
+                const increment = target / 200;
+                if (count < target) {
+                    counter.innerText = count + increment < target ? Math.ceil(count + increment) + (counter.innerText.match(/[A-Za-z%+$]/) || '') : target + (counter.getAttribute('data-target').includes('+') ? '+' : '') + (counter.innerText.match(/[A-Za-z%+$]/) || '');
+                    setTimeout(updateCount, 16);
+                }
+            };
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+            observer.observe(counter);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('particles-js', {
+                    "particles": {
+                        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                        "color": { "value": "#ffffff" },
+                        "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" } },
+                        "opacity": { "value": 0.5, "random": false },
+                        "size": { "value": 3, "random": true },
+                        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+                        "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
+                    },
+                    "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true } },
+                    "retina_detect": true
+                });
+            }
+        });
+    </script>
+</body>
+</html>

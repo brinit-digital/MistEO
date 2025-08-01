@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html class="">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/split-type/css/split-type.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <meta
+            name="description"
+            content="We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+    />
+    <meta property="fb:app_id" content="1321688464574422"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@huggingface"/>
+    <meta
+            property="og:title"
+            content="Hugging Face – The AI community building the future.">
+    <meta property="og:type" content="website"/>
+
+    <title>mistEO - About Us | Climate Intelligence Solutions</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #8a63ff;
+            --secondary: #5e35ff;
+            --accent: #b388ff;
+            --dark: #0e0e18;
+            --light: #f8f9ff;
+            --gradient: linear-gradient(135deg, #8a63ff 0%, #5e35ff 100%, #b388ff 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section {
+            margin-bottom: 5rem;
+            padding: 3rem 0;
+            position: relative;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 2.5rem;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 80vh;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            padding: 4rem;
+            z-index: 2;
+        }
+
+        .hero-image {
+            position: relative;
+            height: 100%;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(248,250,252,0.8) 0%, rgba(248,250,252,0) 100%);
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-subtitle {
+            display: inline-block;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .team-member {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 
+                        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation: float 6s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .team-member:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 1.5rem;
+            border: 5px solid #e2e8f0;
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .position {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .bio {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        .cta-button {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+        }
+
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .cta-button:hover::after {
+            opacity: 1;
+        }
+
+        ul {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        blockquote {
+            font-style: italic;
+            color: #7f8c8d;
+            border-left: 3px solid #3498db;
+            padding-left: 1rem;
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+
+        .focus-items, .service-items, .industry-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .focus-item, .service-item, .industry-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .focus-item:hover, .service-item:hover, .industry-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .focus-item::before, .service-item::before, .industry-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+            transition: width 0.3s ease;
+        }
+
+        .focus-item:hover::before, .service-item:hover::before, .industry-item:hover::before {
+            width: 8px;
+        }
+
+        .focus-item h4, .service-item h4, .industry-item h4 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .focus-item p, .service-item p, .industry-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 4rem 0 3rem;
+            }
+
+            section {
+                padding: 2rem 0;
+                margin-bottom: 3rem;
+            }
+
+            .focus-items, .service-items, .industry-items {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        const key = "_tb_global_settings";
+        let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        try {
+            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;
+            if (storageTheme) {
+                theme = storageTheme === "dark" ? "dark" : "light";
+            }
+        } catch (e) {
+        }
+        if (theme === "dark") {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    </script>
+</head>
+
+<body>
+<main>
+    <!-- Hero Section -->
+    <section class="hero" data-scroll-section>
+        <div class="hero-content">
+            <div class="badge animate__animated animate__fadeIn">AI-Powered Climate Intelligence</div>
+            <h1 class="animate-char-wrap" data-scroll data-scroll-speed="1"><span>Building Climate Resilience</span><br><span>Through AI Innovation</span></h1>
+            <p class="hero-text" data-scroll data-scroll-speed="0.8">mistEO provides hyper-local weather forecasting and climate risk solutions for enterprises requiring premium climate intelligence.</p>
+            <div class="cta-group" data-scroll data-scroll-speed="0.5">
+                <button class="cta-button primary">Explore Solutions</button>
+                <button class="cta-button secondary">Request Demo</button>
+            </div>
+        </div>
+        <div class="hero-image" data-scroll data-scroll-speed="-2">
+            <div class="gradient-overlay"></div>
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-city-at-night-12200-large.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="section-header">
+            <span class="section-subtitle">Who We Are</span>
+            <h2>About mistEO</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>mistEO is a climate intelligence platform that provides hyper-local weather forecasting and climate risk solutions to help businesses and communities adapt to climate change.</p>
+                <p>We combine cutting-edge AI with atmospheric science to deliver actionable insights that help mitigate climate risks and build resilience.</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Clients Protected</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1km</div>
+                        <div class="stat-label">Forecast Resolution</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Monitoring</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Climate Data" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership">
+        <div class="section-header">
+            <span class="section-subtitle">Our Team</span>
+            <h2>Leadership</h2>
+        </div>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="https://misteo.co/wp-content/uploads/2023/05/Soumya-1-300x300.jpg" alt="Soumya Dutta" loading="lazy">
+                </div>
+                <h3>Soumya Dutta</h3>
+                <p class="position">Co-Founder & CEO</p>
+                <p class="bio">Former McKinsey consultant with expertise in climate risk and financial modeling.</p>
+            </div>
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="https://misteo.co/wp-content/uploads/2023/05/Shivam-1-300x300.jpg" alt="Shivam Shrivastava" loading="lazy">
+                </div>
+                <h3>Shivam Shrivastava</h3>
+                <p class="position">Co-Founder & CTO</p>
+                <p class="bio">AI/ML expert with experience in atmospheric science and weather modeling.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why mistEO Exists -->
+    <section class="why-exists">
+        <div class="problem">
+            <h3>The Problem</h3>
+            <ul>
+                <li>Increasing frequency and severity of extreme weather events</li>
+                <li>Lack of reliable hyper-local weather data</li>
+                <li>Growing climate-related financial risks</li>
+            </ul>
+            <blockquote>"The Climate Reality We're Facing"</blockquote>
+        </div>
+        
+        <div class="response">
+            <h3>Our Response</h3>
+            <ul>
+                <li>AI-powered weather forecasting at 1km resolution</li>
+                <li>Climate risk modeling and early warning systems</li>
+                <li>Financial tools to mitigate climate risks</li>
+            </ul>
+        </div>
+        
+        <div class="mission">
+            <h3>Our Mission</h3>
+            <p>To democratize access to accurate climate intelligence and build resilience against climate change through innovative technology solutions.</p>
+        </div>
+    </section>
+
+    <!-- Our Focus -->
+    <section class="focus">
+        <h2>Our Focus</h2>
+        <div class="focus-items">
+            <div class="focus-item">
+                <h4>Climate Mitigation</h4>
+            </div>
+            <div class="focus-item">
+                <h4>Decarbonization</h4>
+            </div>
+            <div class="focus-item">
+                <h4>Climate Adaptation</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="services">
+        <h2>What We Do</h2>
+        <div class="service-items">
+            <div class="service-item">Hyper-local Weather Forecasting</div>
+            <div class="service-item">Climate Risk Alerts & Early Warning Systems</div>
+            <div class="service-item">Climate Risk Modeling</div>
+            <div class="service-item">Parametric Insurance Solutions</div>
+            <div class="service-item">Climate-Based Financial Tools</div>
+            <div class="service-item">Operational Risk Management</div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="industries">
+        <h2>Industries We Serve</h2>
+        <div class="industry-items">
+            <div class="industry-item">Agriculture & Livestock</div>
+            <div class="industry-item">Insurance</div>
+            <div class="industry-item">Banking & Finance</div>
+            <div class="industry-item">Energy & Renewables</div>
+        </div>
+    </section>
+</main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script>
+        // Initialize smooth scrolling
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+            smoothMobile: false,
+            multiplier: 0.7
+        });
+
+        // Text animation
+        document.querySelectorAll('.animate-char-wrap').forEach(el => {
+            const text = new SplitType(el, { types: 'lines,words' });
+            gsap.from(text.words, {
+                opacity: 0,
+                y: 50,
+                duration: 1.5,
+                ease: 'power3.out',
+                stagger: 0.1
+            });
+        });
+
+        // Parallax elements
+        gsap.utils.toArray('[data-scroll-speed]').forEach(el => {
+            const speed = parseFloat(el.getAttribute('data-scroll-speed'));
+            gsap.to(el, {
+                scrollTrigger: {
+                    trigger: el,
+                    scrub: true
+                },
+                yPercent: -10 * speed,
+                ease: 'none'
+            });
+        });
+    </script>
+</body>
+</html>

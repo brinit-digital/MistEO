@@ -23,10 +23,19 @@
   align-items: center;
   flex-direction: column;
 }
-
-
-
 .hero-title{
-  font-size: 80px;
-  margin-top: 12rem;
+  font-size: 70px;
+  margin-top: 14rem;
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 60px;
+    margin-top: 13rem;
+  }
+}
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 40px;
+    margin-top: 13rem;
+  }
 }

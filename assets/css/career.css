@@ -17,15 +17,23 @@
   background-color: rgba(0, 0, 0, 0.559); 
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
 }
-
-
-
 .hero-title{
   font-size: 110px;
   margin-top: 12rem;
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 100px;
+    margin-top: 13rem;
+  }
+}
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 80px;
+    margin-top: 15rem;
+  }
 }
 .link-home{
     text-decoration: none;

@@ -47,24 +47,7 @@ img{
 
 
 
-/* @media(min-width:1241px){
-    .container-fluid.navbar-con{
-    gap: 35rem;
-}
-}
 
-@media(min-width:1500px){
-    .container-fluid.navbar-con{
-    gap: 55rem;
-     
-}
-}
-@media(max-width:1499px){
-    .container-fluid.navbar-con{
-    gap: 45rem;
-     
-}
-} */
 /* footer */
 .foot{
     position: fixed

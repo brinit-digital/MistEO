@@ -41,17 +41,17 @@
 .logo{
     width: 150px !important;
 }
-img{
+/* img{
     vertical-align: auto !important;
-}
+} */
 
 
 
 
 /* footer */
-.foot{
+/* .foot{
     position: fixed
-}
+} */
     /* Top overlapping banner */
     .top-banner {
       background-color: #0a4b73;

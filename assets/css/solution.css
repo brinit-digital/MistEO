@@ -40,14 +40,14 @@
     }
 
     .card {
-      background-color: #0a4b731e;
+      background-color: #0a4b7317;
       border: none;
       border-radius: 1rem;
       overflow: hidden;
       display: flex;
       flex-direction: row;
       color: rgb(0, 0, 0);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.158);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.295);
       transition: transform 0.3s ease;
     }
 

@@ -284,37 +284,43 @@
     }
 
 
-    @media (max-width: 867px) {
-   
-      .top-banner{
-        margin: auto;
-      }
+    @media (max-width: 1162px) {
        .badges img {
-      width: 30px;
+      width: 40px;
     }
     .banner-content .text h1{
         font-size: 30px;
     }
     }
 
-    @media (max-width: 789px){
-    .badges img {
-      width: 25px;
+    @media (max-width: 1081px) {
+   
+      .top-banner{
+        margin: 0 4rem;
+      }
     }
-    .banner-content .text h1{
-        font-size: 22px;
+    @media (max-width: 921px) {
+   
+      .top-banner{
+        margin: 0 2rem;
+      }
     }
+    @media (max-width: 857px) {
+   
+       .banner-img{
+            display: none;
+        }
+        .banner-content{
+            flex-direction: column;
+        }
+         .top-banner{
+            background-image: url('../images/elements/footer-cta-bg.png') !important;
+            padding: 50px;
+            border-radius: 20px;
+        }
     }
 
      @media (max-width: 727px){
-        .banner-img{
-            display: none;
-        }
-        .top-banner{
-            background-image: url('../assets/images/footer-cta-bg.png');
-            padding: 10px;
-            border-radius: 20px;
-        }
         .banner-content button{
         font-weight: 100;
         font-size: 14px;

@@ -8,6 +8,14 @@
      
       font-family: 'DM Sans', sans-serif;
     }
+
+:root {
+	--blue: #3C91E6;
+	--light-blue: rgb(228, 248, 255);
+  --white: #f8f9fa;
+  --gray: #7b7d7d;
+}
+
  /* HERO SECTION */
 .hero-banner {
   background: url('../images/hero/documents-bg.webp') no-repeat  center/cover fixed;

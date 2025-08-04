@@ -1,195 +1,30 @@
-:root{
-    --primary: #0A4B73;
-    --secondary:#34495E;
-    --color1: #2F2F2F;
-    --color2:#8B8C8D ;
-    --color3: #D5D5D5;
-} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
- 
- 
- 
- body {
-
-    font-family: 'DM Sans', sans-serif;
-    margin: 0;
-    background-color: #e7e7e5d8;
- }
-section.hero {
-    position: relative;
-    height: 90vh;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-section.hero .gradient-overlay-1 {
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(to bottom, rgba(31, 41, 55, 0.8), rgba(31, 41, 55, 0.3), rgba(31, 41, 55, 0.8));
-    z-index: 10;
-}
-section.hero .gradient-overlay-2 {
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(to right, rgba(6, 78, 59, 0.1), rgba(30, 64, 175, 0.1));
-    z-index: 10;
-}
-section.hero video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-section.hero #particles-js {
-    position: absolute;
-    inset: 0;
-    z-index: 10;
-}
-section.hero .container {
-    max-width: 80rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    position: relative;
-    z-index: 20;
-}
-section.hero .content {
-    max-width: 56rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-section.hero h1 {
-    font-size: 3.75rem;
-    font-weight: 300;
-    letter-spacing: 0.15em;
-    color: #ffffff;
-    margin-bottom: 2rem;
-    line-height: 1.2;
-}
-@media (min-width: 768px) {
-    section.hero h1 {
-        font-size: 4.5rem;
+  <!--bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-}
-section.hero h1 span.block {
-    margin-top: 1rem;
-    background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to right, #0A4B73, #34495E);
-    font-weight: 400;
-}
-section.hero p {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 32rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3rem;
-    line-height: 1.625;
-}
-section.hero .buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-}
-@media (min-width: 640px) {
-    section.hero .buttons {
-        flex-direction: row;
-        justify-content: center;
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #fdf6f9 0%, #fef8f3 100%);
+      padding: 80px 20px;
     }
-}
-section.hero .buttons a {
-    position: relative;
-}
-section.hero .buttons .gradient-blur {
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(to right, #0A4B73, #34495E);
-    border-radius: 9999px;
-    filter: blur(10px);
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-section.hero .buttons a:hover .gradient-blur {
-    opacity: 1;
-}
-section.hero .buttons button {
-    position: relative;
-    background-image: linear-gradient(to right, #0A4B73, #34495E);
-    color: #ffffff;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-radius: 9999px;
-    font-weight: 300;
-    letter-spacing: 0.15em;
-    font-size: 0.875rem;
-    transition: all 0.3s ease;
-}
-/* section.hero .buttons button:hover{
-    background-image: linear-gradient(to right, #3b82f6, #10b981);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-} */
-
-section.hero .buttons button:hover {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    transform: translateY(-0.25rem);
-}
-section.hero .buttons button.secondary {
-    background: none;
-    color: #ffffff;
-}
-section.hero .buttons button.secondary .overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 9999px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-section.hero .buttons button.secondary:hover .overlay {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-section.hero .buttons button.secondary svg {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-right: 0.5rem;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-0.5rem); }
-}
-@keyframes scroll {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(0.5rem); opacity: 0; }
-}
-
-
-/* ---- reset ---- */ 
-body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } 
-canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ 
-#particles-js{ position:absolute; width: 100%; height: 100%; background-color: #b61924; background-image: url("/assets/images/hero/about.jpg"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } 
-/* ---- stats.js ---- */ 
-.count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } 
-.js-count-particles{ font-size: 1.1em; } 
-#stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } 
-#stats{ border-radius: 3px 3px 0 0; overflow: hidden; } 
-.count-particles{ border-radius: 0 0 3px 3px; }
-
-.about-section {
+  .about-section {
     display: flex;
     position: relative;
     padding: 5.7857142857rem 0 5.1428571429rem;
@@ -282,7 +117,7 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
     font-style: normal;
     font-weight: 650;
     line-height: 130%;
-    background: linear-gradient(180deg, #0A4B73, #2f2f2f80 85.78%);
+    background: linear-gradient(180deg,#f38ab2,#f54c7a 85.78%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent
@@ -368,12 +203,12 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
     }
 }
 
-.about_content .buttn-margin {
+.about_content .btn-margin {
     margin-top: 2.8571428571rem
 }
 
 @media(min-width: 768px) {
-    .about_content .buttn-margin {
+    .about_content .btn-margin {
         margin-top:4.2857142857rem
     }
 }
@@ -422,7 +257,7 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: var(--primary);
+    background: #ffccd7;
     border-radius: 1.0714285714rem;
     width: 10.5714285714rem;
     height: 10.5714285714rem
@@ -459,7 +294,7 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(313deg,#0A4B73 -7.58%,#fcf4fa 98.03%);
+    background: linear-gradient(313deg,#ffccd7 -7.58%,#fcf4fa 98.03%);
     border-radius: 1.0714285714rem;
     width: 10.5714285714rem;
     height: 10.5714285714rem
@@ -490,8 +325,7 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
 }
 
 .preview-right .top_left_box .tl_box_content {
-    color: rgba(10,37,64,.8);;
-    /* background: linear-gradient(180deg, #0A4B73, #2f2f2f80 85.78%); */
+    color: #0a2540
 }
 
 .preview-right .top_left_box .tl_box_span1 {
@@ -499,7 +333,7 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
     font-variant-numeric: stacked-fractions;
     font-size: 2.4285714286rem;
     font-weight: 650;
-    line-height: 130%;
+    line-height: 130%
 }
 
 @media(min-width: 768px) {
@@ -547,7 +381,7 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
 }
 
 .preview-right .top_left_box .box_p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(10,37,64,.8);
     font-feature-settings: "afrc";
     font-variant-numeric: stacked-fractions;
     font-size: .6071428571rem;
@@ -577,7 +411,7 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
 .preview-right .botton_right_box {
     position: absolute;
     z-index: 1;
-    background: #34495E;
+    background: #cbc5e1;
     padding: 1.0714285714rem .7857142857rem;
     border-radius: 1.0714285714rem;
     width: 8.9285714286rem;
@@ -620,7 +454,7 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
     position: absolute;
     bottom: 0;
     right: 0;
-    background: linear-gradient(314deg,#34495E 4.9%,#cbc5e1 97.99%);
+    background: linear-gradient(314deg,#fcf4fa 4.9%,#cbc5e1 97.99%);
     border-radius: 1.0714285714rem;
     width: 8.9285714286rem;
     height: 5.9285714286rem
@@ -684,7 +518,7 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
 
 
 .preview-right .botton_right_box .box_p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(10,37,64,.8);
     font-feature-settings: "afrc";
     font-variant-numeric: stacked-fractions;
     font-size: .6071428571rem;
@@ -742,7 +576,7 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
         transform: translateY(0)
     }
 }
-.buttn-arrow-an {
+.btn-arrow-an {
     content: "";
     cursor: pointer;
     display: flex;
@@ -755,17 +589,17 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
     gap: .1428571429rem
 }
 
-.buttn-arrow-an,.buttn-arrow-an * {
+.btn-arrow-an,.btn-arrow-an * {
     transition: all .25s ease-in-out
 }
 
-.buttn-arrow-an:disabled {
+.btn-arrow-an:disabled {
     opacity: .7
 }
 
 
-.buttn {
-    background: var(--primary);
+.btn {
+    background: #f38ab2;
     color: #fff;
     font-size: 1.0714285714rem;
     font-weight: 650;
@@ -773,35 +607,73 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
     border-radius: 2.1428571429rem;
     padding: .7142857143rem 2.4285714286rem;
     width: max-content;
-    height: max-content;
-    border: none;
+    height: max-content
 }
 
 @media(min-width: 1440px) {
-    .buttn {
+    .btn {
         font-size:1.1428571429rem;
         padding: .8571428571rem 2.4285714286rem
     }
 }
 
-.buttn .buttn-icon {
+.btn .btn-icon {
     width: 1.0714285714rem;
     height: 1.1428571429rem
 }
 
-.buttn .buttn-icon path {
+.btn .btn-icon path {
     fill: #fff
 }
 
-.buttn:hover {
+.btn:hover {
     background: #0a2540;
     color: white;
 }
 
-.buttn:hover .buttn-icon {
+.btn:hover .btn-icon {
     transform: translateX(50%)
 }
 
-.buttn:active {
+.btn:active {
     background: #17334f
 }
+
+  </style>
+</head>
+<body>
+  <section class="about-section">
+    <div class="container preview_block">
+      <div class="about_content">
+        <p class="heading_p about_animation">About Us</p>
+        <h1 class="about_title about_animation">About company</h1>
+        <p class="content_text text_animation">mistEO is a CLIMATE FINTECH company providing climate change adaptation know-how and technologies to private enterprises and governments to overcome the cost of climate change.</p>
+        <button class="btn-arrow-an btn btn-margin button_animation">Contact us <svg class="btn-icon" viewBox="0 0 15 17"><path d="M9.79076 9.50367L6.11195 5.69918C6.05153 5.63607 5.97965 5.58597 5.90044 5.55179C5.82124 5.5176 5.73628 5.5 5.65048 5.5C5.56468 5.5 5.47972 5.5176 5.40052 5.55179C5.32131 5.58597 5.24943 5.63607 5.189 5.69918C5.06795 5.82534 5 5.99601 5 6.1739C5 6.35179 5.06795 6.52245 5.189 6.64862L8.40633 10.0154L5.189 13.3486C5.06795 13.4747 5 13.6454 5 13.8233C5 14.0012 5.06795 14.1718 5.189 14.298C5.2492 14.3616 5.32099 14.4122 5.4002 14.4469C5.47942 14.4816 5.56448 14.4996 5.65048 14.5C5.73647 14.4996 5.82154 14.4816 5.90076 14.4469C5.97997 14.4122 6.05176 14.3616 6.11195 14.298L9.79076 10.4935C9.85673 10.4305 9.90938 10.3539 9.9454 10.2687C9.98141 10.1836 10 10.0916 10 9.99859C10 9.90559 9.98141 9.81361 9.9454 9.72843C9.90938 9.64325 9.85673 9.56672 9.79076 9.50367Z" fill="white"></path></svg></button>
+      </div>
+      <div class="preview-right about_animation">
+        <div class="preview-img"><img src="assets/images/about/abt.webp" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+            <div class="top_left_box">
+                <p class="tl_box_content">
+                    <span class="tl_box_span1">18 </span><span class="tl_box_span2">years</span>
+                </p>
+                <p class="box_p">we are operating in the market for more than 18 years</p>
+            </div>
+            <div class="botton_right_box">
+                <div class="tl_box_content">
+                    <p class="br_yr">2023</p>
+                </div>
+              <p class="box_p">Established in 2023. We have superior expertise</p>
+            </div>
+          </div>
+          <div class="top_left_bg"></div>
+          <div class="bottom_right_bg"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
+  

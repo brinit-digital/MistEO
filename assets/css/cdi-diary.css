@@ -46,79 +46,64 @@ body {
 
 /* icon section */
 
-.logos-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 9rem;
-    max-width: 1150px;
-    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
-    margin-bottom: 4rem;
-}
-
-.logo1 {
-    width: 170px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    background-color: #ffffff;
-    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
-    cursor: pointer;
-    padding-bottom: 2rem;
-}
-
-.logo1 img {
-    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.logo1 h5 {
-    font-size: 1rem;
-    color: #0a4b73;
-    margin-top: 0.8rem;
-    text-align: center;
-}
-
-.logo1:hover {
-    /* background-color: #0a4b73; */
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-}
-
-.logos-container:hover .logo1:not(:hover) {
-    transform: scale(0.88);
-    opacity: 0.48;
-    filter: grayscale(1);
-}
-
-@media (max-width: 1136px) {
-    .logos-container {
-        gap: 6rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .logos-container {
-        gap: 4rem;
+  .icon-carousel {
+        overflow: hidden;
+        padding: 20px 0;
+        background: #fff;
+        margin: 8rem;
     }
 
-}
-
-@media (max-width: 896px) {
-    .logos-container {
-        gap: 2rem;
+    .icon-track {
+        display: flex;
+        width: max-content;
+        animation: scroll-left 30s linear infinite;
     }
-}
 
-@media (max-width: 400px) {
-    .logos-container {
-        gap: .6rem;
+    /* Pause carousel on hover */
+    .icon-carousel:hover .icon-track {
+        animation-play-state: paused;
     }
-}
 
+    .logo1 {
+        text-align: center;
+        min-width: 300px;
+        margin: 0 20px;
+        transition: filter 0.3s ease, transform 0.3s ease;
+    }
+
+    .logo1 img {
+        max-width: 100px;
+        margin-bottom: 10px;
+        transition: filter 0.3s ease, transform 0.3s ease;
+    }
+
+    .logo1 h5 {
+        font-size: 14px;
+        color: #0a4b73;
+        transition: color 0.3s ease;
+    }
+
+    /* Grayscale all icons when hovering over carousel */
+    .icon-carousel:hover .logo1 {
+        filter: grayscale(100%);
+        transform: scale(1);
+    }
+
+    /* Remove grayscale and zoom on hovered icon */
+    .icon-carousel:hover .logo1:hover {
+        filter: grayscale(0%);
+        transform: scale(1.2);
+    }
+
+    @keyframes scroll-left {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+/* API section */
 .img-api {
     width: 650px;
 }

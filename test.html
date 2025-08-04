@@ -1,100 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Career at MistEO</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinite Icon Carousel with Hover Effects</title>
+<style>
     body {
-      margin: 0;
-      font-family: 'DM Sans', sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #fff;
     }
 
-    .hero {
-      background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 100px 20px 80px;
+    .icon-carousel {
+        overflow: hidden;
+        padding: 20px 0;
+        background: #fff;
     }
 
-    .hero h1 {
-      font-size: 2.8rem;
-      margin: 0 0 20px;
+    .icon-track {
+        display: flex;
+        width: max-content;
+        animation: scroll-left 30s linear infinite;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: auto;
+    /* Pause carousel on hover */
+    .icon-carousel:hover .icon-track {
+        animation-play-state: paused;
     }
 
-    .section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
+    .logo1 {
+        text-align: center;
+        min-width: 200px;
+        margin: 0 20px;
+        transition: filter 0.3s ease, transform 0.3s ease;
     }
 
-    .section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-      color: #1f1f1f;
+    .logo1 img {
+        max-width: 80px;
+        margin-bottom: 10px;
+        transition: filter 0.3s ease, transform 0.3s ease;
     }
 
-    .section p.subtitle {
-      font-size: 1.2rem;
-      color: #666;
-      margin-bottom: 40px;
+    .logo1 h5 {
+        font-size: 14px;
+        color: #0a4b73;
+        transition: color 0.3s ease;
     }
 
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
+    /* Grayscale all icons when hovering over carousel */
+    .icon-carousel:hover .logo1 {
+        filter: grayscale(100%);
+        transform: scale(1);
     }
 
-    .col {
-      flex: 1 1 300px;
+    /* Remove grayscale and zoom on hovered icon */
+    .icon-carousel:hover .logo1:hover {
+        filter: grayscale(0%);
+        transform: scale(1.2);
     }
 
-    .col p {
-      line-height: 1.6;
+    @keyframes scroll-left {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
     }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      .row {
-        flex-direction: column;
-      }
-    }
-  </style>
+</style>
 </head>
 <body>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h1>JOIN THE MISTEO MISSION</h1>
-    <p>We’re on the hunt for like-minded people to help build a sustainable future with us.</p>
-  </section>
+<!-- Icon Carousel Section -->
+<div class="icon-carousel">
+    <div class="icon-track">
+        <!-- Icons - first set -->
+        <div class="logo1"><img src="../assets/images/elements/sun-cloud.png" alt=""><h5>Weather Forecast</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/warning.png" alt=""><h5>Daily & Weekly Alerts</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/data-visual.png" alt=""><h5>Modern User Interface</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/web-mobile-tab.png" alt=""><h5>Web, Mobile & Tablet</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/risk-assesment.png" alt=""><h5>Risk Assessment Calculator</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/growing-pool.png" alt=""><h5>Growing Pool of Climate Resources</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/heat-loads.png" alt=""><h5>Heat Load Plans</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/australian-support.png" alt=""><h5>Dedicated Australian Based Support Team</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/outside.png" alt=""><h5>Onsite Weather Station Integration</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/operation-effeiciency.png" alt=""><h5>Heat Load Scoring</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/ios-antro.png" alt=""><h5>IOS & Android App (Coming Soon)</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/panting-score.png" alt=""><h5>Panting Score Training</h5></div>
 
-  <!-- CAREER DETAILS SECTION -->
-  <section class="section">
-    <h2>WE'RE HIRING!</h2>
-    <p class="subtitle">We don't hire often, but we are growing. And it takes a certain type of person, driven by a desire to change the world, to help mistEO achieve our mission.</p>
-    
-    <div class="row">
-      <div class="col">
-        <p>At mistEO, we're passionate about building a more resilient future. We're a team of innovators and problem-solvers dedicated to tackling the challenges posed by climate change. By joining mistEO, you'll have the opportunity to work on cutting-edge projects that make a real difference in the world.</p>
-      </div>
-      <div class="col">
-        <p>We offer a dynamic and collaborative work environment where your ideas are valued and your growth is encouraged. Our team is composed of diverse individuals who share a common goal: to create a sustainable future. If you're passionate about technology, climate change, and making a positive impact, mistEO is the place for you.</p>
-      </div>
+        <!-- Icons - duplicate set for smooth looping -->
+        <div class="logo1"><img src="../assets/images/elements/sun-cloud.png" alt=""><h5>Weather Forecast</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/warning.png" alt=""><h5>Daily & Weekly Alerts</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/data-visual.png" alt=""><h5>Modern User Interface</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/web-mobile-tab.png" alt=""><h5>Web, Mobile & Tablet</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/risk-assesment.png" alt=""><h5>Risk Assessment Calculator</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/growing-pool.png" alt=""><h5>Growing Pool of Climate Resources</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/heat-loads.png" alt=""><h5>Heat Load Plans</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/australian-support.png" alt=""><h5>Dedicated Australian Based Support Team</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/outside.png" alt=""><h5>Onsite Weather Station Integration</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/operation-effeiciency.png" alt=""><h5>Heat Load Scoring</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/ios-antro.png" alt=""><h5>IOS & Android App (Coming Soon)</h5></div>
+        <div class="logo1"><img src="../assets/images/elements/panting-score.png" alt=""><h5>Panting Score Training</h5></div>
     </div>
-  </section>
+</div>
 
 </body>
 </html>

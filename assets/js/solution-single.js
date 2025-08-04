@@ -46,7 +46,7 @@ gsap.from(".hero-title, .hero-overlay h4", {
     scrollTrigger: {
         trigger: ".hero-banner",
         start: "top 80%",
-        toggleActions: "play reverse play reverse"
+        // toggleActions: "play reverse play reverse"
     }
 });
 

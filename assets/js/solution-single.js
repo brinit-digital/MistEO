@@ -73,7 +73,7 @@ gsap.utils.toArray(".frame img").forEach((img) => {
         scrollTrigger: {
             trigger: img,
             start: "top 85%",
-            toggleActions: "play reverse play reverse"
+            // toggleActions: "play reverse play reverse"
         }
     });
 });

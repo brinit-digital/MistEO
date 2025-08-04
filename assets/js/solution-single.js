@@ -59,7 +59,7 @@ gsap.utils.toArray(".card1").forEach((card, i) => {
         scrollTrigger: {
             trigger: card,
             start: "top 85%",
-            toggleActions: "play reverse play reverse"
+            // toggleActions: "play reverse play reverse"
         }
     });
 });
@@ -87,7 +87,7 @@ gsap.utils.toArray(".cards-container .card").forEach((card) => {
         scrollTrigger: {
             trigger: card,
             start: "top 90%",
-            toggleActions: "play reverse play reverse"
+            // toggleActions: "play reverse play reverse"
         }
     });
 });
@@ -100,7 +100,7 @@ gsap.from(".api-text", {
     scrollTrigger: {
         trigger: ".api-text",
         start: "top 85%",
-        toggleActions: "play reverse play reverse"
+        // toggleActions: "play reverse play reverse"
     }
 });
 gsap.from(".api-img img", {
@@ -110,7 +110,7 @@ gsap.from(".api-img img", {
     scrollTrigger: {
         trigger: ".api-img",
         start: "top 85%",
-        toggleActions: "play reverse play reverse"
+        // toggleActions: "play reverse play reverse"
     }
 });
 
@@ -124,7 +124,7 @@ gsap.utils.toArray(".logos-container .logo1").forEach((logo, i) => {
         scrollTrigger: {
             trigger: logo,
             start: "top 90%",
-            toggleActions: "play reverse play reverse"
+            // toggleActions: "play reverse play reverse"
         }
     });
 });
@@ -139,7 +139,7 @@ gsap.utils.toArray(".accordion-container .accordion-item").forEach((item, i) => 
         scrollTrigger: {
             trigger: item,
             start: "top 90%",
-            toggleActions: "play reverse play reverse"
+            // toggleActions: "play reverse play reverse"
         }
     });
 });

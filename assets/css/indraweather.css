@@ -7,7 +7,7 @@ body{
   /* position: relative; */
   background: url('../images/hero/indraweather-bg') no-repeat  center/cover fixed;
   height: 80vh;
-  margin-bottom: 6rem;
+
 }
 
 .hero-overlay {
@@ -46,7 +46,8 @@ body{
         overflow: hidden;
         padding: 20px 0;
         background: #fff;
-        margin: 8rem;
+        margin-top: 5rem;
+      
     }
 
     .icon-track {
@@ -98,6 +99,12 @@ body{
         to {
             transform: translateX(-50%);
         }
+    }
+
+    /* api section */
+    .api-section {
+       margin-top: 7rem;
+    
     }
 .img-api{
     width: 650px;
@@ -182,14 +189,14 @@ body{
         text-align: center;
         font-size: 1rem;
         color: rgb(66, 66, 66);
-        margin: 1rem 4rem;
+        margin: 1rem 6rem;
     
     }
     .cards-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        max-width: 1200px;
+        gap: 2rem;
+        max-width: 1300px;
         margin: auto;
     }
 
@@ -203,7 +210,6 @@ body{
         position: relative;
         overflow: hidden;
     }
-
     .card:hover {
         transform: translateY(-10px) scale(1.02);
         box-shadow: 0 8px 25px rgba(0, 91, 187, 0.2);
@@ -278,6 +284,7 @@ body{
         font-weight: bold;
         color: #0a4b73;
         margin-bottom: 3rem;
+        margin-top: 7rem !important;
      
     }
     .card1 {
@@ -307,17 +314,6 @@ body{
         transform: translateY(-3px);
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
-   
-    /* Right side frames */
-   
-    .frame img {
-        width: auto;
-        border-radius: 20px;
-    }
-    .frame:hover {
-        transform: scale(1.05);
-        transition: transform 0.3s ease;
-    }
     @media(max-width: 900px) {
         .visa-section {
             flex-direction: column;
@@ -327,7 +323,7 @@ body{
         .frames {
             display: none;
         }
-       
+        
     }
 
     .card1-sec1 {

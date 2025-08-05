@@ -40,14 +40,14 @@
     }
 
     .card {
-      background-color: #0a4b7317;
+      background-color: #ffffff17;
       border: none;
       border-radius: 1rem;
       overflow: hidden;
       display: flex;
       flex-direction: row;
       color: rgb(0, 0, 0);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.295);
+      box-shadow: 0 4px 20px #0a4b7341;
       transition: transform 0.3s ease;
     }
 
@@ -78,7 +78,8 @@
 
     .card-content h3 {
       margin: 0 0 0.5rem;
-      font-size: 1.1rem;
+      font-size: 1.4rem;
+      font-weight: 600;
     }
 
     .card-content p {
@@ -88,14 +89,14 @@
     }
 
     .card-content button {
-      background: white;
+      background: #0a4b73;
       border: none;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem .8rem;
       border-radius: 0.5rem;
-      font-weight: bold;
-      color: #0a4b73;
+      color: #ffffff;
       cursor: pointer;
       width: fit-content;
+      font-size: 13px;
     }
 
      @media (max-width: 1200px) {

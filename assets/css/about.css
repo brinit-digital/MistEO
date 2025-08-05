@@ -11,18 +11,15 @@
     padding: 0;
     box-sizing: border-box;
 }
- 
- 
- 
  body {
-
     font-family: 'DM Sans', sans-serif;
     margin: 0;
     background-color: #e7e7e5d8;
  }
+
 section.hero {
     position: relative;
-    height: 90vh;
+    height: 70vh;
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -67,14 +64,15 @@ section.hero .content {
     margin-right: auto;
     text-align: center;
 }
-section.hero h1 {
-    font-size: 3.75rem;
-    font-weight: 300;
-    letter-spacing: 0.15em;
+section.hero h1{
+    font-size: 4.75rem !important;
+    font-weight: 700;
     color: #ffffff;
     margin-bottom: 2rem;
     line-height: 1.2;
 }
+
+
 @media (min-width: 768px) {
     section.hero h1 {
         font-size: 4.5rem;
@@ -85,11 +83,11 @@ section.hero h1 span.block {
     background-clip: text;
     color: transparent;
     background-image: linear-gradient(to right, #0A4B73, #34495E);
-    font-weight: 400;
+    font-weight: 700;
 }
 section.hero p {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.35rem;
+    color: rgba(255, 255, 255, 0.911);
     max-width: 32rem;
     margin-left: auto;
     margin-right: auto;
@@ -181,7 +179,7 @@ section.hero .buttons button.secondary svg {
 /* ---- reset ---- */ 
 body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } 
 canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ 
-#particles-js{ position:absolute; width: 100%; height: 100%; background-color: #b61924; background-image: url("/assets/images/hero/about-bg.jpg"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } 
+#particles-js{ position:absolute; width: 100%; height: 100%; background-color: #b61924; background-image: url("/assets/images/hero/Serene\ Wind\ Farm\ Landscape.png"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } 
 /* ---- stats.js ---- */ 
 .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } 
 .js-count-particles{ font-size: 1.1em; } 

@@ -9,6 +9,7 @@
     <!-- external css -->
     <link href="assets/css/navfoot.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/parallex.css">
 
     <!--bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,10 +21,12 @@
 
     <!-- icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/parallex.css">
+
 
     <!-- ICONS BOXICONS -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
 
@@ -43,59 +46,222 @@
 
         <h1 class="parallax home__title" data-rellax-speed="-6">mistEO</h1>
         <span class="parallax home__subtitle" data-rellax-speed="-5">Climate Change. Covered.</span>
-
-        <div class="home__scroll">
-            <a href="#section"><i class='bx bx-mouse'></i></a>
-        </div>
     </div>
 
 
     <!-- ===== ABOUT SECTION =====-->
-    <section class="l-section" id="section">
-        <div class="section">
-            <div class="section__data">
-                <h2 class="section__title">About us</h2>
-                <p class="section__text">mistEO is a CLIMATE FINTECH company providing climate change adaptation
-                    know-how and technologies to private enterprises and governments to overcome the cost of climate
-                    change.<br>
-                    We integrate a wide range of data sources, including satellite imagery, IoT, stationary sensors,
-                    radar and third party data into our proprietary platform to deliver climate intelligence services.<br>
 
-                    Our proprietary models have been developed with academic and industry experts in agronomy, animal
-                    husbandry and other niche fields to unlock insights that were previously unachievable.</p>
-            </div>
-
-            <img src="" alt="" class="sec-img">
-        </div>
-    </section>
     <!-- ===== what we do SECTION =====-->
+    <div class="text-center">
+        <h2>What We Do</h2>
+    </div>
+
+    <div class="container swiper-container-wrapper">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Card 1 -->
+                <div class="swiper-slide">
+                    <div class="card-content">
+                        <div class="card-title">Hyper-local Weather Forecasting</div>
+                        <div class="card-desc">Implement data-driven planning to reduce disruptions, manage insurance,
+                            and optimize field operations.</div>
+                    </div>
+                    <div class="card-icon">
+                        <img src="assets/images/elements/logo-1 home.png" alt="Operational Risk">
+                    </div>
+                </div>
+
+                <!-- Repeat all other cards exactly as before -->
+                <!-- Card 2 -->
+                <div class="swiper-slide">
+                    <div class="card-content">
+                        <div class="card-title">Climate Risk Alerts & Early Warning Systems</div>
+                        <div class="card-desc">Receive precise, localized forecasts that help you make real-time
+                            decisions across critical operations.</div>
+                    </div>
+                    <div class="card-icon">
+                        <img src="assets/images/elements/logo-2-home.png" alt="Weather Forecast">
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="swiper-slide">
+                    <div class="card-content">
+                        <div class="card-title">Climate Risk Modeling</div>
+                        <div class="card-desc">Analyze climate risk and its potential financial impact across assets or
+                            regions.</div>
+                    </div>
+                    <div class="card-icon">
+                        <img src="assets/images/elements/logo-3-home.png" alt="Analytics">
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="swiper-slide">
+                    <div class="card-content">
+                        <div class="card-title">Parametric Insurance Solutions</div>
+                        <div class="card-desc">Utilize climate-aware finance tools to manage weather-related costs and
+                            support sustainable investments.</div>
+                    </div>
+                    <div class="card-icon">
+                        <img src="assets/images/elements/logo-4-home.png" alt="Finance">
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="swiper-slide">
+                    <div class="card-content">
+                        <div class="card-title">Climate-Based Financial Tools</div>
+                        <div class="card-desc">Prepare for extreme events with predictive insights and mitigation
+                            strategies tailored to your region.</div>
+                    </div>
+                    <div class="card-icon">
+                        <img src="assets/images/elements/logo-5-home.png" alt="Disaster">
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="swiper-slide">
+                    <div class="card-content">
+                        <div class="card-title">Infrastructure Planning</div>
+                        <div class="card-desc">Build resilient infrastructure by integrating climate intelligence into
+                            planning and development processes.</div>
+                    </div>
+                    <div class="card-icon">
+                        <img src="assets/images/elements/logo-6-home.png" alt="Infrastructure">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+    <!-- Product Section -->
+    <div class="text-center">
+        <h2>Our Product Suite</h2>
+    </div>
 
+    <section class="cards-section-product">
+
+        <a href="solutions/cdi-beef.html" class="card-product bg-img-1">
+            <div class="card-content-product">
+                <h3>CLIMATE DECISION INTELLIGENCE-BEEF</h3>
+                <p>Make smarter business decisions by factoring in accurate data about our changing climate</p>
+            </div>
+        </a>
+
+        <a href="solutions/indrawheather.html" class="card-product bg-img-2">
+            <div class="card-content-product">
+                <h3>INDRAWEATHER</h3>
+                <p>Affordable hyperlocal weather forecasting at a 3km resolution.</p>
+            </div>
+        </a>
+
+        <a href="solutions/cdi-diary.html" class="card-product bg-img-3">
+            <div class="card-content-product">
+                <h3>CLIMATE DECISION INTELLIGENCE-DAIRY</h3>
+                <p>CDI Dairy delivers precise heat load index data to optimize milk production and cow comfort.</p>
+            </div>
+        </a>
+    </section>
+
+    <section class="section-livestock">
+        <div class="background-words">CDI Livestock by mistEO</div>
+
+        <h1>
+            <span>Track Progress</span>
+
+        </h1>
+
+        <img src="assets/images/Blog/CDI-Forecast-1024.png" alt="Phone Mockup" class="phone-image">
+        <img src="assets/images/Blog/CDI-My-Site-1024.png" alt="Phone Mockup" class="phone-image2">
+
+        <div>
+            <h3 style="color: #0a4b73; font-size: 26px; font-weight: 500; margin-bottom: 1.5rem;">CDI Livestock by
+                mistEO <br>is the premier risk management tool for Feedlot and Dairy</h3>
+        </div>
+
+        <div class="info-boxes">
+            <div class="info-box"><strong>Hyperlocal Weather Forecasting</strong> <BR>
+                We forecast at a 3km resolution to provide pinpoint accuracy for the most critical of services</div>
+            <div class="info-box"><strong>Comprehensive Early Warning </strong><br> Identify heatstress onset up to 7
+                days in
+                advance and to the hour with SMS, Email and App notifications</div>
+            <div class="info-box"><strong>Risk Management Toolset</strong><br> Build and executie heat load plans as
+                well as
+                track and report on heat events</div>
+            <!-- <div class="info-box"><strong>Automated  Heat Load Monitoring</strong> <br>Continuously monitor environmental data to trigger automated alerts and responses, ensuring real-time decision support during high-risk weather conditions.</div> -->
+        </div>
+
+        <button class="download-btn" id="openModalBtn">SIGN UP NOW »</button>
+
+        <!-- Modal -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal">
+                <div class="close-btn" id="closeBtn">&times;</div>
+                <h2>Sign Up for the CDI Platform</h2>
+                <form>
+                    <input type="email" placeholder="Email*" required class="full-width" />
+                    <input type="text" placeholder="Full Name*" required />
+                    <input type="tel" placeholder="Phone Number*" required />
+                    <input type="text" placeholder="Feedlot / Company Name" />
+                    <input type="text" placeholder="Farm Size (e.g., in SCU)" />
+                    <input type="number" placeholder="Number of sites" />
+                    <div class="radio-group">
+                        <label>Weather station on site?</label>
+                        <label><input type="radio" name="weather" value="yes" /> Yes</label>
+                        <label><input type="radio" name="weather" value="no" /> No</label>
+                    </div>
+                    <textarea placeholder="Site manager email + latitude/longitude of each site"
+                        class="full-width"></textarea>
+                    <input type="text" placeholder="Company Street Address" class="full-width" />
+                    <input type="text" placeholder="Street Address 2" />
+                    <input type="text" placeholder="City / Suburb" />
+                    <input type="text" placeholder="Postal Code" />
+                    <input type="text" placeholder="State / Region" />
+                    <input type="text" placeholder="Country / Region" value="Australia" />
+                    <input type="text" placeholder="Referred by another feedlot?" class="full-width" />
+                    <div class="checkbox-group full-width">
+                        <label><input type="checkbox" required /> I agree to the <a href="#" target="_blank">Terms and
+                                Conditions</a></label>
+                        <label><input type="checkbox" /> I agree to receive other communications from misteo.co</label>
+                    </div>
+                    <button type="submit">Create Account</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
     <!-- footer -->
 
     <div id="footer"></div>
 
 
-    <!-- bootstrap js -->
+    <!-- BOOTSTRAP BUNDLE JS (Includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
-    <!-- external js -->
-    <!-- <script src="assets/js/navfoot.js"></script> -->
-    <script src="assets/js/script.js"></script>
 
-    <!-- RELLAX JS -->
-    <script src="assets/js/rellax.min.js"></script>
-
-    <!-- GSAP -->
+    <!-- GSAP (Animations) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 
-    <!-- SCROLL REVEAL -->
+    <!-- SCROLLREVEAL (Reveal animations on scroll) -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- MAIN JS -->
+    <!-- RELLAX (Parallax scrolling effect) -->
+    <script src="assets/js/rellax.min.js"></script>
+
+
+    <!-- Move Swiper JS before custom scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <!-- CUSTOM JS FILES -->
     <script src="assets/js/parallex.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/style.js"></script>
 
 </body>
 

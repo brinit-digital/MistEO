@@ -53,7 +53,9 @@ body {
     text-decoration: none;
     color: white;
 }
-
+.img-left{
+    border-radius: 10px;
+}
 /* icon section */
 
 

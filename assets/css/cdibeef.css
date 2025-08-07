@@ -7,7 +7,7 @@ body {
 .hero-banner {
     /* position: relative; */
     background: url('../images/Blog/Cattle-Farmer-with-iPad-blg-lg.jpg') no-repeat center/cover fixed;
-    height: 80vh;
+    height: 70vh;
     margin-bottom: 6rem;
 }
 
@@ -51,6 +51,9 @@ body {
 .link-home {
     text-decoration: none;
     color: white;
+}
+.img-left{
+    border-radius: 10px;
 }
 
 /* icon section */

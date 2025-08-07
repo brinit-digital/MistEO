@@ -21,24 +21,23 @@
   });
 
 //   modal pop up
- const openModal = document.getElementById('openModalBtn');
-  const closeModal = document.getElementById('closeBtn');
-  const modalOverlay = document.getElementById('modalOverlay');
+  const openModal = document.getElementById("openModal");
+  const closeModal = document.getElementById("closeModal");
+  const modal = document.getElementById("signupModal");
 
-  openModal.addEventListener('click', () => {
-    modalOverlay.style.display = 'flex';
+  openModal.addEventListener("click", () => {
+    modal.style.display = "flex";
   });
 
-  closeModal.addEventListener('click', () => {
-    modalOverlay.style.display = 'none';
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
   });
 
-  modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
-      modalOverlay.style.display = 'none';
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
     }
   });
-
 // GSAP and ScrollTrigger Initialization gsap.registerPlugin(ScrollTrigger);
 
   const tl = gsap.timeline({

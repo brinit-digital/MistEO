@@ -193,43 +193,62 @@
             <!-- <div class="info-box"><strong>Automated  Heat Load Monitoring</strong> <br>Continuously monitor environmental data to trigger automated alerts and responses, ensuring real-time decision support during high-risk weather conditions.</div> -->
         </div>
 
-        <button class="download-btn" id="openModalBtn">SIGN UP NOW »</button>
+  <!-- Trigger Button -->
 
-        <!-- Modal -->
-        <div class="modal-overlay" id="modalOverlay">
-            <div class="modal">
-                <div class="close-btn" id="closeBtn">&times;</div>
-                <h2>Sign Up for the CDI Platform</h2>
-                <form>
-                    <input type="email" placeholder="Email*" required class="full-width" />
-                    <input type="text" placeholder="Full Name*" required />
-                    <input type="tel" placeholder="Phone Number*" required />
-                    <input type="text" placeholder="Feedlot / Company Name" />
-                    <input type="text" placeholder="Farm Size (e.g., in SCU)" />
-                    <input type="number" placeholder="Number of sites" />
-                    <div class="radio-group">
-                        <label>Weather station on site?</label>
-                        <label><input type="radio" name="weather" value="yes" /> Yes</label>
-                        <label><input type="radio" name="weather" value="no" /> No</label>
-                    </div>
-                    <textarea placeholder="Site manager email + latitude/longitude of each site"
-                        class="full-width"></textarea>
-                    <input type="text" placeholder="Company Street Address" class="full-width" />
-                    <input type="text" placeholder="Street Address 2" />
-                    <input type="text" placeholder="City / Suburb" />
-                    <input type="text" placeholder="Postal Code" />
-                    <input type="text" placeholder="State / Region" />
-                    <input type="text" placeholder="Country / Region" value="Australia" />
-                    <input type="text" placeholder="Referred by another feedlot?" class="full-width" />
-                    <div class="checkbox-group full-width">
-                        <label><input type="checkbox" required /> I agree to the <a href="#" target="_blank">Terms and
-                                Conditions</a></label>
-                        <label><input type="checkbox" /> I agree to receive other communications from misteo.co</label>
-                    </div>
-                    <button type="submit">Create Account</button>
-                </form>
-            </div>
-        </div>
+<button class="download-btn" id="openModal">SIGN UP NOW »</button>
+
+<div class="modal" id="signupModal">
+  <div class="custom-modal">
+    <button class="close-btn" id="closeModal">&times;</button>
+    <h2 class="modal-heading"> Get Started With a <span>7 Day Free</span> trial now.</h2>
+
+    <form class="signup-form">
+      <div class="form-row">
+        <input type="email" placeholder="Email*" required />
+        <input type="text" placeholder="Full Name*" required />
+      </div>
+      <div class="form-row">
+        <input type="tel" placeholder="Phone Number*" required />
+        <input type="text" placeholder="Feedlot / Company Name" />
+      </div>
+      <div class="form-row">
+        <input type="text" placeholder="Farm Size (e.g., in SCU)" />
+        <input type="number" placeholder="Number of Sites" />
+      </div>
+
+     
+
+      <textarea placeholder="Site manager email + latitude/longitude of each site"></textarea>
+
+      <input type="text" placeholder="Company Street Address" class="full-width" />
+
+      <div class="form-row">
+        <input type="text" placeholder="Street Address 2" />
+        <input type="text" placeholder="City / Suburb" />
+      </div>
+      <div class="form-row">
+        <input type="text" placeholder="Postal Code" />
+        <input type="text" placeholder="State / Region" />
+      </div>
+
+      <select class="full-width">
+        <option selected>Australia</option>
+        <option>USA</option>
+        <option>India</option>
+      </select>
+
+      <input type="text" placeholder="Referred by another feedlot?" class="full-width" />
+
+      <div class="checkbox-group ">
+        <label><input type="checkbox" /> I agree to the <a href="privacy-policy.html">Terms and Conditions</a></label><br>
+        <label><input type="checkbox" /> I agree to receive other communications from misteo.co</label>
+      </div>
+
+      <button type="submit">Create Account</button>
+    </form>
+  </div>
+</div>
+
 
     </section>
     <!-- footer -->

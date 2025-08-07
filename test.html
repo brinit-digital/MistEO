@@ -1,108 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Infinite Icon Carousel with Hover Effects</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up Modal</title>
+  <style>
     body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f3f3;
+      padding: 50px;
     }
 
-    .icon-carousel {
-        overflow: hidden;
-        padding: 20px 0;
-        background: #fff;
+    .download-btn {
+      padding: 12px 25px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
     }
 
-    .icon-track {
-        display: flex;
-        width: max-content;
-        animation: scroll-left 30s linear infinite;
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
     }
 
-    /* Pause carousel on hover */
-    .icon-carousel:hover .icon-track {
-        animation-play-state: paused;
+    .modal {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      animation: popUp 0.3s ease-out;
+      position: relative;
     }
 
-    .logo1 {
-        text-align: center;
-        min-width: 200px;
-        margin: 0 20px;
-        transition: filter 0.3s ease, transform 0.3s ease;
+    @keyframes popUp {
+      from {opacity: 0; transform: scale(0.8);}
+      to {opacity: 1; transform: scale(1);}
     }
 
-    .logo1 img {
-        max-width: 80px;
-        margin-bottom: 10px;
-        transition: filter 0.3s ease, transform 0.3s ease;
+    .modal h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
     }
 
-    .logo1 h5 {
-        font-size: 14px;
-        color: #0a4b73;
-        transition: color 0.3s ease;
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px 20px;
     }
 
-    /* Grayscale all icons when hovering over carousel */
-    .icon-carousel:hover .logo1 {
-        filter: grayscale(100%);
-        transform: scale(1);
+    form .full-width {
+      grid-column: span 2;
     }
 
-    /* Remove grayscale and zoom on hovered icon */
-    .icon-carousel:hover .logo1:hover {
-        filter: grayscale(0%);
-        transform: scale(1.2);
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
     }
 
-    @keyframes scroll-left {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-50%);
-        }
+    textarea {
+      resize: vertical;
+      min-height: 80px;
     }
-</style>
+
+    .radio-group {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    button[type="submit"] {
+      grid-column: span 2;
+      padding: 12px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+      button[type="submit"] {
+        grid-column: span 1;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- Icon Carousel Section -->
-<div class="icon-carousel">
-    <div class="icon-track">
-        <!-- Icons - first set -->
-        <div class="logo1"><img src="../assets/images/elements/sun-cloud.png" alt=""><h5>Weather Forecast</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/warning.png" alt=""><h5>Daily & Weekly Alerts</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/data-visual.png" alt=""><h5>Modern User Interface</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/web-mobile-tab.png" alt=""><h5>Web, Mobile & Tablet</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/risk-assesment.png" alt=""><h5>Risk Assessment Calculator</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/growing-pool.png" alt=""><h5>Growing Pool of Climate Resources</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/heat-loads.png" alt=""><h5>Heat Load Plans</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/australian-support.png" alt=""><h5>Dedicated Australian Based Support Team</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/outside.png" alt=""><h5>Onsite Weather Station Integration</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/operation-effeiciency.png" alt=""><h5>Heat Load Scoring</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/ios-antro.png" alt=""><h5>IOS & Android App (Coming Soon)</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/panting-score.png" alt=""><h5>Panting Score Training</h5></div>
+<button class="download-btn" id="openModalBtn">SIGN UP NOW »</button>
 
-        <!-- Icons - duplicate set for smooth looping -->
-        <div class="logo1"><img src="../assets/images/elements/sun-cloud.png" alt=""><h5>Weather Forecast</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/warning.png" alt=""><h5>Daily & Weekly Alerts</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/data-visual.png" alt=""><h5>Modern User Interface</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/web-mobile-tab.png" alt=""><h5>Web, Mobile & Tablet</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/risk-assesment.png" alt=""><h5>Risk Assessment Calculator</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/growing-pool.png" alt=""><h5>Growing Pool of Climate Resources</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/heat-loads.png" alt=""><h5>Heat Load Plans</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/australian-support.png" alt=""><h5>Dedicated Australian Based Support Team</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/outside.png" alt=""><h5>Onsite Weather Station Integration</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/operation-effeiciency.png" alt=""><h5>Heat Load Scoring</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/ios-antro.png" alt=""><h5>IOS & Android App (Coming Soon)</h5></div>
-        <div class="logo1"><img src="../assets/images/elements/panting-score.png" alt=""><h5>Panting Score Training</h5></div>
-    </div>
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="close-btn" id="closeBtn">&times;</div>
+    <h2>Sign Up for the CDI Platform</h2>
+    <form>
+      <input type="email" placeholder="Email*" required class="full-width" />
+      <input type="text" placeholder="Full Name*" required />
+      <input type="tel" placeholder="Phone Number*" required />
+      <input type="text" placeholder="Feedlot / Company Name" />
+      <input type="text" placeholder="Farm Size (e.g., in SCU)" />
+      <input type="number" placeholder="Number of sites" />
+      <div class="radio-group">
+        <label>Weather station on site?</label>
+        <label><input type="radio" name="weather" value="yes" /> Yes</label>
+        <label><input type="radio" name="weather" value="no" /> No</label>
+      </div>
+      <textarea placeholder="Site manager email + latitude/longitude of each site" class="full-width"></textarea>
+      <input type="text" placeholder="Company Street Address" class="full-width" />
+      <input type="text" placeholder="Street Address 2" />
+      <input type="text" placeholder="City / Suburb" />
+      <input type="text" placeholder="Postal Code" />
+      <input type="text" placeholder="State / Region" />
+      <input type="text" placeholder="Country / Region" value="Australia" />
+      <input type="text" placeholder="Referred by another feedlot?" class="full-width" />
+      <div class="checkbox-group full-width">
+        <label><input type="checkbox" required /> I agree to the <a href="#" target="_blank">Terms and Conditions</a></label>
+        <label><input type="checkbox" /> I agree to receive other communications from misteo.co</label>
+      </div>
+      <button type="submit">Create Account</button>
+    </form>
+  </div>
 </div>
+
+<script>
+  const openModal = document.getElementById('openModalBtn');
+  const closeModal = document.getElementById('closeBtn');
+  const modalOverlay = document.getElementById('modalOverlay');
+
+  openModal.addEventListener('click', () => {
+    modalOverlay.style.display = 'flex';
+  });
+
+  closeModal.addEventListener('click', () => {
+    modalOverlay.style.display = 'none';
+  });
+
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+      modalOverlay.style.display = 'none';
+    }
+  });
+</script>
 
 </body>
 </html>

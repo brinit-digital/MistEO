@@ -3,185 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sign Up Modal</title>
+  <title>Signup Modal</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f3f3f3;
-      padding: 50px;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
     }
 
     .download-btn {
-      padding: 12px 25px;
-      background-color: #007BFF;
+      display: block;
+      margin: 100px auto;
+      padding: 15px 30px;
+      background-color: #003E61;
       color: white;
       border: none;
-      border-radius: 6px;
       font-size: 16px;
       cursor: pointer;
+      border-radius: 6px;
     }
 
-    .modal-overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      background: rgba(0, 0, 0, 0.6);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-    }
-
+    /* Modal styles */
     .modal {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
       width: 90%;
-      max-width: 800px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      animation: popUp 0.3s ease-out;
+      max-width: 700px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 30px;
+      border-radius: 12px;
+      animation: scaleIn 0.3s ease-in-out;
       position: relative;
     }
 
-    @keyframes popUp {
-      from {opacity: 0; transform: scale(0.8);}
-      to {opacity: 1; transform: scale(1);}
+    @keyframes scaleIn {
+      0% {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
-    .modal h2 {
-      margin-top: 0;
+    .modal-content h2 {
+      text-align: center;
       margin-bottom: 20px;
-      font-size: 24px;
-      color: #333;
     }
 
-    form {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px 20px;
+    .form-row {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
-    form .full-width {
-      grid-column: span 2;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="number"],
-    select,
-    textarea {
-      width: 100%;
+    .form-row input,
+    textarea, select {
+      flex: 1;
       padding: 10px;
+      margin: 10px 0;
+      font-size: 14px;
       border: 1px solid #ccc;
       border-radius: 6px;
-      font-size: 14px;
-      box-sizing: border-box;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 80px;
-    }
-
-    .radio-group {
-      display: flex;
-      align-items: center;
-      gap: 15px;
+      width: 100%;
     }
 
     .checkbox-group {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      margin-top: 10px;
+      margin: 10px 0;
       font-size: 14px;
     }
 
-    button[type="submit"] {
-      grid-column: span 2;
-      padding: 12px;
-      background: #007BFF;
+    .checkbox-group label {
+      margin-left: 8px;
+    }
+
+    .create-account {
+      margin-top: 20px;
+      padding: 15px;
+      width: 100%;
+      background: #003E61;
       color: white;
+      font-size: 16px;
       border: none;
       border-radius: 6px;
-      font-size: 16px;
       cursor: pointer;
     }
 
-    .close-btn {
+    .close-modal {
       position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 24px;
+      right: 15px;
+      top: 10px;
+      font-size: 22px;
       cursor: pointer;
-      color: #aaa;
+      font-weight: bold;
     }
 
-    @media (max-width: 768px) {
-      form {
-        grid-template-columns: 1fr;
-      }
-      button[type="submit"] {
-        grid-column: span 1;
+    @media (max-width: 600px) {
+      .form-row {
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
 
-<button class="download-btn" id="openModalBtn">SIGN UP NOW »</button>
+<button class="download-btn">SIGN UP NOW »</button>
 
-<!-- Modal -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal">
-    <div class="close-btn" id="closeBtn">&times;</div>
-    <h2>Sign Up for the CDI Platform</h2>
-    <form>
-      <input type="email" placeholder="Email*" required class="full-width" />
-      <input type="text" placeholder="Full Name*" required />
-      <input type="tel" placeholder="Phone Number*" required />
-      <input type="text" placeholder="Feedlot / Company Name" />
-      <input type="text" placeholder="Farm Size (e.g., in SCU)" />
-      <input type="number" placeholder="Number of sites" />
-      <div class="radio-group">
-        <label>Weather station on site?</label>
-        <label><input type="radio" name="weather" value="yes" /> Yes</label>
-        <label><input type="radio" name="weather" value="no" /> No</label>
-      </div>
-      <textarea placeholder="Site manager email + latitude/longitude of each site" class="full-width"></textarea>
-      <input type="text" placeholder="Company Street Address" class="full-width" />
+<div class="modal" id="signupModal">
+  <div class="modal-content">
+    <span class="close-modal" id="closeModal">&times;</span>
+    <h2>Create Account</h2>
+
+    <div class="checkbox-group">
+      <label>Weather station on site?</label><br>
+      <input type="radio" name="weather" id="yes"> <label for="yes">Yes</label>
+      <input type="radio" name="weather" id="no"> <label for="no">No</label>
+    </div>
+
+    <textarea placeholder="Site manager email + latitude/longitude of each site"></textarea>
+    <input type="text" placeholder="Company Street Address" />
+    
+    <div class="form-row">
       <input type="text" placeholder="Street Address 2" />
       <input type="text" placeholder="City / Suburb" />
+    </div>
+    <div class="form-row">
       <input type="text" placeholder="Postal Code" />
       <input type="text" placeholder="State / Region" />
-      <input type="text" placeholder="Country / Region" value="Australia" />
-      <input type="text" placeholder="Referred by another feedlot?" class="full-width" />
-      <div class="checkbox-group full-width">
-        <label><input type="checkbox" required /> I agree to the <a href="#" target="_blank">Terms and Conditions</a></label>
-        <label><input type="checkbox" /> I agree to receive other communications from misteo.co</label>
-      </div>
-      <button type="submit">Create Account</button>
-    </form>
+    </div>
+    <select>
+      <option selected>Australia</option>
+      <option>USA</option>
+      <option>India</option>
+      <!-- Add more countries -->
+    </select>
+    <input type="text" placeholder="Referred by another feedlot?" />
+
+    <div class="checkbox-group">
+      <input type="checkbox" id="terms" />
+      <label for="terms">I agree to the <a href="#" target="_blank">Terms and Conditions</a></label>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="marketing" />
+      <label for="marketing">I agree to receive other communications from misteo.co</label>
+    </div>
+
+    <button class="create-account">Create Account</button>
   </div>
 </div>
 
 <script>
-  const openModal = document.getElementById('openModalBtn');
-  const closeModal = document.getElementById('closeBtn');
-  const modalOverlay = document.getElementById('modalOverlay');
+  const modal = document.getElementById("signupModal");
+  const openBtn = document.querySelector(".download-btn");
+  const closeBtn = document.getElementById("closeModal");
 
-  openModal.addEventListener('click', () => {
-    modalOverlay.style.display = 'flex';
+  openBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
   });
 
-  closeModal.addEventListener('click', () => {
-    modalOverlay.style.display = 'none';
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
   });
 
-  modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
-      modalOverlay.style.display = 'none';
+  window.addEventListener("click", (e) => {
+    if (e.target == modal) {
+      modal.style.display = "none";
     }
   });
 </script>

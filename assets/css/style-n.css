@@ -18,7 +18,7 @@
 
     font-family: 'DM Sans', sans-serif;
     margin: 0;
-    background-color: #e7e7e5d8;
+    /* background-color: #e7e7e5d8; */
  }
 section.hero {
     position: relative;
@@ -189,6 +189,13 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
 #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } 
 .count-particles{ border-radius: 0 0 3px 3px; }
 
+
+
+/*********************************************
+
+About Section
+
+**********************************************/
 .about-section {
     display: flex;
     position: relative;
@@ -216,7 +223,7 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
 
 @media(min-width: 1440px) {
     .about-section {
-        background:linear-gradient(180deg,#faf5ff,#fff3f3 77.67%,#fefefe) no-repeat bottom;
+        /* background:linear-gradient(180deg,#faf5ff,#fff3f3 77.67%,#fefefe) no-repeat bottom; */
         background-size: 137.1428571429rem auto;
         padding: 13.5714285714rem 4.9285714286rem 8.3571428571rem 8.5714285714rem
     }
@@ -804,4 +811,222 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
 
 .buttn:active {
     background: #17334f
+}
+
+
+
+/**************************
+
+Mission 
+
+****************************/
+
+div.mission {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    /* background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(37 171 254 / 30%) 50%, rgba(0, 0, 0, 0) 100%); */
+}
+div.mission .content {
+    position: relative;
+    /* background-image: linear-gradient(135deg, #0A4B73, #34495e80); */
+    border-radius: 1.5rem;
+    padding: 2rem;
+    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(5.9px);
+-webkit-backdrop-filter: blur(5.9px);
+background: rgba(255, 255, 255, 0.48);
+box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 60px 30px rgba(255, 255, 255, 3);
+}
+@media (min-width: 768px) {
+    div.mission .content {
+        padding: 3rem;
+    }
+}
+div.mission .content .gradient-blob-1 {
+    position: absolute;
+    right: -2.5rem;
+    top: -3.5rem;
+    width: 21rem;
+    height: 19rem;
+    background-color: #0A4B73;
+    border-radius: 9999px;
+    mix-blend-mode: multiply;
+    filter: blur(30px);
+    opacity: 0.2;
+}
+div.mission .content .gradient-blob-2 {
+    position: absolute;
+    left: -2.5rem;
+    bottom: -3.5rem;
+    width: 21rem;
+    height: 19rem;
+    background-color: #93c5fd;
+    border-radius: 9999px;
+    mix-blend-mode: multiply;
+    filter: blur(30px);
+    opacity: 0.4;
+}
+div.mission h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 2rem;
+    position: relative;
+}
+div.mission .inner {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+    position: relative;
+      background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+}
+div.mission p {
+    font-size: 1.125rem;
+    color: #000000;
+}
+
+
+/* What We Do Contanir */
+.what-we-do {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  /* height: 100vh; */
+  /* min-height: 400px; */
+  /* background-color: #fbfbfb; */
+    
+
+  .block-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin: 32px;
+    transition: 250ms;
+    perspective: 500px;
+
+    .btn-back {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      width: inherit;
+      height: inherit;
+      border-radius: 32px;
+      transition: 250ms;
+      transform-style: preserve-3d;
+      transform-origin: bottom right;
+      transform: rotateZ(8deg);
+      will-change: transform;
+      top: -110px;
+      left: 100px;
+      /* box-shadow: 16px 0 40px #e4e4e4; */
+    }
+
+    .btn-back-1 {
+      background: linear-gradient(135deg, #4682eb -20%, #01beff 120%);
+      /* background: linear-gradient(135deg, #4682eb -20%, #01beff 120%), url(/assets/images/about/clim.png) ; */
+      /* background: url(/assets/images/about/clim.png) ; */
+    }
+
+    .btn-back-2 {
+      background: linear-gradient(135deg, #5c46eb -20%, #013fff 120%);
+      /* background: url(/assets/images/about/co.png) ; */
+
+    }
+
+    .btn-back-3 {
+      background: linear-gradient(135deg, #ebe046 -20%, #ffac01 120%);
+      /* background: url(/assets/images/about/earth.png) ; */
+
+    }
+
+    .btn-front {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: inherit;
+      height: inherit;
+      border-radius: 32px;
+      background-color: #ffffff33;
+      backdrop-filter: blur(20px);
+      transition: 250ms;
+      transform-style: preserve-3d;
+      transform-origin: top left;
+      overflow: hidden;
+      padding: 40px 30px 30px 40px;
+      border: 1px solid rgb(255, 255, 255);
+      box-shadow: 0px 0 10px #afafaf44;
+
+
+      svg.frame {
+        width: inherit;
+        height: inherit;
+
+        rect {
+          width: inherit;
+          height: inherit;
+          fill: none;
+          stroke-width: 4;
+        }
+      }
+
+      svg.icon {
+        position: absolute;
+        inset: 50% 0 0 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &:hover {
+      & > .btn-back {
+        /* transform: translateZ(20px) rotateZ(15deg) rotateX(-20deg) rotateY(-20deg); */
+        transform: translateZ(20px) rotateZ(10deg) rotateX(0deg) rotateY(0deg);
+      }
+
+      & > .btn-front {
+        /* transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg); */
+        transform: translateZ(20px) translateY(-20px) rotateX(0deg) rotateY(0deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+.grid-col{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+@media (max-width:991px){
+    .what-we-do{
+        width: 90%;
+    }
+    .grid-col{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

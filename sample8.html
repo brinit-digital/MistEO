@@ -1,0 +1,53 @@
+<style>
+    .card {
+  position: relative;
+  width: 300px;
+  padding: 30px;
+  border-radius: 25px;
+  margin: 20px;
+  color: #111;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+}
+
+/* Individual Cards */
+.card.mitigation {
+  background: radial-gradient(circle at 30% 30%, #4cb8ff, #005eff);
+}
+
+.card.decarbonisation {
+  background: radial-gradient(circle at 30% 30%, #7762ff, #1100ff);
+  color: white;
+}
+
+.card.adaptation {
+  background: radial-gradient(circle at 30% 30%, #ffd86f, #ff9900);
+}
+
+/* Optional: Text Shadow for Depth */
+.card h2, .card p {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+
+<div class="card mitigation">
+  <h2>Climate Mitigation</h2>
+  <p>Efforts aimed at stopping or reducing the emission of greenhouse gases...</p>
+</div>
+
+<div class="card decarbonisation">
+  <h2>Decarbonisation</h2>
+  <p>Removal of carbon dioxide and other greenhouse gases...</p>
+</div>
+
+<div class="card adaptation">
+  <h2>Climate Adaptation</h2>
+  <p>Encompasses strategies and measures taken to address the impacts...</p>
+</div>

@@ -1,0 +1,219 @@
+<!-- <style>
+    body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 400px;
+  background-color: #fbfbfb;
+
+  .block-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 32px;
+    transition: 250ms;
+    perspective: 500px;
+
+    .btn-back {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      width: inherit;
+      height: inherit;
+      border-radius: 32px;
+      transition: 250ms;
+      transform-style: preserve-3d;
+      transform-origin: bottom right;
+      transform: rotateZ(15deg);
+      will-change: transform;
+      box-shadow: 16px 0 40px #e4e4e4;
+    }
+
+    .btn-back-1 {
+      background: linear-gradient(135deg, #4682eb -20%, #01beff 120%);
+    }
+
+    .btn-back-2 {
+      background: linear-gradient(135deg, #5c46eb -20%, #013fff 120%);
+    }
+
+    .btn-back-3 {
+      background: linear-gradient(135deg, #ebe046 -20%, #ffac01 120%);
+    }
+
+    .btn-front {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: inherit;
+      height: inherit;
+      border-radius: 32px;
+      background-color: #ffffff33;
+      backdrop-filter: blur(20px);
+      transition: 250ms;
+      transform-style: preserve-3d;
+      transform-origin: top left;
+      overflow: hidden;
+
+      svg.frame {
+        width: inherit;
+        height: inherit;
+
+        rect {
+          width: inherit;
+          height: inherit;
+          fill: none;
+          stroke-width: 4;
+        }
+      }
+
+      svg.icon {
+        position: absolute;
+        inset: 50% 0 0 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &:hover {
+      & > .btn-back {
+        transform: translateZ(20px) rotateZ(15deg) rotateX(-20deg) rotateY(-20deg);
+      }
+
+      & > .btn-front {
+        transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+}
+</style>
+
+<div class="block-container">
+  <div class="btn-back btn-back-1"></div>
+  <div class="btn-front">
+    <h4>Climate Mitigation</h4>
+    <p>Efforts aimed at stopping or reducing the emission of greenhouse gases, into the atmosphere and slow down the pace of climate change.</p>
+  </div>
+</div>
+<div class="block-container">
+  <div class="btn-back btn-back-2"></div>
+  <div class="btn-front">
+  </div>
+</div>
+<div class="block-container">
+  <div class="btn-back btn-back-3"></div>
+  <div class="btn-front">
+  </div>
+</div> -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+<style>
+    body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 400px;
+  background-color: #fbfbfb;
+    }
+
+  .block-container {
+    position: relative;
+    width: 80%; /* Adjusted to fit content */
+    height: 150px; /* Adjusted to fit content */
+    margin: 32px;
+    transition: 250ms;
+    perspective: 500px;
+  }
+
+    .btn-back {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      width: inherit;
+      height: inherit;
+      border-radius: 32px;
+      transition: 250ms;
+      transform-style: preserve-3d;
+      transform-origin: bottom right;
+      transform: rotateZ(15deg);
+      will-change: transform;
+      box-shadow: 16px 0 40px #e4e4e4;
+    }
+
+    .btn-back-1 {
+      background: linear-gradient(135deg, #4682eb -20%, #01beff 120%);
+    }
+
+    .btn-back-2 {
+      background: linear-gradient(135deg, #5c46eb -20%, #013fff 120%);
+    }
+
+    .btn-back-3 {
+      background: linear-gradient(135deg, #ebe046 -20%, #ffac01 120%);
+    }
+
+    .btn-front {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: inherit;
+      height: inherit;
+      border-radius: 32px;
+      background-color: #ffffff33;
+      backdrop-filter: blur(20px);
+      transition: 250ms;
+      transform-style: preserve-3d;
+      transform-origin: top left;
+      overflow: hidden;
+
+    }
+
+    &:hover {
+      & > .btn-back {
+        transform: translateZ(20px) rotateZ(15deg) rotateX(-20deg) rotateY(-20deg);
+      }
+
+      & > .btn-front {
+        transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
+      }
+    }
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+}
+</style>
+
+<div class="block-container">
+  <div class="btn-back btn-back-1"></div>
+  <div class="btn-front">
+    <h4>Climate Mitigation</h4>
+    <p>Efforts aimed at stopping or reducing the emission of greenhouse gases, into the atmosphere and slow down the pace of climate change.</p>
+  </div>
+</div>
+<div class="block-container">
+  <div class="btn-back btn-back-2"></div>
+  <div class="btn-front">
+    <h4>Decarbonisation</h4>
+    <p>Removal of carbon dioxide and other greenhouse gases that have already been emitted into the atmosphere to bring the planet back to natural levels.</p>
+  </div>
+</div>
+<div class="block-container">
+  <div class="btn-back btn-back-3"></div>
+  <div class="btn-front">
+    <h4>Climate Adaptation</h4>
+    <p>Encompasses strategies and measures taken to address the impacts of climate change that are already occurring or expected to occur. It involves adjusting to changing climate conditions and enhancing resilience.</p>
+  </div>
+</div>

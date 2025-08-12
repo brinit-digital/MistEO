@@ -68,3 +68,10 @@
     stagger: 0.3,
     ease: "power3.out"
   }, "-=0.5");
+
+
+  // industries we serve
+ 
+document.querySelectorAll(".carousel-track").forEach(track => {
+  track.innerHTML += track.innerHTML; // clone for seamless loop
+});

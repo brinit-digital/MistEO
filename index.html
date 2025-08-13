@@ -54,36 +54,15 @@
   </div>
   <!-- Top overlapping banner -->
 
-  <div class="first-banner "
-    style="position: relative; margin-top: -140px;margin-left: 11rem;margin-right: 11rem; z-index: 1888; border-radius: 30px;padding: 0; background-color: rgba(255, 255, 255, 0.514); backdrop-filter: blur(5px);">
-    <div>
-      <div style="display: flex; justify-content: center; border-radius: 30px; text-align: center; ">
-
-
-        <section style="display: flex; justify-content: center; align-items: center; gap: 80px; padding: 45px 20px; ">
-          <div style="text-align: center; ">
-            <h2 style="font-size: 1.7rem; font-weight: bold; color: #0c345f; margin: 0; ">mistEO , Turning Climate
-              Challenges into Resilient Opportunities
-            </h2>
-            <p style="font-size: 1.1rem; color: #434444; margin-top: 9px;"> From pinpoint forecasts to strategic risk
-              management - enabling faster, smarter climate decisions when it matters most
-            </p>
-          </div>
-          <!-- <div style="text-align: center;">
-        <h2 style="font-size: 1.1rem; font-weight: bold; color: #1f2b38; margin: 0; ">Hyper-Local Accuracy</h2>
-        <p style="font-size: .76rem; color: #374151; margin-top: 5px;"> Weather forecasts at a 3km resolution for precision decisions.
-    </div>
-    <div style="text-align: center;">
-         <h2 style="font-size: 1.1rem; font-weight: bold; color: #1f2b38; margin: 0; ">Hyper-Local Accuracy</h2>
-        <p style="font-size: .76rem; color: #374151; margin-top: 5px;"> Weather forecasts at a 3km resolution for precision decisions.
-    </div>
-    <div style="text-align: center;">
-        <h2 style="font-size: 1.1rem; font-weight: bold; color: #1f2b38; margin: 0; ">Hyper-Local Accuracy</h2>
-        <p style="font-size: .76rem; color: #374151; margin-top: 5px;"> Weather forecasts at a 3km resolution for precision decisions.
-    </div> -->
-        </section>
-      </div>
-
+  <div class="first-banner">
+    <div class="first-banner-div">
+      <section class="first-banner-section">
+        <div class="first-banner-content">
+          <h2 class="first-banner-title">mistEO , Turning Climate Challenges into Resilient Opportunities</h2>
+          <p class="first-banner-subtitle"> From pinpoint forecasts to strategic risk
+            management - enabling faster, smarter climate decisions when it matters most</p>
+        </div>
+      </section>
     </div>
   </div>
 
@@ -91,7 +70,6 @@
   <!-- ===== ABOUT SECTION =====-->
   <section class="section-why-misteo mt-3">
     <div class="wrap">
-
       <div class="left">
         <div class="eyebrow">About mistEO</div>
         <h1 class="why-head">Built for a Changing Climate</h1>
@@ -150,10 +128,8 @@
 
           <!-- image card -->
           <div class="cards" style="height:360px;">
-
             <img src="assets/images/elements/why misteo -img.png" alt="Instructor Image" />
           </div>
-
           <!-- dotted decorative grid -->
           <div class="dots" aria-hidden="true"></div>
         </div>
@@ -256,7 +232,6 @@
             </div>
           </div>
         </div>
-
       </div>
 
       <!-- Indicators -->
@@ -276,7 +251,6 @@
   </div>
 
   <section class="cards-section-product">
-
     <a href="solutions/cdi-beef.html" class="card-product bg-img-1">
       <div class="card-content-product">
         <h3>Climate Decision Intelligence-Beef</h3>
@@ -332,17 +306,12 @@
   <!-- api section -->
   <section class="section-livestock">
     <div class="background-words">CDI Livestock by mistEO</div>
-
     <h1>
       <span>Track Progress</span>
-
     </h1>
-
     <img src="assets/images/Blog/api-img.png" alt="Phone Mockup" class="phone-image">
-    <!-- <img src="assets/images/Blog/CDI-My-Site-1024-c.png" alt="Phone Mockup" class="phone-image2"> -->
-
     <div>
-      <h3 style="color: #0a4b73; font-size: 26px; font-weight: 500; margin-bottom: 1.5rem;">CDI Livestock by
+      <h3 class="cdi-live-subheading">CDI Livestock by
         mistEO <br>is the premier risk management tool for Feedlot and Dairy</h3>
     </div>
 
@@ -380,9 +349,6 @@
             <input type="text" placeholder="Farm Size (e.g., in SCU)" />
             <input type="number" placeholder="Number of Sites" />
           </div>
-
-
-
           <textarea placeholder="Site manager email + latitude/longitude of each site"></textarea>
 
           <input type="text" placeholder="Company Street Address" class="full-width" />
@@ -414,8 +380,6 @@
         </form>
       </div>
     </div>
-
-
   </section>
 
   <!-- insight section -->
@@ -427,7 +391,7 @@
       <p>The climate is changing and so is the way we prepare for it. Explore our latest research, industry
         updates, and expert analyses to stay ahead of the trends shaping tomorrow’s climate-resilient
         businesses.</p>
-      <a href="#" class="btn">Explore more</a>
+      <a href="insights.html" class="btn">Explore more</a>
     </div>
 
     <!-- Right Cards -->
@@ -499,8 +463,6 @@
     </div>
   </section>
 
-
-
   <!-- footer -->
 
   <div id="footer"></div>
@@ -533,40 +495,6 @@
   <script src="assets/js/script.js"></script>
   <script src="assets/js/style.js"></script>
 
-  <script>
-    const counters = document.querySelectorAll(".counter");
-
-    const startCounter = (counter) => {
-      const target = +counter.getAttribute("data-target");
-      const increment = target / 100;
-      let count = 0;
-
-      const updateCounter = () => {
-        count += increment;
-        if (count < target) {
-          counter.textContent = Math.ceil(count) + "+";
-          requestAnimationFrame(updateCounter);
-        } else {
-          counter.textContent = target + "+";
-        }
-      };
-
-      updateCounter();
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCounter(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    counters.forEach(counter => {
-      observer.observe(counter);
-    });
-  </script>
 </body>
 
 </html>

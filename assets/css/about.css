@@ -12,7 +12,7 @@
     box-sizing: border-box;
 }
  body {
-    font-family: 'DM Sans', sans-serif;
+    
     margin: 0;
     background-color: #e7e7e5d8;
  }
@@ -191,7 +191,7 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
     display: flex;
     position: relative;
     padding: 5.7857142857rem 0 5.1428571429rem;
-    background: url(/grid/grid_360.svg) repeat-y top;
+    background: url(/grid/grid_360.svg) repeat-y top; 
     background-size: 25.7142857143rem auto
 }
 

@@ -4,10 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
- body {
-     
-      font-family: 'DM Sans', sans-serif;
-    }
+
  /* HERO SECTION */
 .hero-banner {
   background: url('../images/hero/contact-bg.png') no-repeat  center/cover fixed;

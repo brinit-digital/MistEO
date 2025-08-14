@@ -4,10 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
- body {
-     
-      font-family: 'DM Sans', sans-serif;
-    }
  /* HERO SECTION */
 .hero-banner {
   background: url('../images/hero/license-agreement-bg.webp') no-repeat  center/cover fixed;

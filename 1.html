@@ -28,6 +28,12 @@
     max-width: 150px;
     height: auto;
 }
+/* Hide close button by default */
+.mobile-close-btn {
+    display: none;
+}
+
+
 
 /* Hover dropdown on desktop */
 @media (min-width: 992px) {
@@ -55,6 +61,18 @@
     .navbar-collapse.show {
         right: 0;
     }
+    .mobile-close-btn {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: #0a4b73;
+        cursor: pointer;
+    }
+   
 }
 
 /* Overlay blur */
@@ -99,6 +117,8 @@
     </button>
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+      <!-- Close Button for Mobile -->
+      <button class="mobile-close-btn">&times;</button>
       <ul class="navbar-nav me-4 mb-2 mb-lg-0">
         <li class="nav-item mx-2">
           <a class="nav-link" href="../index.html">Home</a>
@@ -106,7 +126,7 @@
         <li class="nav-item dropdown mx-2 hover-dropdown">
           <div class="d-flex align-items-center">
             <a class="nav-link" href="../solutions.html">Solutions</a>
-            <a class="nav-link dropdown-toggle ms-1" href="#" id="solutionsToggle" role="button"></a>
+            <a class="nav-link dropdown-toggle ms-1" href="#" id="solutionsToggle"></a>
           </div>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="../solutions/indrawheather.html">IndraWeather</a></li>
@@ -115,9 +135,7 @@
           </ul>
         </li>
         <li class="nav-item dropdown mx-2 hover-dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="companyDropdown">
-            Company
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" id="companyToggle">Company</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="../about.html">About US</a></li>
             <li><a class="dropdown-item" href="../team.html">Our Team</a></li>
@@ -141,8 +159,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const toggler = document.querySelector(".navbar-toggler");
     const navbarMenu = document.querySelector("#navbarMenu");
     const overlay = document.querySelector("#overlay");
+    const closeBtn = document.querySelector(".mobile-close-btn");
+
     const solutionsToggle = document.querySelector("#solutionsToggle");
     const solutionsDropdown = solutionsToggle.closest(".dropdown").querySelector(".dropdown-menu");
+
+    const companyToggle = document.querySelector("#companyToggle");
+    const companyDropdown = companyToggle.closest(".dropdown").querySelector(".dropdown-menu");
 
     // Open/close mobile menu
     toggler.addEventListener("click", function() {
@@ -150,13 +173,20 @@ document.addEventListener("DOMContentLoaded", function() {
         overlay.classList.toggle("active");
     });
 
-    // Close when clicking outside
-    overlay.addEventListener("click", function() {
+    // Close button click
+    closeBtn.addEventListener("click", function() {
         navbarMenu.classList.remove("show");
         overlay.classList.remove("active");
     });
 
-    // Navbar scroll effect
+    // Overlay click closes menu
+    overlay.addEventListener("click", function() {
+        navbarMenu.classList.remove("show");
+        overlay.classList.remove("active");
+        document.querySelectorAll(".dropdown-menu.show").forEach(menu => menu.classList.remove("show"));
+    });
+
+    // Scroll navbar background
     window.addEventListener("scroll", function() {
         const navbar = document.querySelector(".navbar");
         if (window.scrollY > 50) {
@@ -166,10 +196,24 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Mobile dropdown toggle (arrow click)
+    // Mobile dropdown toggles
     solutionsToggle.addEventListener("click", function(e) {
         e.preventDefault();
         solutionsDropdown.classList.toggle("show");
+        companyDropdown.classList.remove("show");
+    });
+
+    companyToggle.addEventListener("click", function(e) {
+        e.preventDefault();
+        companyDropdown.classList.toggle("show");
+        solutionsDropdown.classList.remove("show");
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener("click", function(e) {
+        if (!e.target.closest(".dropdown")) {
+            document.querySelectorAll(".dropdown-menu.show").forEach(menu => menu.classList.remove("show"));
+        }
     });
 });
 </script>

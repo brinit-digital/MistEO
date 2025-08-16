@@ -44,7 +44,38 @@
   background-color: rgba(255, 255, 255, 0.514);
   backdrop-filter: blur(5px);
 }
-
+@media (max-width: 973px) {
+  .first-banner{
+    margin-left: 5rem;
+  margin-right: 5rem;
+  }
+  .first-banner-title{
+     font-size: 1.5rem !important;
+  }
+   .first-banner-subtitle{
+    font-size: 1.1rem !important;
+   }
+}
+@media (max-width: 729px) {
+  .first-banner{
+    margin-left: 0;
+    margin-right: 0;
+  }
+   .first-banner-title{
+     font-size: 1.3rem !important;
+  }
+  .first-banner-subtitle{
+    font-size: .9rem !important;
+   }
+}
+@media (max-width: 570px) {
+   .first-banner-title{
+     font-size: 1rem !important;
+  }
+   .first-banner-subtitle{
+    font-size: .8rem !important;
+   }
+}
 .first-banner-div {
   display: flex;
   justify-content: center;
@@ -265,7 +296,7 @@
 }
 
 .bg-img-3::before {
-  background-image: url('../images/Blog/product\ suit-cdi-diary.png');
+  background-image: url('../images/Blog/product\ suit-cdi-diary.jpg');
 }
 
 .card-content-product {
@@ -464,7 +495,7 @@
 
 
 .custom-modal {
-  background: #ffffff60;
+  background: #ffffff1f;
   backdrop-filter: blur(10px);
   padding: 40px 30px;
   border-radius: 12px;
@@ -535,7 +566,7 @@
 }
 
 .signup-form ::placeholder {
-  color: #000000dc;
+  color: #000000e7;
 }
 
 .full-width {
@@ -886,112 +917,134 @@ hr.sep {
 }
 
 /* insustries */
-.container.popular {
-  max-width: 1370px;
-  margin: auto;
-  padding: 2rem;
-  background-color: #ffffff;
-  text-align: center;
+.mentor-section {
+    text-align: center;
+    padding: 10px 1px;
+   
 }
 
-.popular-tags {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.mentor-section h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #0a4b73;
+    margin-bottom: 10px;
+}
+
+.mentor-section p {
+    color: #777;
+    max-width: 850px;
+    margin: 10px auto 1px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.mentor-layout {
+ 
+  align-items:center ;
+    position: relative;
+    max-width: 1000px ;
+    margin:0 auto;
+    height: 400px;
+}
+
+.mentor {
+    position: absolute;
+    text-align: center;
+}
+
+.mentor img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 8px 20px #093c5c8c;
+    transition: transform 0.3s ease;
+}
+
+.mentor img:hover {
+    transform: scale(1.05);
+}
+
+.mentor h4 {
+    margin: 10px 0 4px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0d2c4a;
+}
+
+.mentor span {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Updated positions with extra gaps */
+.m1  { top: 180px; left: 10px; }    /* Choirul Syafril */
+.m2  { top: 90px;  left: 190px; }   /* Ceptari Tyas */
+.m3  { top: 290px; left: 160px; }   /* Fauzi Akmal */
+.m4  { top: 180px; left: 290px; }   /* Andika Wiraputra */
+.m5  { top: 80px;  left: 490px; }   /* Fadhilah Rizky */
+.m6  { top: 330px; left: 420px; }   /* Happy Senang */
+.m7  { top: 240px; left: 570px; }   /* Aryo Romadhon */
+.m8  { top: 80px; left: 880px; }   /* Ekhsan Madaputra */
+.m9  { top: 150px;  left: 680px; }   /* Fakih Ucup Ickiwikr */
+.m10 { top: 290px; left: 790px; }   /* Dames Adi Prakoso */
+
+
+
+/* Sizes */
+.m1 img, .m4 img, .m5 img,.m11 img {
+    width: 90px;
+    height: 90px;
+}
+.m2 img, .m3 img, .m6 img, .m10 img,.m9 img {
+    width: 70px;
+    height: 70px;
+}
+.m7 img, .m8 img {
+    width: 50px;
+    height: 50px;
 }
 
 
-.right-content-popular h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: 700;
-  color: #0a4b73;
-  display: flex;
-  justify-content: center;
+
+/* Responsive: switch to grid layout to avoid overflow */
+@media (max-width: 992px) {
+    .mentor-layout {
+        position: static;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 25px;
+        height: auto;
+        justify-items: center;
+    }
+    .mentor {
+        position: static !important; /* remove absolute positioning */
+    }
+    /* Make all images same size */
+    .mentor img {
+        width: 80px !important;
+        height: 80px !important;
+    }
 }
 
-.right-content-popular p {
-  /* margin-bottom: 1.5rem; */
-  opacity: 0.8;
-  text-align: center;
+/* Mobile adjustments */
+@media (max-width: 576px) {
+    .mentor-layout {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 20px;
+    }
+    .mentor img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    .mentor h4 {
+        font-size: 12px;
+    }
+    .mentor span {
+        font-size: 10px;
+    }
 }
-
-.carousel-row {
-  overflow: hidden;
-  /* margin-bottom: 1rem; */
-  position: relative;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 1rem;
-}
-
-.card.popular {
-  flex: 0 0 auto;
-  background-color: #ffffff3d;
-  backdrop-filter: blur(15px);
-  padding: 1rem 1rem;
-  border-radius: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
-  min-width: 170px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.3s ease, border 0.3s ease;
-  border: none;
-}
-
-.card.popular:hover {
-  transform: scale(1.08);
-  color: #ffffff;
-  background: #0a4b73;
-}
-
-/* Animation */
-.row1 .carousel-track {
-  animation: scroll-left 25s linear infinite;
-}
-
-.row2 .carousel-track {
-  animation: scroll-right 25s linear infinite;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-/* Pause on hover */
-.carousel-row:hover .carousel-track {
-  animation-play-state: paused;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .card.popular {
-    min-width: 110px;
-    font-size: 0.85rem;
-  }
-}
-
 /* imsight section */
 
 .insight-container {

@@ -1,6 +1,21 @@
+    // Close navbar when clicking outside (mobile)
+    document.addEventListener('click', function(e) {
+        const navbarMenu = document.getElementById('navbarMenu');
+        const toggler = document.querySelector('.navbar-toggler');
+        const isNavbarOpen = navbarMenu.classList.contains('show');
+        const isClickInsideNavbar = navbarMenu.contains(e.target) || toggler.contains(e.target);
+        if (window.innerWidth < 992 && isNavbarOpen && !isClickInsideNavbar) {
+            const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarMenu);
+            bsCollapse.hide();
+        }
+    });
+
 fetch('../navbar.html')
     .then(res => res.text())
-    .then(data => document.getElementById('navbar').innerHTML = data);
+    .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+        initNavbarFeatures();
+    });
 
 fetch('../footer.html')
     .then(res => res.text())
@@ -16,64 +31,41 @@ fetch('../footer.html')
     }
   });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const toggler = document.querySelector(".navbar-toggler");
-    const navbarMenu = document.querySelector("#navbarMenu");
-    const overlay = document.querySelector("#overlay");
-    const closeBtn = document.querySelector(".mobile-close-btn");
 
-    const solutionsToggle = document.querySelector("#solutionsToggle");
-    const solutionsDropdown = solutionsToggle.closest(".dropdown").querySelector(".dropdown-menu");
-
-    const companyToggle = document.querySelector("#companyToggle");
-    const companyDropdown = companyToggle.closest(".dropdown").querySelector(".dropdown-menu");
-
-    // Open/close mobile menu
-    toggler.addEventListener("click", function() {
-        navbarMenu.classList.toggle("show");
-        overlay.classList.toggle("active");
+function initNavbarFeatures() {
+    // Mobile close button
+    const closeBtn = document.querySelector('.mobile-close-btn');
+    const navbarMenu = document.getElementById('navbarMenu');
+    closeBtn?.addEventListener('click', function() {
+        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarMenu);
+        bsCollapse.hide();
     });
 
-    // Close button click
-    closeBtn.addEventListener("click", function() {
-        navbarMenu.classList.remove("show");
-        overlay.classList.remove("active");
-    });
-
-    // Overlay click closes menu
-    overlay.addEventListener("click", function() {
-        navbarMenu.classList.remove("show");
-        overlay.classList.remove("active");
-        document.querySelectorAll(".dropdown-menu.show").forEach(menu => menu.classList.remove("show"));
-    });
-
-    // Scroll navbar background
-    window.addEventListener("scroll", function() {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
+    // Hover dropdowns for desktop
+    const dropdowns = document.querySelectorAll('.navbar .dropdown');
+    dropdowns.forEach(function(dropdown) {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        if (!toggle) return;
+        // Show dropdown on hover (desktop only)
+        dropdown.addEventListener('mouseenter', function() {
+            if (window.innerWidth >= 992) {
+                const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(toggle);
+                bsDropdown.show();
+            }
+        });
+        dropdown.addEventListener('mouseleave', function() {
+            if (window.innerWidth >= 992) {
+                const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(toggle);
+                bsDropdown.hide();
+            }
+        });
+        // Redirect on click for heading
+        if (toggle.dataset.redirect) {
+            toggle.addEventListener('click', function(e) {
+                if (window.innerWidth >= 992) {
+                    window.location.href = toggle.dataset.redirect;
+                }
+            });
         }
     });
-
-    // Mobile dropdown toggles
-    solutionsToggle.addEventListener("click", function(e) {
-        e.preventDefault();
-        solutionsDropdown.classList.toggle("show");
-        companyDropdown.classList.remove("show");
-    });
-
-    companyToggle.addEventListener("click", function(e) {
-        e.preventDefault();
-        companyDropdown.classList.toggle("show");
-        solutionsDropdown.classList.remove("show");
-    });
-
-    // Close dropdowns when clicking outside
-    document.addEventListener("click", function(e) {
-        if (!e.target.closest(".dropdown")) {
-            document.querySelectorAll(".dropdown-menu.show").forEach(menu => menu.classList.remove("show"));
-        }
-    });
-});
+}

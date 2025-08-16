@@ -36,8 +36,15 @@ p,a,ul,li,div,input{
     z-index: 9999;
 }
 .navbar .nav-link {
-    color: #1b1b1bd6;
+    color: #ffffffd6;
     transition: color 0.3s ease;
+}
+.navbar .nav-link:hover{
+  color: #ccc;
+}
+
+.nav-link:focus-visible {
+  box-shadow: none !important;
 }
 .navbar.scrolled .nav-link {
     color: #0a4b73 !important;
@@ -48,8 +55,18 @@ p,a,ul,li,div,input{
     margin-left: 3rem;
 }
 /* Hide close button by default */
+
 .mobile-close-btn {
     display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #0a4b73;
+    cursor: pointer;
+    z-index: 1100;
 }
 
 
@@ -80,16 +97,8 @@ p,a,ul,li,div,input{
     .navbar-collapse.show {
         right: 0;
     }
-    .mobile-close-btn {
+    .navbar-collapse.show .mobile-close-btn {
         display: block;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        font-size: 1.5rem;
-        background: none;
-        border: none;
-        color: #0a4b73;
-        cursor: pointer;
     }
    
 }

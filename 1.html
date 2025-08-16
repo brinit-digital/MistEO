@@ -3,219 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modern Navbar</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-/* Navbar styles */
-.navbar {
-    padding: 1rem;
-    background-color: transparent !important;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-.navbar.scrolled {
-    background-color: #ffffffda !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-}
-.navbar .nav-link {
-    color: #929292;
-    transition: color 0.3s ease;
-}
-.navbar.scrolled .nav-link {
-    color: #0a4b73 !important;
-}
-.logo {
-    max-width: 150px;
-    height: auto;
-}
-/* Hide close button by default */
-.mobile-close-btn {
-    display: none;
-}
+<title>Mentors Section</title>
 
-
-
-/* Hover dropdown on desktop */
-@media (min-width: 992px) {
-    .hover-dropdown:hover > .dropdown-menu {
-        display: block;
-        margin-top: 0;
-    }
-}
-
-/* Mobile menu slide in */
-@media (max-width: 991px) {
-    .navbar-collapse {
-        position: fixed;
-        top: 0;
-        right: -300px;
-        height: 100%;
-        width: 300px;
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(15px);
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
-        transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-        padding-top: 60px;
-        z-index: 1000;
-    }
-    .navbar-collapse.show {
-        right: 0;
-    }
-    .mobile-close-btn {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        font-size: 1.5rem;
-        background: none;
-        border: none;
-        color: #0a4b73;
-        cursor: pointer;
-    }
-   
-}
-
-/* Overlay blur */
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(5px);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
-    z-index: 999;
-}
-#overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Toggler icon */
-.navbar-toggler {
-    border: none;
-    background: none;
-    outline: none;
-}
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230a4b73' viewBox='0 0 30 30'%3E%3Cpath stroke='%230a4b73' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-</style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container-fluid navbar-con align-items-center justify-content-between">
-    <a class="navbar-brand" href="../index.html">
-      <img src="../assets/images/logo/mistEO shadow Logo.png" class="logo" alt="Logo">
-    </a>
-    <button class="navbar-toggler" type="button">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
-      <!-- Close Button for Mobile -->
-      <button class="mobile-close-btn">&times;</button>
-      <ul class="navbar-nav me-4 mb-2 mb-lg-0">
-        <li class="nav-item mx-2">
-          <a class="nav-link" href="../index.html">Home</a>
-        </li>
-        <li class="nav-item dropdown mx-2 hover-dropdown">
-          <div class="d-flex align-items-center">
-            <a class="nav-link" href="../solutions.html">Solutions</a>
-            <a class="nav-link dropdown-toggle ms-1" href="#" id="solutionsToggle"></a>
-          </div>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="../solutions/indrawheather.html">IndraWeather</a></li>
-            <li><a class="dropdown-item" href="../solutions/cdi-beef.html">CDI Beef</a></li>
-            <li><a class="dropdown-item" href="../solutions/cdi-diary.html">CDI Dairy/Livestock</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown mx-2 hover-dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="companyToggle">Company</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="../about.html">About US</a></li>
-            <li><a class="dropdown-item" href="../team.html">Our Team</a></li>
-            <li><a class="dropdown-item" href="../career.html">Careers</a></li>
-            <li><a class="dropdown-item" href="../privacy-policy.html">Privacy Policy</a></li>
-            <li><a class="dropdown-item" href="../documents.html">Documents</a></li>
-          </ul>
-        </li>
-        <li class="nav-item mx-2"><a class="nav-link" href="../insights.html">Insights</a></li>
-        <li class="nav-item mx-2"><a class="nav-link" href="../contact.html">Contact</a></li>
-      </ul>
+<section class="quote-section">
+  <div class="quote-background">
+    <div class="quote-bubble">
+      <span class="quote-icon top">❝</span>
+      <p class="quote-text">
+        Mitigation and decarbonisation take time. Adaptation is addressing the needs 
+        of governments, organisations, and citizens right now.
+      </p>
+      <span class="quote-author">— Chris Wilson</span>
+      <span class="quote-icon bottom">❞</span>
     </div>
   </div>
-</nav>
+</section>
 
-<div id="overlay"></div>
+<style>
+.quote-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const toggler = document.querySelector(".navbar-toggler");
-    const navbarMenu = document.querySelector("#navbarMenu");
-    const overlay = document.querySelector("#overlay");
-    const closeBtn = document.querySelector(".mobile-close-btn");
+.quote-background {
+  background: #0a4b73 url('https://i.ibb.co/z4rxL3V/paint-brush-texture.png') center/cover no-repeat;
+  /* The image above is a transparent paint brush texture — replace with your own if needed */
+  padding: 50px;
+  border-radius: 8px;
+}
 
-    const solutionsToggle = document.querySelector("#solutionsToggle");
-    const solutionsDropdown = solutionsToggle.closest(".dropdown").querySelector(".dropdown-menu");
+.quote-bubble {
+  position: relative;
+  max-width: 750px;
+  border: 3px solid white;
+  border-radius: 12px;
+  padding: 40px 50px;
+  background: transparent;
+  color: white;
+  text-align: center;
+}
 
-    const companyToggle = document.querySelector("#companyToggle");
-    const companyDropdown = companyToggle.closest(".dropdown").querySelector(".dropdown-menu");
+.quote-icon {
+  font-size: 2rem;
+  position: absolute;
+  color: white;
+}
 
-    // Open/close mobile menu
-    toggler.addEventListener("click", function() {
-        navbarMenu.classList.toggle("show");
-        overlay.classList.toggle("active");
-    });
+.quote-icon.top {
+  top: -10px;
+  left: -10px;
+}
 
-    // Close button click
-    closeBtn.addEventListener("click", function() {
-        navbarMenu.classList.remove("show");
-        overlay.classList.remove("active");
-    });
+.quote-icon.bottom {
+  bottom: -10px;
+  right: -10px;
+}
 
-    // Overlay click closes menu
-    overlay.addEventListener("click", function() {
-        navbarMenu.classList.remove("show");
-        overlay.classList.remove("active");
-        document.querySelectorAll(".dropdown-menu.show").forEach(menu => menu.classList.remove("show"));
-    });
+.quote-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+}
 
-    // Scroll navbar background
-    window.addEventListener("scroll", function() {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
-    });
+.quote-author {
+  display: block;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+</style>
 
-    // Mobile dropdown toggles
-    solutionsToggle.addEventListener("click", function(e) {
-        e.preventDefault();
-        solutionsDropdown.classList.toggle("show");
-        companyDropdown.classList.remove("show");
-    });
 
-    companyToggle.addEventListener("click", function(e) {
-        e.preventDefault();
-        companyDropdown.classList.toggle("show");
-        solutionsDropdown.classList.remove("show");
-    });
-
-    // Close dropdowns when clicking outside
-    document.addEventListener("click", function(e) {
-        if (!e.target.closest(".dropdown")) {
-            document.querySelectorAll(".dropdown-menu.show").forEach(menu => menu.classList.remove("show"));
-        }
-    });
-});
-</script>
 </body>
 </html>

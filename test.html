@@ -1,227 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Features Section</title>
-<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
- <!--bootstrap  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #f9f9f9;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassmorphism Cards</title>
+  <style>
+    /* body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+    } */
+    .our-focus-sec{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
     }
 
-       .services-section {
-  background: linear-gradient(320deg, #0a4b7338, white);
-  padding:5px 50px 45px 50px;
-  border-radius: 20px;
-}
+    /* Floating Decorative Elements */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background:linear-gradient(280deg,rgb(0, 0, 0) 0%, rgba(10, 75, 115, 1) 35%, rgb(50, 142, 163) 100%);;
+      opacity: 0.85;
+      filter: blur(1px);
+      animation: float 4s infinite ease-in-out alternate;
+    }
 
-.services-section h2 {
-  color: white;
-  margin-bottom: 40px;
-  font-size: 32px;
-}
+    .circle:nth-child(1) {
+      width: 100px;
+      height: 100px;
+      top: 45%;
+      left: 13%;
+    }
+    .circle:nth-child(2) {
+      width: 150px;
+      height: 150px;
+      bottom: 12%;
+      right: 15%;
+    }
+    .circle:nth-child(3) {
+      width: 80px;
+      height: 80px;
+      top: 46%;
+      right: 30%;
+    }
+     .circle:nth-child(4) {
+      width: 100px;
+      height: 100px;
+      top: 70%;
+      left: 29%;
+    }
+    .circle:nth-child(5) {
+      width: 70px;
+      height: 70px;
+      bottom: 32%;
+      right: 45%;
+    }
+   
 
-.section-pill {
-  display: inline-block;
-  background: #0a4b73;
-  color: white;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 6px 16px;
-  border-radius: 50px;
-  margin-bottom: 12px;
-}
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-30px); }
+    }
 
-.cards-container {
-  display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px 50px;
-}
+    /* Card Container */
+    .cards.our-focu {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 2;
+    }
+    .our-focus-content{
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+     .our-focus-content h2{
+      color: #0a4b73;
+      font-size: 2.5rem;
+     }
+      .our-focus-content p{
+        font-size: 1rem;
+        color: #333;
 
-.card-item {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
-  display: flex;
-  flex-direction: column-reverse;
-  /* align-items: center; */
-  justify-content: center;
-  padding: 20px;
-  height: 260px;
-  transition: all 0.6s ease;
-  position: relative;
-}
+      }
+    .our-focus{
+      display: flex;
+      flex-direction: row;
+    }
 
-.card-content {
-  /* width: 60%; */
-  z-index: 2;
-  transition: all 0.5s ease;
-  text-align: center;
-}
+    /* Glassmorphism Card */
+    .card.focus {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+      width: 280px;
+      text-align: center;
+      color: #0a4b73;
+      transition: transform 0.3s ease;
+    }
 
-.card-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #0a4b73;
-  margin-bottom: 15px;
-  transition: color 0.5s ease;
-}
+    .card.focus:hover {
+      transform: translateY(-10px);
+    }
 
-.card-desc {
-  font-size: 16px;
-  color: #333;
-  transition: color 0.5s ease;
-}
+    .card.focus i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      display: block;
+    }
 
-.card-icon {
-  width: 80px;
-  height: 80px;
-  background-color: #ebfbfc;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  align-self: center;
-  justify-content: center;
-  transition: all 0.6s ease-in;
-  transform-origin: center;
-  z-index: 2;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.137);
-  margin-bottom: 1rem;
-}
+    .card.focus h3 {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
 
-.card-icon img {
-  width: 50px;
-  height: 50px;
-  transition: transform 0.6s ease-in, opacity 0.6s ease-in;
-}
+    .card.focus p {
+      font-size: 0.95rem;
+      color: #333;
+    }
 
-/* Hover Effects (same as before) */
-.card-item:hover {
-  background: #0a4b73;
-}
-
-.card-item:hover .card-title,
-.card-item:hover .card-desc {
-  color: white;
-}
-
-.card-item:hover .card-icon {
-  position: absolute;
-  /* top: 0;
-  right: 0; */
-  width: 100%;
-  height: 100%;
-  background-color: #def2ff;
-  opacity: 0.08;
-  border-radius: 0;
-  z-index: 1;
-  transform: scale(1.2);
-}
-
-.card-item:hover .card-icon img {
-  transform: scale(2.2) rotateY(20deg);
-  opacity: 0.15;
-}
-
-</style>
+    @media (max-width: 900px) {
+      .cards.our-focu {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+  
 </head>
 <body>
- <!-- ===== what we do SECTION =====-->
-   <div class="container  services-section mt-5">
-  <div class="text-center">
-    <span class="section-pill">What We Do</span>
-    <h2 style="color: #0a4b73;">Explore Our Services</h2>
-    <p>We provide a range of innovative solutions to help you navigate the complexities of climate risk and enhance your operational resilience.</p>
-  </div>
+  <section class="our-focus-sec">
+  <!-- Floating Elements -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+   <div class="circle"></div>
+  <div class="circle"></div>
 
-  <div class="cards-container">
-    <!-- Card 1 -->
-    <div class="card-item">
-      <div class="card-content">
-        <div class="card-title">Hyper-local Weather Forecasting</div>
-        <div class="card-desc">
-           Analyze climate risk and its potential financial impact across assets or regions.
-        </div>
-      </div>
-      <div class="card-icon">
-        <img src="assets/images/elements/logo-1 home.png" alt="Operational Risk">
-      </div>
+  <!-- Cards -->
+  <div class="cards our-focu">
+     <div class="our-focus-content">
+      <h2>All are urgent One demands action right now.</h2>
+      <p>Climate action has three pillars, but adaptation is where mistEO focuses - tackling the risks that businesses, 
+communities, and governments face today.
+</p>
     </div>
-
-    <!-- Card 2 -->
-    <div class="card-item">
-      <div class="card-content">
-        <div class="card-title"> Early Warning Systems</div>
-        <div class="card-desc">
-           Analyze climate risk and its potential financial impact across assets or regions.
-        </div>
-      </div>
-      <div class="card-icon">
-        <img src="assets/images/elements/logo-2-home.png" alt="Weather Forecast">
-      </div>
+    <div class="our-focus">
+    <div class="card focus" style="border-top-right-radius: 100% !important; border-radius: 0;">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Climate Mitigation</h3>
+      <p>Reducing greenhouse gas emissions to slow climate change.</p>
     </div>
-
-    <!-- Card 3 -->
-    <div class="card-item">
-      <div class="card-content">
-        <div class="card-title">Climate Risk Modeling</div>
-        <div class="card-desc">
-          Analyze climate risk and its potential financial impact across assets or regions.
-        </div>
-      </div>
-      <div class="card-icon">
-        <img src="assets/images/elements/logo-3-home.png" alt="Analytics">
-      </div>
+    <div class="card focus">
+      <i class="fas fa-laptop-code"></i>
+      <h3>Decarbonisation</h3>
+      <p>Removing existing greenhouse gases from the atmosphere.</p>
     </div>
-
-    <!-- Card 4 -->
-    <div class="card-item">
-      <div class="card-content">
-        <div class="card-title">Parametric Insurance Solutions</div>
-        <div class="card-desc">
-           Analyze climate risk and its potential financial impact across assets or regions.
-        </div>
-      </div>
-      <div class="card-icon">
-        <img src="assets/images/elements/logo-4-home.png" alt="Finance">
-      </div>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="card-item">
-      <div class="card-content">
-        <div class="card-title">Climate-Based Financial Tools</div>
-        <div class="card-desc">
-           Analyze climate risk and its potential financial impact across assets or regions.
-        </div>
-      </div>
-      <div class="card-icon">
-        <img src="assets/images/elements/logo-5-home.png" alt="Disaster">
-      </div>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="card-item">
-      <div class="card-content">
-        <div class="card-title">Infrastructure Planning</div>
-        <div class="card-desc">
-          Analyze climate risk and its potential financial impact across assets or regions.
-        </div>
-      </div>
-      <div class="card-icon">
-        <img src="assets/images/elements/logo-6-home.png" alt="Infrastructure">
-      </div>
+    <div class="card focus">
+      <i class="fas fa-cloud"></i>
+      <h3>Climate Adaptation</h3>
+      <p>Preparing for and adjusting to the climate impacts already happening and those we can’t avoid.</p>
     </div>
   </div>
-</div>
-
+  </div>
+  </section>
+  <div style="mask-image: url('assets/images/elements/hero-shape2.png'); mask-repeat: no-repeat; mask-size: 70%">
+    <img src="http://html.themeholy.com/webteck/demo/assets/img/hero/hero_img_22_1.jpg">
+  </div>
 </body>
 </html>

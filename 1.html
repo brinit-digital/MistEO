@@ -1,83 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mentors Section</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf7f0;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 20px;
+      max-width: 1000px;
+      width: 100%;
+    }
+    .card {
+      border-radius: 16px;
+      padding: 30px;
+      color: #fff;
+      font-weight: 500;
+    }
+    /* Card colors */
+    .card1 { background: #0a4b73; grid-column: 1; grid-row: 1; }
+    .card2 { background: #e6dfd5; color:#000; grid-column: 2; grid-row: 1; }
+    .card3 { background: #d6cdc3; color:#000; grid-column: 1; grid-row: 2; }
+    .card4 { background: #627056; grid-column: 2; grid-row: 2; }
+    
+    /* Headings */
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+    .card p {
+      font-size: 14px;
+      margin: 0;
+      opacity: 0.9;
+    }
 
+    /* Small image/icon style */
+    .card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 15px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="grid">
+    <!-- Card 1 -->
+    <div class="card card1">
+      <h3>Built-In Team Chat</h3>
+      <p>Communicate instantly within your workspace.</p>
+    </div>
 
-<section class="quote-section">
-  <div class="quote-background">
-    <div class="quote-bubble">
-      <span class="quote-icon top">❝</span>
-      <p class="quote-text">
-        Mitigation and decarbonisation take time. Adaptation is addressing the needs 
-        of governments, organisations, and citizens right now.
-      </p>
-      <span class="quote-author">— Chris Wilson</span>
-      <span class="quote-icon bottom">❞</span>
+    <!-- Card 2 (with small image) -->
+    <div class="card card2">
+      <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" alt="icon">
+      <h3>Task Assignment</h3>
+      <p>Easily create, assign, and track tasks to keep everyone aligned.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card card3">
+      <h3>Real-Time Scheduling</h3>
+      <p>Plan meetings, set deadlines, and sync calendars in one place.</p>
+    </div>
+
+    <!-- Card 4 (with small image) -->
+    <div class="card card4">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="icon">
+      <h3>Progress Tracking</h3>
+      <p>Visualize performance with dashboards and insights.</p>
     </div>
   </div>
-</section>
-
-<style>
-.quote-section {
-  padding: 60px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.quote-background {
-  background: #0a4b73 url('https://i.ibb.co/z4rxL3V/paint-brush-texture.png') center/cover no-repeat;
-  /* The image above is a transparent paint brush texture — replace with your own if needed */
-  padding: 50px;
-  border-radius: 8px;
-}
-
-.quote-bubble {
-  position: relative;
-  max-width: 750px;
-  border: 3px solid white;
-  border-radius: 12px;
-  padding: 40px 50px;
-  background: transparent;
-  color: white;
-  text-align: center;
-}
-
-.quote-icon {
-  font-size: 2rem;
-  position: absolute;
-  color: white;
-}
-
-.quote-icon.top {
-  top: -10px;
-  left: -10px;
-}
-
-.quote-icon.bottom {
-  bottom: -10px;
-  right: -10px;
-}
-
-.quote-text {
-  font-size: 1.4rem;
-  font-weight: 600;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.quote-author {
-  display: block;
-  margin-top: 15px;
-  font-size: 1.1rem;
-  font-style: italic;
-}
-</style>
-
-
 </body>
 </html>

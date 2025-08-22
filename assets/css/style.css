@@ -1282,5 +1282,12 @@ hr.sep {
   .flip-card.card-4 {
   margin-top: -3rem;
 }
+.insight-container{
+  margin-top: 0;
+  padding: 1px 20px;
+}
+.insight-text p{
+  text-align: justify;
+}
 
 }

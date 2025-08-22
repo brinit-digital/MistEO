@@ -425,3 +425,21 @@ max-width: 130px;
     }
 
      }
+      @media (max-width: 546px){
+        .footer-bottom{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .left{
+          text-align: center !important;
+        }
+        .right-f{
+           text-align: center !important;
+           margin-top: .8rem;
+        }
+        .fbottom{
+          margin-top: .7rem;
+        }
+
+      }

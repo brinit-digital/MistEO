@@ -43,8 +43,8 @@
     text-align: justify;
 }
 .about-img{
-    width: 550px;
-    margin-left: 2rem;
+    width: 100%;
+    /* margin-left: 4rem; */
 }
 .actions {
   margin-top: 2.5rem;
@@ -64,10 +64,10 @@
   font-size: .9rem;
 }
 /* our focus section */
+/* our focus section */
 .our-focus-sec{
       display: flex;
       justify-content: center;
-      /* align-items: center; */
       min-height: 100vh;
       position: relative;
       overflow: hidden;
@@ -78,7 +78,7 @@
     .circle.focus {
       position: absolute;
       border-radius: 50%;
-      background:linear-gradient(280deg,rgb(0, 0, 0) 0%, rgba(10, 75, 115, 1) 35%, rgb(50, 142, 163) 100%);;
+      background:linear-gradient(280deg,rgb(0, 0, 0) 0%, rgba(10, 75, 115, 1) 35%, rgb(50, 142, 163) 100%);
       opacity: 0.95;
       filter: blur(1px);
       margin-top: -7.5rem !important;
@@ -128,10 +128,14 @@
       flex-direction: column;
       gap: 20px ;
       z-index: 2;
+      width: 100%;
+      padding: 0 1rem;
+      box-sizing: border-box;
     }
     .our-focus-content{
       text-align: center;
       margin-bottom: 2rem;
+      padding: 0 1rem;
     }
      .our-focus-content h2{
       color: #0a4b73;
@@ -140,13 +144,14 @@
       .our-focus-content p{
         font-size: 1rem;
         color: #333;
-
       }
+
     .our-focus{
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
-
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     /* Glassmorphism Card */
@@ -158,11 +163,13 @@
       border: 1px solid rgba(255, 255, 255, 0.3);
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       padding: 30px !important;
-      width: 430px !important;
-      height: 30vh;
+      width: 100%;
+      max-width: 430px;
+      min-height: 280px;
       text-align: center;
       color: #0a4b73;
       transition: transform 0.3s ease;
+      box-sizing: border-box;
     }
 
     .card.focus:hover {
@@ -173,7 +180,6 @@
       font-size: 40px;
       margin-bottom: 15px;
       display: block;
-      /* color: rgb(61, 61, 61); */
     }
 
     .card.focus h3 {
@@ -186,13 +192,50 @@
       color: #333;
     }
 
-    @media (max-width: 900px) {
-      .cards.our-focu {
-        flex-direction: column;
-        align-items: center;
+    /* Tablet */
+    @media (max-width: 1024px) {
+      .our-focus-content h2 {
+        font-size: 2rem;
+      }
+      .card.focus {
+        max-width: 350px;
+        min-height: auto;
       }
     }
 
+    /* Mobile */
+    @media (max-width: 768px) {
+      .our-focus {
+        flex-direction: column;
+        align-items: center;
+      }
+      .our-focus-content h2 {
+        font-size: 1.8rem;
+      }
+      .our-focus-content p {
+        font-size: 0.95rem;
+      }
+      .card.focus {
+        width: 100%;
+        max-width: 95%;
+      }
+    }
+
+    /* Extra Small */
+    @media (max-width: 480px) {
+      .our-focus-content h2 {
+        font-size: 1.5rem;
+      }
+      .our-focus-content p {
+        font-size: 0.9rem;
+      }
+      .card.focus {
+        padding: 20px !important;
+      }
+      .our-focus{
+        margin-bottom: 3rem;
+      }
+    }
    
 
 /* mission section */
@@ -690,3 +733,62 @@
         font-size: 0.85rem;
       }
     }
+
+    /* responsive */
+     /* @media (max-width: 1200px){
+    .about-img{
+      margin-left: 0;
+      margin-top: 3rem;
+    }
+     }
+    @media (max-width: 1112px){
+    .about-img{
+      width: 480px !important;
+      margin-right: 1rem !important;
+    }
+    } */
+     @media (max-width: 992px){
+    .about-img{ 
+      margin-right: 2rem !important;
+      margin-top: 7rem !important;
+      width: 440px !important;
+    }
+  }
+   @media (max-width: 904px){
+    .about-img{ 
+      margin-right: 0;
+      width: 380px !important;
+      margin-top: 9rem !important;
+    }
+  }
+    @media (max-width: 768px){
+    .about-img{ 
+      width: 500px !important;
+      margin-top: 3rem !important;
+    }
+  }
+     @media (max-width: 545px){
+    .about-img{ 
+      width: 300px !important;
+      margin-left: 2rem;
+    }
+    .crisis-title{
+      font-size: 2rem;
+    }
+    .crisis-subtitle{
+      font-size: .9rem;
+      text-align: justify;
+    }
+    .mission-section {
+      padding: 0;
+    }
+    .process-section h2 {
+      font-size: 1.8rem;
+    }
+    .process-para {
+      font-size: .9rem;
+      padding: 0 5px;
+      text-align: justify;
+    }
+    
+  }

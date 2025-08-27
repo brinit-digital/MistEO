@@ -423,29 +423,38 @@
         }
     }
 
-    .contact-sec-2{
-        display: flex;
-        justify-content: center;
-        height: 40vh;
-        /* margin: 6rem; */
+ .contact-sec-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* allows stacking on smaller screens */
+    height: auto; /* so it adjusts naturally */
+    padding: 2rem;
+}
+
+.contact-left,
+.contact-right {
+    flex: 1 1 300px; /* ensures both sides shrink and wrap */
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-sec-2 {
+        flex-direction: column;
+        text-align: center;
     }
-    .contact-left{
-        padding: 4rem;
+    .contact-left,
+    .contact-right {
+        padding: .5rem;
     }
-    .contact-left h3{
-        color: #0a4b73;
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
+    .contact-left h3 {
+        font-size: 1.6rem;
     }
-    .contact-left p{
-        font-size: 1.3rem;
+    .contact-left p,
+    .contact-right p {
+        font-size: 1.1rem;
     }
-    .contact-left p span{
-        font-size: 1.3rem;
-        color: #0a4b73;
-        font-weight:700;
-    }
-     .contact-right{
-        padding: 4rem;
-        font-size: 1.2rem;
-    }
+    
+}

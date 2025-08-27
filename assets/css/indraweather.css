@@ -19,7 +19,7 @@ body{
 }
 .hero-title{
   font-size: 110px;
-  margin-top: 15rem;
+  margin-top: 8rem;
 }
 @media (max-width: 768px) {
   .hero-title {

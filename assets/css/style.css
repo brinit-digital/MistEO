@@ -286,6 +286,7 @@
   transition: filter 0.4s ease, transform 0.4s ease;
   border-radius: 15px;
 }
+
 @media (max-width: 600px){
 .text-center h2 {
   font-size: 1.8rem;
@@ -318,6 +319,17 @@
 
 .bg-img-3::before {
   background-image: url('../images/Blog/product\ suit-cdi-diary.jpg');
+}
+.bg-img-4::before {
+  background-image: url('../images/Blog/resilience\ pro.jpg');
+}
+
+.bg-img-5::before {
+  background-image: url('../images/Blog/detrative\ pro.jpg');
+}
+
+.bg-img-6::before {
+  background-image: url('../images/Blog/transition\ pro.jpg');
 }
 
 .card-content-product {
@@ -362,9 +374,28 @@
   }
 
   .card-product {
-    width: 90vw;
+    width: 310px !important;
     height: 250px;
   }
+}
+@media (max-width: 676px) {
+  .card-product {
+    width: 270px !important;
+    height: 250px;
+  }
+}
+@media (max-width: 1012px) {
+  .cards-section-product {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2px;
+
+  }
+}
+@media (max-width: 853px) {
+.card-product {
+  width: 360px;
+}
 }
 
 /* section livestock */
@@ -488,6 +519,9 @@
 .phone-image {
     max-width: 350px;
   }
+  .cdi-live-subheading {
+  font-size: 1.2rem;
+}
 }
 
 /* modal  */
@@ -1095,7 +1129,7 @@ hr.sep {
       padding: 0 5px;
      }
      .section-livestock h2 span{
-      font-size: 2rem;
+      font-size: 1.4rem;
      }
 
  
@@ -1280,7 +1314,7 @@ hr.sep {
     grid-template-columns: 1fr;
   }
   .flip-card.card-4 {
-  margin-top: -3rem;
+  margin-top: .2rem;
 }
 .insight-container{
   margin-top: 0;

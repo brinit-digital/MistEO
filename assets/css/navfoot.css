@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +15,7 @@ p,a,ul,li,div,input{
 }
 .link-home{
     text-decoration: none;
-    color: rgb(209, 209, 209);
+    color: rgb(255, 255, 255);
 }
 .link-home-span{
     padding: .6rem;
@@ -20,24 +23,31 @@ p,a,ul,li,div,input{
 
 /* Navbar styles */
 .navbar {
-    padding: 1rem;
-    background-color: transparent !important;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 1rem;
+    position: absolute;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    background: transparent !important;
+    padding: 1rem !important;
+    box-shadow: none !important;
+     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .navbar.scrolled {
-    background-color: #ffffffda !important;
+    background-color: #ffffff48 !important;
+    backdrop-filter: blur(15px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    margin-top: 1rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    padding: 1rem;
+    /* border-radius: 20px; */
+    /* margin-top: 0; */
+    /* margin-left: 2rem; */
+    /* margin-right: 2rem; */
+    /* padding: 1rem; */
     z-index: 9999;
 }
 .navbar .nav-link {
     color: #ffffffd6;
-    transition: color 0.3s ease;
+    /* transition: color 0.3s ease; */
 }
 .navbar .nav-link:hover{
   color: #ccc;
@@ -103,12 +113,12 @@ p,a,ul,li,div,input{
    
 }
 @media (max-width: 600px){
-.navbar.scrolled {
+/* .navbar.scrolled {
     margin-top: 1rem;
     margin-left: 0;
     margin-right: 0;
     padding: .5rem; 
-}
+} */
 .navbar-toggler {
   padding: .3rem !important;
   font-size: 1rem !important;
@@ -152,7 +162,8 @@ max-width: 130px;
 
     /* Top overlapping banner */
     .top-banner {
-      background-color: #0a4b73;
+      background-color: #0a4b73e1;
+      backdrop-filter: blur(10px);
       background-repeat: no-repeat;
       background-size: cover;
       color: white;
@@ -170,7 +181,7 @@ max-width: 130px;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      max-width: 1200px;
+      /* max-width: 1200px; */
       margin: auto;
     }
 
@@ -191,8 +202,10 @@ max-width: 130px;
     }
 
     .banner-img img {
-      max-width: 550px;
-      border-radius: 20px;
+      max-width: 450px;
+      /* border-radius: 20px; */
+      border-bottom-right-radius: 20px;
+      border-top-right-radius: 20px;
     }
 
     /* Footer */
@@ -441,5 +454,10 @@ max-width: 130px;
         .fbottom{
           margin-top: .7rem;
         }
+         .banner-content button {
+      padding: 1opx 17px;
+      margin-top: 2rem;
+      
+    }
 
       }

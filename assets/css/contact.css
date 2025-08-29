@@ -53,7 +53,7 @@
 
     .form {
         width: 100%;
-        max-width: 950px;
+        /* max-width: 950px; */
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
@@ -69,7 +69,7 @@
         padding: 20px;
     }
 
-    .circle {
+    /* .circle {
         border-radius: 50%;
         background: linear-gradient(135deg, transparent 20%, #467592);
         position: absolute;
@@ -87,7 +87,7 @@
         height: 80px;
         top: 10px;
         right: 30px;
-    }
+    } */
 
     .contact-form:before {
         content: "";
@@ -110,7 +110,7 @@
     .title {
         color: #fff;
         font-weight: 500;
-        font-size: 1.5rem;
+        font-size: 2rem;
         line-height: 1;
         margin-bottom: 2.7rem;
     }
@@ -235,6 +235,9 @@
 
     .contact-info .title {
         color: #0a4b73;
+        font-size: 2rem;
+        margin-top: 1rem;
+        font-weight: 600;
     }
 
     .text {
@@ -294,7 +297,7 @@
         transform: scale(1.05);
     }
 
-    .contact-info:before {
+    /* .contact-info:before {
         content: "";
         position: absolute;
         width: 110px;
@@ -326,7 +329,7 @@
         border-radius: 50%;
         top: calc(50% - 180px);
         left: calc(50% - 180px);
-    }
+    } */
 
     .square {
         position: absolute;
@@ -424,20 +427,16 @@
     }
 
  .contact-sec-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* allows stacking on smaller screens */
-    height: auto; /* so it adjusts naturally */
-    padding: 2rem;
+    padding: 3rem;
 }
 
-.contact-left,
-.contact-right {
-    flex: 1 1 300px; /* ensures both sides shrink and wrap */
-    padding: 2rem;
-    box-sizing: border-box;
+.contact-right{
+    padding-left: 5rem;
 }
+.contact-left{
+    padding-left: 1rem;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

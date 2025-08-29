@@ -92,7 +92,7 @@ a {
 }
 
 .home__parallax-img1 {
-  background-image: url("/assets/images/home/Sky.png");
+  background-image: url("/assets/images/home/ChatGPT\ Image\ Aug\ 29\,\ 2025\,\ 12_17_24\ PM.png");
   z-index: var(--z-normal);
 }
 
@@ -102,12 +102,12 @@ a {
 } */
 
 .home__parallax-img3 {
-  background-image: url("/assets/images/home/Mountain.png");
+  background-image: url("/assets/images/home/img2.png");
   z-index: var(--z-fixed);
 }
 
 .home__parallax-img4 {
-  background-image: url("/assets/images/home/Trees1.png");
+  background-image: url("/assets/images/home/img1.png");
   z-index: var(--z-fixed);
 }
 

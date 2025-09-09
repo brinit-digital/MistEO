@@ -68,14 +68,14 @@
 .our-focus-sec{
       display: flex;
       justify-content: center;
-      min-height: 100vh;
+      min-height: 70vh;
       position: relative;
       overflow: hidden;
       margin-top: 7rem !important;
     }
 
     /* Floating Decorative Elements */
-    .circle.focus {
+    /* .circle.focus {
       position: absolute;
       border-radius: 50%;
       background:linear-gradient(280deg,rgb(0, 0, 0) 0%, rgba(10, 75, 115, 1) 35%, rgb(50, 142, 163) 100%);
@@ -120,7 +120,7 @@
     @keyframes float {
       from { transform: translateY(0); }
       to { transform: translateY(-30px); }
-    }
+    } */
 
     /* Card Container */
     .cards.our-focu {
@@ -165,7 +165,7 @@
       padding: 30px !important;
       width: 100%;
       max-width: 430px;
-      min-height: 280px;
+      /* min-height: 230px; */
       text-align: center;
       color: #0a4b73;
       transition: transform 0.3s ease;
@@ -263,7 +263,7 @@
 
   .mission-card{
     position:relative;
-    width:min(1250px, 92vw);
+    width:min(1330px, 92vw);
     background:#030c35;
     border:1px solid var(--ring);
     border-radius:22px;

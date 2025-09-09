@@ -6,7 +6,7 @@
 }
  /* HERO SECTION */
 .hero-banner {
-  background: url('../images/hero/license-agreement-bg.webp') no-repeat  center/cover fixed;
+  background: url('../images/hero/end.jpg') no-repeat  center/cover fixed;
   height: 70vh;
   margin-bottom: 6rem;
 }
@@ -14,7 +14,7 @@
 .hero-overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.559); 
+  background-color: rgba(0, 0, 0, 0.096); 
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -22,6 +22,7 @@
 .hero-title{
   font-size: 70px;
   margin-top: 14rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 768px) {
   .hero-title {

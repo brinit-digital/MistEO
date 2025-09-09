@@ -5,7 +5,7 @@ body {
 
 /* HERO SECTION */
 .hero-banner {
-    background: url('../images/Blog/Dairy-Farmer-with-iPad-blg-lg.jpg') no-repeat center/cover fixed;
+    background: url('../images/hero/diary.jpg') no-repeat center/cover fixed;
     height: 70vh;
     margin-bottom: 6rem;
 }
@@ -13,7 +13,7 @@ body {
 .hero-overlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.559);
+    background-color: rgba(255, 255, 255, 0.137);
     display: flex;
     align-items: center;
     flex-direction: column;

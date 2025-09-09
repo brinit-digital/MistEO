@@ -310,7 +310,7 @@
 
 /* Use custom classes to assign background images */
 .bg-img-1::before {
-  background-image: url('../images/Blog/product\ suit-cdi-beef.jpg');
+  background-image: url('../images/Blog/product\ suit-cdi-beef.png');
 }
 
 .bg-img-2::before {
@@ -1021,6 +1021,7 @@ hr.sep {
     max-width: 1000px ;
     margin:0 auto;
     height: 400px;
+     margin-bottom: 4rem;
 }
 
 .mentor {

@@ -125,9 +125,12 @@ a {
 
 .home__title {
   top: 32%;
-  font-size: var(--biggest-font-size);
+  /* font-size: var(--biggest-font-size); */
   z-index: var(--z-fixed);
   filter: drop-shadow(0 0.9rem 0.25rem rgba(0, 0, 0, 0.2));
+}
+.home__title img {
+  align-items: center;
 }
 
 .home__subtitle {

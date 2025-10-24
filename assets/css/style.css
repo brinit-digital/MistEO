@@ -8,6 +8,14 @@
   z-index: 1000;
 }
 
+.cloud-section .hero-image {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 @media (max-width: 973px) {
   .cloud-section {
     margin-top: -9rem;
@@ -235,7 +243,7 @@
 
 .product {
   text-align: center;
-  margin-top: 7rem;
+  /* margin-top: 7rem; */
 }
 
 .text-center h2 {
@@ -251,9 +259,9 @@
 
 .cards-section-product {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   row-gap: 2rem;
-  padding: 40px 80px;
+  padding: 40px 0;
   flex-wrap: wrap;
   margin: 1rem;
 }
@@ -703,12 +711,13 @@ option {
 }
 
 .wrap {
-  max-width: var(--max-width);
+  /* max-width: var(--max-width); */
   margin: 0 auto;
   display: flex;
-  gap: 40px;
+  gap: 4px;
   align-items: center;
   position: relative;
+  flex-wrap: nowrap !important;
 }
 
 /* big subtle circular glow behind content */
@@ -917,23 +926,9 @@ hr.sep {
   z-index: 1;
 }
 
-/* Responsive adjustments */
-@media(max-width:1100px) {
-  .wrap {
-    gap: 28px;
-  }
 
-  .right {
-    flex-basis: 420px;
-    width: 420px;
-  }
 
-  .frame::before {
-    transform: translate(10px, -10px);
-  }
-}
-
-@media(max-width:860px) {
+@media(max-width:992px) {
   .wrap {
     flex-direction: column;
     align-items: stretch;
@@ -1225,9 +1220,7 @@ hr.sep {
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
+
 
 .flip-card-front,
 .flip-card-back {
@@ -1260,6 +1253,9 @@ hr.sep {
   font-size: .8rem;
   color: #0a4b73;
   padding: 0 15px;
+}
+.flip-card-front a{
+  text-decoration: none;
 }
 
 /* Back side */
@@ -1324,5 +1320,285 @@ hr.sep {
 .insight-text p{
   text-align: justify;
 }
-
 }
+
+/* Owl Carousel styles */
+.section-achievements{
+  margin: 1.5rem 0;
+}
+.owl-carousel .item {
+  position: relative;
+  text-align: -webkit-right;
+}
+.owl-carousel .owl-item img {
+  width: 160px !important;
+}
+.achievement-head{
+  color: var(--primary);
+  font-weight: 700;
+}
+.owl-theme .owl-nav {
+  display: none !important;
+}
+
+.hover-text {
+  display: none !important;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.301);
+  backdrop-filter: blur(5px);
+  color: var(--primary);
+  /* padding: 10px; */
+  font-size: 12px;
+  text-align: center;
+}
+.item:hover .hover-text {
+  display: block !important;
+}
+@media (max-width: 768px) {
+  .owl-carousel .item img {
+    width: 120px !important;
+  }
+}
+
+/* ==============================
+   Our Pillars (Flow) Section
+   ============================== */
+.pillars-section{position:relative;padding:60px 0;background:linear-gradient(180deg,#f6fbff 0%,#ffffff 60%)}
+.pillars-title{color:#0a4b73;font-weight:800;text-align: center; margin-bottom:24px}
+.pillars-flow{width:100%;display:flex;justify-content:center}
+.pillars-svg{width:100%;height:auto}
+.pillars-flow text{font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+
+/* Mobile stacked version */
+.pillars-flow-mobile{max-width:600px;margin:10px auto 0}
+.pillars-list{list-style:none;margin:0;padding:0}
+.pillars-list .pillar{position:relative;display:flex;align-items:center;gap:14px;background:#f2f7fb;border:1px solid #d7e3ee;border-radius:999px;padding:12px 16px;margin:14px 0;box-shadow:0 2px 8px rgba(10,75,115,.06)}
+.pillars-icon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#fff;border:1px dashed #0a4b73;font-size:20px}
+.pillars-list .pillar div{font-weight:600;color:#20384a}
+.pillars-list .pillar::after{content:"";position:absolute;left:calc(50% - 1px);bottom:-22px;width:2px;height:22px;background-image:radial-gradient(#0a4b73 1px,rgba(10,75,115,0) 1px);background-size:2px 8px;background-repeat:repeat-y}
+.pillars-list .pillar:last-child::after{display:none}
+
+@media (max-width: 575.98px){
+  .pillars-title{font-size:28px}
+}
+
+
+/* furniture carousel */
+  /* furniture carousel */
+       section.furniture-carousel {
+      padding: 0 0 50px 0;
+    }
+    .furniture-carousel .content-box h2 {
+          font-size: 2em;
+    font-weight: bold;
+    color: #0a4b73;
+    margin-bottom: 10px;
+    }
+    .furniture-carousel .content-box{
+      text-align: right;
+      margin-bottom: 30px;
+    }
+    .furniture-carousel .swiper {
+      padding: 20px 0;
+    }
+    .furniture-carousel .swiper-slide {
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+      background: #fff;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    }
+    .furniture-carousel .swiper-slide img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .furniture-carousel .swiper-slide:hover img {
+      transform: scale(1.05);
+    }
+    .furniture-carousel .add-to-cart {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      text-decoration: none;
+    }
+    .furniture-carousel .swiper-slide:hover .add-to-cart {
+      opacity: 1;
+    }
+    .swiper-pagination-bullets .swiper-pagination-bullet {
+      background: #eca64a;
+      opacity: 0.5;
+      
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1 !important;
+    }
+    .linkedin-btn {
+    padding: 8px 17px;
+    background: #0a4b73;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.3s;
+    font-size: .9rem;
+    }
+
+    /* partners */
+         /* --- Partner Header Style --- */
+        .partner-text {
+            color: #4c718a;
+            font-size: 1.1rem;
+        }
+     
+        /* --- Main Content Area --- */
+        #partner-section {
+            background:linear-gradient(230deg,#0a4b7327, #ffffffab);
+            /* min-height: 80vh; */
+            overflow: hidden; /* Important for clean edges */
+        }
+
+        .main-content-row{
+          height: 50vh;
+        }
+        .text-content-area {
+            padding-left: 5rem !important; /* Adjust spacing */
+        }
+
+        .count-number {
+            color: #0a4b73;
+            font-size: 2.2rem !important; /* Adjust size to match 5000+ */
+            font-weight: 800;
+        }
+
+        .english-text {
+            font-size: 0.9rem;
+            color: #6a7185;
+        }
+
+        /* --- Logo Grid Area & Background --- */
+        .logo-grid-area {
+            position: relative;
+            /* This creates the visual separation line */
+            border-left: 1px solid rgba(255, 255, 255, 0.1); 
+            /* min-height: 600px; */
+        }
+
+        #logo-grid-container {
+            width: 100%;
+            height: 100%;
+            /* The core: Absolute grid for the background lines */
+            display: grid;
+            /* Create 4 columns and 3 rows for the 12 slots */
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            
+            /* **Background Grid Lines** */
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: calc(100% / 4) calc(100% / 3); /* Size lines to align with grid */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* --- Logo Slots and Asymmetry --- */
+        .logo-slot {
+            position: absolute; /* Essential for manual asymmetric placement */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: rgba(255, 255, 255, 0.05);  */
+            border-radius: 5px;
+            transition: all 0.5s ease-in-out;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .logo-slot img {
+            width: 90%;
+            /* max-height: 90%; */
+            /* filter: grayscale(100%) brightness(1.5);  */
+            opacity: 0.8;
+            transition: opacity 0.5s ease-in; /* For the fade effect */
+        }
+        
+        /* Fade effect class used by JavaScript */
+        .logo-slot img.fading-out {
+            opacity: 0 !important;
+        }
+
+        /* LOGO POSITIONING (ASYNMETRIC LAYOUT) - Manually placed */
+        /* Row 1 */
+        .logo-slot-1 { top: 10%; left: 0%; width: 22%; height: 25%; z-index: 10; } 
+        .logo-slot-2 { top: 5%; left: 25%; width: 28%; height: 30%; z-index: 9; }
+        .logo-slot-3 { top: 15%; left: 55%; width: 18%; height: 20%; z-index: 11; }
+        .logo-slot-4 { top: 5%; left: 75%; width: 22%; height: 25%; z-index: 8; }
+
+        /* Row 2 */
+        .logo-slot-5 { top: 35%; left: 15%; width: 25%; height: 28%; z-index: 12; }
+        .logo-slot-6 { top: 40%; left: 45%; width: 20%; height: 20%; z-index: 9; }
+        .logo-slot-7 { top: 30%; left: 70%; width: 30%; height: 25%; z-index: 11; }
+        .logo-slot-8 { top: 50%; left: 0%; width: 15%; height: 18%; z-index: 8; }
+
+        /* Row 3 */
+        .logo-slot-9 { top: 65%; left: 5%; width: 20%; height: 20%; z-index: 10; }
+        .logo-slot-10 { top: 70%; left: 30%; width: 25%; height: 25%; z-index: 12; }
+        .logo-slot-11 { top: 60%; left: 60%; width: 20%; height: 25%; z-index: 9; }
+        .logo-slot-12 { top: 75%; left: 85%; width: 15%; height: 18%; z-index: 11; }
+
+
+        /* --- Responsiveness --- */
+        @media (max-width: 1200px) { /* Laptops */
+            .text-content-area {
+                padding-left: 2rem !important;
+            }
+        }
+
+        @media (max-width: 992px) { /* Tablets/Small Desktops (Responsiveness for logo grid) */
+            .logo-grid-area {
+                border-left: none;
+                min-height: 400px;
+                margin-top: 2rem;
+            }
+            .text-content-area {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            /* Switch to a simple grid layout for mobile */
+            #logo-grid-container {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                background-size: calc(100% / 3) calc(100% / 4);
+                position: static; /* Switch from absolute positioning */
+            }
+
+            .logo-slot {
+                position: static; /* Let the grid handle layout */
+                width: auto;
+                height: auto;
+                /* Reset manual positioning */
+                top: auto; left: auto;
+                margin: 5px; /* Add some margin for spacing */
+            }
+        }
+
+        @media (max-width: 576px) { /* Mobile phones */
+            .count-number {
+                font-size: 3rem;
+            }
+        }
+   

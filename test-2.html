@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climate Decision Intelligence</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+      color: #0a3d62;
+      overflow-x: hidden;
+    }
+
+    .cdi-section {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cdi-header {
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cdi-header h2 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      background: linear-gradient(90deg, #023e8a, #0096c7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .cdi-header p {
+      color: #4361ee;
+      font-weight: 500;
+      font-size: 1.05rem;
+      margin-top: 10px;
+    }
+
+    /* Owl Carousel - Data Bar */
+    .owl-carousel .item {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      text-align: center;
+      padding: 25px 15px;
+      margin: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      border: 1px solid rgba(255,255,255,0.6);
+      transition: all 0.3s ease;
+    }
+
+    .owl-carousel .item:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+    }
+
+    .owl-carousel .item img {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 10px;
+      filter: brightness(0) saturate(100%) invert(21%) sepia(99%) saturate(654%) hue-rotate(194deg) brightness(93%) contrast(92%);
+    }
+
+    .owl-carousel .item p {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #023e8a;
+      margin: 0;
+    }
+
+    /* Dashboard Cards */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cdi-card {
+      border-radius: 22px;
+      padding: 35px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 80%, rgba(0, 150, 199, 0.1));
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cdi-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Decorative gradient stripe at bottom */
+    .cdi-card::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, #0077b6, #00b4d8, #90e0ef);
+      border-bottom-left-radius: 22px;
+      border-bottom-right-radius: 22px;
+    }
+
+    .cdi-card h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0077b6;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cdi-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      z-index: 2;
+      position: relative;
+    }
+
+    .cdi-card ul li {
+      background: #e8f3ff;
+      padding: 8px 16px;
+      border-radius: 14px;
+      margin-bottom: 10px;
+      display: inline-block;
+      font-size: 0.9rem;
+      color: #023e8a;
+      margin-right: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .cdi-card ul li:hover {
+      background: #0077b6;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .cdi-header h2 {
+        font-size: 2.1rem;
+      }
+      .dashboard-grid {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="cdi-section">
+  <div class="container">
+    <div class="cdi-header">
+      <h2>Climate Decision Intelligence</h2>
+      <p>Integrating real-time data and analytics for smarter, sustainable decisions.</p>
+    </div>
+
+    <!-- Data Bar (Owl Carousel) -->
+    <div class="owl-carousel owl-theme mb-5">
+      <div class="item"><img src="assets/images/logo/piller-1.png" alt=""><p>Satellite Data</p></div>
+      <div class="item"><img src="assets/images/logo/piller-2.png" alt=""><p>Hyper-localised Weather Stations</p></div>
+      <div class="item"><img src="assets/images/logo/piller-3.png" alt=""><p>IoT Sensors</p></div>
+      <div class="item"><img src="assets/images/logo/piller-4.png" alt=""><p>Weather & Third Party Data</p></div>
+      <div class="item"><img src="assets/images/logo/piller-5.png" alt=""><p>Business Economic Data</p></div>
+      <div class="item"><img src="livestock.svg" alt=""><p>Livestock Data</p></div>
+      <div class="item"><img src="crop.svg" alt=""><p>Crop Data</p></div>
+      <div class="item"><img src="utility.svg" alt=""><p>Utility Data</p></div>
+      <div class="item"><img src="renewable.svg" alt=""><p>Renewables</p></div>
+      <div class="item"><img src="mobility.svg" alt=""><p>Mobility</p></div>
+    </div>
+
+    <!-- Dashboard Grid -->
+    <div class="dashboard-grid">
+      <div class="cdi-card">
+        <h4>CDI Forecast</h4>
+        <ul>
+          <li>Weather Forecasting</li>
+          <li>Long Range Climate Forecasting</li>
+        </ul>
+      </div>
+
+      <div class="cdi-card">
+        <h4>CDI Foresight</h4>
+        <ul>
+          <li>Dangerous Weather</li>
+          <li>Flood</li>
+          <li>Landslide</li>
+          <li>Bushfire</li>
+          <li>Wet Weather</li>
+          <li>Extreme Heat</li>
+        </ul>
+      </div>
+
+      <div class="cdi-card">
+        <h4>CDI Insight</h4>
+        <ul>
+          <li>Livestock Heat Load Index</li>
+          <li>Climate Resilient Agriculture</li>
+          <li>Marine Ecology</li>
+          <li>Human Heat Load Index</li>
+          <li>Physical Transition Risk</li>
+          <li>Logistics Occurrence Index</li>
+        </ul>
+      </div>
+
+      <div class="cdi-card">
+        <h4>CDI Resilience</h4>
+        <ul>
+          <li>Infrastructure</li>
+          <li>Agriculture</li>
+          <li>Livestock</li>
+          <li>Healthcare</li>
+          <li>Global Logistics</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- jQuery and Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 15,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: false,
+    smartSpeed: 900,
+    slideTransition: 'linear',
+    autoplaySpeed: 4000,
+    responsive: {
+      0: { items: 2 },
+      600: { items: 4 },
+      1000: { items: 6 }
+    }
+  });
+</script>
+
+</body>
+</html>

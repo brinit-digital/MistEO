@@ -31,6 +31,10 @@
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+
 </head>
 
 <body>
@@ -47,7 +51,7 @@
     <div class="parallax home__parallax home__parallax-img4" data-rellax-speed="-3"></div>
 
     <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-      <img src="assets/images/logo/Mist EO Logo 1080px[1].png" class="parallax home__title w-25" data-rellax-speed="-6" >
+      <img src="assets/images/logo/Mist EO Logo 1080px[1].png" class="parallax home__title" data-rellax-speed="-6" >
     </div>
     <span class="parallax home__subtitle" data-rellax-speed="-5">Climate Change. Covered.</span>
   </div>
@@ -70,9 +74,9 @@
 
 
   <!-- ===== ABOUT SECTION =====-->
-  <section class="section-why-misteo mt-3">
-    <div class="wrap">
-      <div class="left">
+  <section class="container section-why-misteo mt-3">
+    <div class=" wrap row">
+      <div class="col-lg-6 left">
         <span class="section-pill">About Us</span>
         <h1 class="why-head"> A Climate Fintech company</h1>
         <p class="lead">
@@ -120,20 +124,20 @@
           <button class="btn-primary">Discover More</button>
         </div>
       </div>
-      <div class="right">
+      <div class="col-lg-6 right">
         <div class="frame">
 
           <!-- circle badge -->
           <div class="badge">
             <div>
-              <div class="num">15+</div>
-              <div class="small">Years of Experience</div>
+              <div class="num pb-1">15+</div>
+              <div class="small">Years of <br>Experience</div>
             </div>
           </div>
 
           <!-- image card -->
           <div class="cards" style="height:360px;">
-            <img src="assets/images/elements/misteo-about.png" alt="Instructor Image" />
+            <img src="assets/images/elements/about-indian.png" class="img-fluid" alt="Instructor Image" />
           </div>
           <!-- dotted decorative grid -->
           <div class="dots" aria-hidden="true"></div>
@@ -141,6 +145,70 @@
       </div>
     </div>
   </section>
+
+  <!-- achievements -->
+   <section class="section-achievements">
+    <div class="container">
+      <div class="row achievement-section">
+        <div class="col-md-3 ">
+          <h4 class="achievement-head">Our Achievements</h4>
+            <p class="achievement-subhead">Proud Partnerships & Collaborations</p>
+        </div>
+        <div class="col-md-9">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <img src="assets/images/achievements/logo-1.png" alt="Enterprise Singapore">
+              <!-- <p class="hover-text">Partnership with Enterprise Singapore for innovation in climate tech.</p> -->
+            </div>
+            <div class="item">
+              <img src="assets/images/achievements/logo-2.png" alt="IN-SPACe">
+              <!-- <p class="hover-text">Collaboration with IN-SPACe for space-based climate solutions.</p> -->
+            </div>
+            <div class="item">
+              <img src="assets/images/achievements/logo-3.png" alt="Enterprise Singapore">
+              <!-- <p class="hover-text">Partnership with Enterprise Singapore for innovation in climate tech.</p> -->
+            </div>
+            <div class="item">
+              <img src="assets/images/achievements/logo-4.png" alt="IN-SPACe">
+              <!-- <p class="hover-text">Collaboration with IN-SPACe for space-based climate solutions.</p> -->
+            </div>
+            <div class="item">
+              <img src="assets/images/achievements/logo-5.png" alt="Enterprise Singapore">
+              <!-- <p class="hover-text">Partnership with Enterprise Singapore for innovation in climate tech.</p> -->
+            </div>
+            <div class="item">
+              <img src="assets/images/achievements/logo-6.png" alt="IN-SPACe">
+              <!-- <p class="hover-text">Collaboration with IN-SPACe for space-based climate solutions.</p> -->
+            </div>
+            <div class="item">
+              <img src="assets/images/achievements/logo-7.png" alt="Enterprise Singapore">
+              <!-- <p class="hover-text">Partnership with Enterprise Singapore for innovation in climate tech.</p> -->
+            </div>
+            <div class="item">
+              <img src="assets/images/achievements/logo-8.png" alt="IN-SPACe">
+              <!-- <p class="hover-text">Collaboration with IN-SPACe for space-based climate solutions.</p> -->
+            </div>
+            <div class="item">
+              <img src="assets/images/achievements/logo-9.png" alt="Enterprise Singapore">
+              <!-- <p class="hover-text">Partnership with Enterprise Singapore for innovation in climate tech.</p> -->
+            </div>
+              <div class="item">
+              <img src="assets/images/achievements/logo-10.png" alt="Enterprise Singapore">
+              <!-- <p class="hover-text">Partnership with Enterprise Singapore for innovation in climate tech.</p> -->
+            </div>
+            <div class="item">
+              <img src="assets/images/achievements/logo-11.png" alt="IN-SPACe">
+              <!-- <p class="hover-text">Collaboration with IN-SPACe for space-based climate solutions.</p> -->
+            </div>
+            <div class="item">
+              <img src="assets/images/achievements/logo-12.png" alt="Enterprise Singapore">
+              <!-- <p class="hover-text">Partnership with Enterprise Singapore for innovation in climate tech.</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
 
   <!-- ===== what we do SECTION =====-->
   <div class="container services-section mt-5">
@@ -251,8 +319,89 @@
       </div>
     </div>
   </div>
+
+  <!-- Our Pillars (Flow) -->
+  <section class="pillars-section">
+    <div class="container">
+      <h2 class="pillars-title">Our Pillars</h2>
+
+      <!-- Desktop / tablet: SVG flow -->
+      <div class="pillars-flow d-none d-md-block">
+        <svg class="pillars-svg" viewBox="0 0 1000 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Forecast to Resilience flow">
+          <defs>
+            <marker id="pillars-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#0a4b73"/>
+            </marker>
+            <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#9bb8c9" flood-opacity="0.25"/>
+            </filter>
+          </defs>
+
+          <!-- dotted curved connectors -->
+          <path d="M 180 100 Q 260 55 340 100" fill="none" stroke="#0a4b73" stroke-width="2" stroke-dasharray="1 10" stroke-linecap="round" marker-end="url(#pillars-arrow)"/>
+          <path d="M 420 165 Q 500 225 580 180" fill="none" stroke="#0a4b73" stroke-width="2" stroke-dasharray="1 10" stroke-linecap="round" marker-end="url(#pillars-arrow)"/>
+          <path d="M 660 100 Q 740 55 820 100" fill="none" stroke="#0a4b73" stroke-width="2" stroke-dasharray="1 10" stroke-linecap="round" marker-end="url(#pillars-arrow)"/>
+
+          <!-- Pillar 1: Forecast -->
+          <g transform="translate(140,130)">
+            <circle r="44" fill="#f2f7fb" stroke="#d7e3ee" stroke-width="2" filter="url(#softShadow)"/>
+            <!-- cloud + rain icon -->
+             <image x="-22" y="-22" width="44" height="44" href="assets/images/logo/piller-1.png" />
+            <text x="0" y="80" text-anchor="middle" fill="#20384a" font-size="18" font-weight="600">Forecast</text>
+          </g>
+
+          <!-- Pillar 2: Foresight -->
+          <g transform="translate(380,130)">
+            <circle r="44" fill="#f2f7fb" stroke="#d7e3ee" stroke-width="2" filter="url(#softShadow)"/>
+            <!-- monitor + chart icon -->
+             <image x="-22" y="-22" width="44" height="44" href="assets/images/logo/piller-2.png" />
+            <text x="0" y="80" text-anchor="middle" fill="#20384a" font-size="18" font-weight="600">Foresight</text>
+          </g>
+
+          <!-- Pillar 3: Insight -->
+          <g transform="translate(620,130)">
+            <circle r="44" fill="#f2f7fb" stroke="#d7e3ee" stroke-width="2" filter="url(#softShadow)"/>
+            <!-- lightbulb icon -->
+            <image x="-22" y="-22" width="44" height="44" href="assets/images/logo/piller-3.png" />
+            <text x="0" y="80" text-anchor="middle" fill="#20384a" font-size="18" font-weight="600">Insight</text>
+          </g>
+
+          <!-- Pillar 4: Resilience -->
+          <g transform="translate(860,130)">
+            <circle r="44" fill="#f2f7fb" stroke="#d7e3ee" stroke-width="2" filter="url(#softShadow)"/>
+            <!-- resilience image -->
+            <image x="-22" y="-22" width="44" height="44" href="assets/images/logo/piller-4.png" />
+            <text x="0" y="80" text-anchor="middle" fill="#20384a" font-size="18" font-weight="600">Resilience</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Mobile: stacked list with dotted connectors -->
+      <div class="pillars-flow-mobile d-md-none">
+        <ul class="pillars-list">
+          <li class="pillar">
+            <img  width="34" height="34" src="assets/images/logo/piller-1.png" ></img>
+            <div>Forecast</div>
+          </li>
+          <li class="pillar">
+             <img  width="34" height="34" src="assets/images/logo/piller-2.png" ></img>
+            <div>Foresight</div>
+          </li>
+          <li class="pillar">
+            <img  width="34" height="34" src="assets/images/logo/piller-3.png" ></img>
+            <div>Insight</div>
+          </li>
+          <li class="pillar">
+            <img  width="34" height="34" src="assets/images/logo/piller-4.png" ></img>
+            <div>Resilience</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- Product Section -->
-  <div class="product text-center">
+  <div class=" product text-center">
     <span class="section-pill">Our Product Suite</span>
     <h2>Innovation at the Intersection of Climate Science</h2>
     <p>Each mistEO solution is built to transform complex climate data into decisive action. Whether you’re protecting
@@ -260,7 +409,7 @@
       intelligence, and sector-specific expertise - giving you the clarity to act when it matters most.</p>
   </div>
 
-  <section class="cards-section-product mb-5">
+  <section class="container cards-section-product mb-5">
     <a href="solutions/cdi-beef.html" class="card-product bg-img-1">
       <div class="card-content-product">
         <h3>Climate Decision Intelligence-Beef</h3>
@@ -282,7 +431,7 @@
       </div>
     </a>
 
-    <a href="#" class="card-product bg-img-4">
+    <!-- <a href="#" class="card-product bg-img-4">
       <div class="card-content-product">
         <h3>Climate Resilience Pro</h3>
         <p>Develop bespoke insurance and derivative coverage for your business to ensure continual peace of mind</p>
@@ -301,11 +450,42 @@
         <h3>Climate Transition Pro</h3>
         <p>Enable climate driven banking and finance products to facilitate transition.</p>
       </div>
-    </a>
+    </a> -->
   </section>
+  <section id="partner-section" class="py-5">
+        <div class="container px-0">
+            <div class="row main-content-row mx-0">
+                <div class="col-12 col-lg-5 p-4 text-content-area mt-5 pt-5">
+                    <h2 class=" display-2 fw-bolder mb-3 count-number">Partnerships & Collaborations</h2>
+                    <p class="english-text">We deliver AI-powered climate and weather intelligence to help organizations reduce risk, improve
+            resilience, and make faster decisions.</p>
+                </div>
+
+                <div class="col-12 col-lg-7 logo-grid-area p-0">
+                    <div id="logo-grid-container" class="position-relative">
+                        <div class="logo-slot logo-slot-1"></div>
+                        <div class="logo-slot logo-slot-2"></div>
+                        <div class="logo-slot logo-slot-3"></div>
+                        <div class="logo-slot logo-slot-4"></div>
+
+                        <div class="logo-slot logo-slot-5"></div>
+                        <div class="logo-slot logo-slot-6"></div>
+                        <div class="logo-slot logo-slot-7"></div>
+                        <div class="logo-slot logo-slot-8"></div>
+
+                        <div class="logo-slot logo-slot-9"></div>
+                        <div class="logo-slot logo-slot-10"></div>
+                        <div class="logo-slot logo-slot-11"></div>
+                        <div class="logo-slot logo-slot-12"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
   <!-- industries we serve -->
   
-<section class="container mentor-section" id="mentorSection">
+<section class="container mentor-section mt-5 pt-5" id="mentorSection">
     <div class="mentor-content">
       <span class="section-pill">industries We Serve</span>
     <h2>Climate Intelligence for Diverse Sectors</h2>
@@ -453,7 +633,7 @@ helping you protect revenue, maintain continuity, and stay competitive.</p>
   </section>
 
   <!-- insight section -->
-  <section class="insight-container ">
+  <section class="container insight-container ">
     <!-- Left Text -->
     <div class=" insight-text">
       <span>Insights </span>
@@ -471,14 +651,7 @@ helping you protect revenue, maintain continuity, and stay competitive.</p>
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img src="assets/images/Blog/farm-bureau-mark-blg-lg.jpg" alt="SEO  insight">
-            <h3>Real-World Success Stories – A Deep Dive into Rangers Valley</h3>
-
-          </div>
-          <div class="flip-card-back">
-
-            <p>When I first heard about Rangers Valley, I was intrigued. What makes it a standout name in the world of
-              premium beef? </p>
-            <a href="insights/real-world-success-stories-rangers-valley.html">Read More</a>
+            <a href="insights/real-world-success-stories-rangers-valley.html"><h3>Real-World Success Stories – A Deep Dive into Rangers Valley</h3></a>
           </div>
         </div>
       </div>
@@ -488,13 +661,7 @@ helping you protect revenue, maintain continuity, and stay competitive.</p>
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img src="assets/images/Blog/farm-sunrise-blg-lg.jpg" alt="Social Media Marketing">
-            <h3>The Future of Livestock Farming with Climate Decision Intelligence</h3>
-          </div>
-          <div class="flip-card-back">
-
-            <p>In a world where climate uncertainty continues to challenge agriculture, innovative solutions are
-              redefining how we approach livestock farming.</p>
-            <a href="insights/future-of-livestock-farming-climate-decision-intelligence.html">Read More</a>
+            <a href="insights/future-of-livestock-farming-climate-decision-intelligence.html"><h3>The Future of Livestock Farming with Climate Decision Intelligence</h3></a>
           </div>
         </div>
       </div>
@@ -504,13 +671,7 @@ helping you protect revenue, maintain continuity, and stay competitive.</p>
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img src="assets/images/Blog/farmer-watering-blg-lg.jpg" alt="PPC Advertising">
-            <h3>Financial Security for Livestock Farmers with Parametric Solutions</h3>
-          </div>
-          <div class="flip-card-back">
-
-            <p>Financial Security for Livestock Farmers with Parametric Solutions
-              Farming has always been an unpredictable business. </p>
-            <a href="insights/financial-security-livestock-farmers-parametric-solutions.html">Read More</a>
+            <a href="insights/financial-security-livestock-farmers-parametric-solutions.html"><h3>Financial Security for Livestock Farmers with Parametric Solutions</h3></a>
           </div>
         </div>
       </div>
@@ -520,18 +681,56 @@ helping you protect revenue, maintain continuity, and stay competitive.</p>
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img src="assets/images/Blog/Agriculture-blg-lg.jpg" alt="Web Design">
-            <h3>
-              IndraWeather’s Role in Long-Term Climate Planning</h3>
-          </div>
-          <div class="flip-card-back">
-            <p>In an era defined by climate unpredictability, access to precise, hyper-local weather data has become
-              essential for industries worldwide.</p>
-            <a href="insights/IndraWeather’s Role in Long-Term .html">Read More</a>
+            <a href="insights/IndraWeather’s Role in Long-Term Climate Planning.html"><h3>IndraWeather’s Role in Long-Term Climate Planning</h3></a>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- carousel -->
+ <section class="furniture-carousel">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Carousel -->
+      <div class="col-lg-7 ">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="assets/images/linkedin post/post-1.png" alt="LinkedIn Post">
+              <a href="https://www.linkedin.com/posts/misteo_climateresilience-rubberplantation-weatherintelligence-activity-7380828633180880896-xNrD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8AqvQBjdEIVIN7S_QAekIt5FP8v3BsjMU" target="_blank" class="add-to-cart">Read More</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/linkedin post/post-2.png" alt="LinkedIn Post">
+              <a href="https://www.linkedin.com/posts/thinkag_insights-from-the-panel-boosting-parametric-ugcPost-7369020276296048644-JRMV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8AqvQBjdEIVIN7S_QAekIt5FP8v3BsjMU" target="_blank" class="add-to-cart">Read More</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/linkedin post/post-3.png" alt="LinkedIn Post">
+              <a href="https://www.linkedin.com/posts/misteo_marutisuzuki-marutisuzukiinnovation-unlockgrowth-activity-7341680073780953090-una1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8AqvQBjdEIVIN7S_QAekIt5FP8v3BsjMU" target="_blank" class="add-to-cart">Read More</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/linkedin post/post-4.png" alt="LinkedIn Post">
+              <a href="https://www.linkedin.com/posts/misteo_diving-scuba-activity-7342816199908499457-rliq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8AqvQBjdEIVIN7S_QAekIt5FP8v3BsjMU" target="_blank" class="add-to-cart">Read More</a>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <!-- <div class="swiper-pagination "></div> -->
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="col-lg-5 content-box ">
+        <span class="section-pill">LinkedIn </span>
+        <h2 >Latest Posts from MistEO</h2>
+        <p class="mb-3">Stay connected with our latest updates  on climate change and fintech.</p>
+        <a href="https://www.linkedin.com/company/misteo" class="linkedin-btn">Follow Us</a>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- footer -->
 
@@ -559,6 +758,10 @@ helping you protect revenue, maintain continuity, and stay competitive.</p>
   <!-- GSAP and ScrollTrigger -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- jQuery and Owl Carousel JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
 
   <!-- CUSTOM JS FILES -->
   <script src="assets/js/parallex.js"></script>
@@ -646,6 +849,209 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+
+<script>
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    responsive:{
+      0:{
+        items:3
+      },
+     
+      992:{
+        items:4
+      }
+    }
+  });
+});
+</script>
+
+<script>
+document.querySelectorAll('.add-to-cart').forEach(btn => {
+  btn.addEventListener('mouseover', () => btn.textContent = 'Read More');
+  btn.addEventListener('mouseout', () => btn.textContent = 'Read More');
+});
+</script>
+
+</script>
+
+<!-- Partners logos fade rotation -->
+<script>
+(function(){
+  const grid = document.getElementById('partners-logos');
+  if(!grid) return;
+  const imgs = Array.from(grid.querySelectorAll('img'));
+  if(imgs.length === 0) return;
+
+  // Build a list of up to 33 logo paths. Reuse achievement logos to fill if needed.
+  const base = Array.from({length: 12}, (_,i)=>`assets/images/achievements/logo-${i+1}.png`);
+  const logos = [];
+  while (logos.length < 33) logos.push(...base);
+  logos.length = 33;
+
+  let start = 0;
+  function swapBatch(){
+    imgs.forEach((img, i) => {
+      const nextSrc = logos[(start + i) % logos.length];
+      if (img.getAttribute('src') === nextSrc) return;
+      img.classList.add('is-fading');
+      setTimeout(() => {
+        img.src = nextSrc;
+        const onLoad = () => {
+          img.classList.remove('is-fading');
+          img.removeEventListener('load', onLoad);
+        };
+        img.addEventListener('load', onLoad);
+      }, 180);
+      setTimeout(() => img.classList.remove('is-fading'), 900);
+    });
+    start = (start + imgs.length) % logos.length;
+  }
+
+  // initial and interval
+  swapBatch();
+  setInterval(swapBatch, 3000);
+})();
+</script>
+  <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Array of all 33 logo image URLs (***REPLACE THESE WITH YOUR ACTUAL LOGO PATHS***)
+            const allLogos = [
+                'assets/images/achievements/logo-34.png', // Example path
+                'assets/images/achievements/logo-2.png',
+                'assets/images/achievements/logo-3.png',
+                'assets/images/achievements/logo-4.png',
+                'assets/images/achievements/logo-5.png',
+                'assets/images/achievements/logo-6.png',
+                'assets/images/achievements/logo-7.png',
+                'assets/images/achievements/logo-8.png',
+                'assets/images/achievements/logo-9.png',
+                'assets/images/achievements/logo-33.png',
+                'assets/images/achievements/logo-11.png',
+                'assets/images/achievements/logo-12.png',
+                'assets/images/achievements/logo-13.png',
+                'assets/images/achievements/logo-14.png',
+                'assets/images/achievements/logo-15.png',
+                'assets/images/achievements/logo-16.png',
+                'assets/images/achievements/logo-17.png',
+                'assets/images/achievements/logo-18.png',
+                'assets/images/achievements/logo-19.png',
+                'assets/images/achievements/logo-20.png',
+                'assets/images/achievements/logo-21.png',
+                'assets/images/achievements/logo-22.png',
+                'assets/images/achievements/logo-23.png',
+                'assets/images/achievements/logo-24.png',
+                'assets/images/achievements/logo-25.png',
+                'assets/images/achievements/logo-26.png',
+                'assets/images/achievements/logo-27.png',
+                'assets/images/achievements/logo-28.png',
+                'assets/images/achievements/logo-29.png',
+                'assets/images/achievements/logo-30.png',
+                'assets/images/achievements/logo-31.png',
+                'assets/images/achievements/logo-32.png'
+            ];
+
+            const logoSlots = document.querySelectorAll('.logo-slot');
+            const numSlots = logoSlots.length; // 12 slots
+            let currentLogoIndex = 0;
+
+            /**
+             * Shuffles an array randomly (Fisher-Yates).
+             */
+            function shuffleArray(array) {
+                let newArray = [...array];
+                for (let i = newArray.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+                }
+                return newArray;
+            }
+
+            /**
+             * Updates the logos in the grid slots every cycle.
+             */
+            function updateLogos() {
+                // 1. Select the next 12 logos from the total pool of 33
+                let logosToShow = [];
+                for (let i = 0; i < numSlots; i++) {
+                    const index = (currentLogoIndex + i) % allLogos.length;
+                    logosToShow.push(allLogos[index]);
+                }
+                
+                // 2. Randomize the order of the selected 12 to make the layout feel less repetitive
+                logosToShow = shuffleArray(logosToShow);
+
+                logoSlots.forEach((slot, index) => {
+                    const logoPath = logosToShow[index];
+                    
+                    let img = slot.querySelector('img');
+                    if (!img) {
+                        img = document.createElement('img');
+                        slot.appendChild(img);
+                    }
+                    
+                    // Trigger fade-out (CSS transition)
+                    img.classList.add('fading-out');
+                    
+                    setTimeout(() => {
+                        img.src = logoPath;
+                        img.alt = `Partner Logo ${index + 1}`;
+                        
+                        // Trigger fade-in (CSS transition)
+                        img.classList.remove('fading-out');
+                    }, 500); // Wait 500ms (matches CSS transition time)
+                });
+
+                // 3. Move the pointer forward for the next cycle
+                currentLogoIndex = (currentLogoIndex + numSlots) % allLogos.length;
+            }
+
+            // Initial load
+            updateLogos();
+
+            // Set interval for logo rotation: 3000ms = 3 seconds
+            setInterval(updateLogos, 3000);
+        });
+
+        // GSAP ScrollTrigger animation
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Set initial states
+        gsap.set(".text-content-area", { x: -100, opacity: 0 });
+        gsap.set(".logo-grid-area", { x: 100, opacity: 0 });
+
+        // Animate text content
+        gsap.to(".text-content-area", {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            scrollTrigger: {
+                trigger: "#partner-section",
+                start: "top 80%",
+                toggleActions: "restart none none none"
+            }
+        });
+
+        // Animate logo grid
+        gsap.to(".logo-grid-area", {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 0.5,
+            scrollTrigger: {
+                trigger: "#partner-section",
+                start: "top 80%",
+                toggleActions: "restart none none none"
+            }
+        });
+    </script>
 
 </body>
 

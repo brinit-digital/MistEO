@@ -1,3 +1,57 @@
+.weather-box {
+      position: absolute;
+      top: 5rem;
+      right: 25px;
+      /* background: rgba(10, 75, 115, 0.085); */
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-radius: 16px;
+      padding: 18px 25px;
+      color: #fff;
+      /* box-shadow: 0 4px 25px rgba(0, 0, 0, 0.158); */
+      text-align: center;
+      z-index: 999;
+      width: 180px;
+      transition: 0.4s ease;
+    }
+
+    .weather-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .weather-box p {
+      margin: 6px 0;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      color: #0a4b73;
+    }
+
+    #location {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    #temp {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 5px 0;
+    }
+
+    #desc {
+      text-transform: capitalize;
+      opacity: 0.85;
+      font-size: 13px;
+    }
+
+    #icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    .home {
+      position: relative;
+    }
 /* cloud section */
 .cloud-section {
   position: absolute;
@@ -15,7 +69,16 @@
   display: block;
   object-fit: cover;
 }
-
+@media (min-width: 1500px){
+  .cloud-section {
+  margin-top: -15rem;
+}
+}
+@media (min-width: 1700px){
+  .cloud-section {
+  margin-top: -19rem;
+}
+}
 @media (max-width: 973px) {
   .cloud-section {
     margin-top: -9rem;
@@ -121,7 +184,7 @@
   background: linear-gradient(320deg, #0a4b7338, white);
   /* padding: 5px 50px 45px 50px; */
   border-radius: 20px;
-  padding-top: 5rem !important;
+  padding-top: 5rem ;
   padding-bottom: 3rem;
 }
 
@@ -1364,6 +1427,600 @@ hr.sep {
 }
 
 /* ==============================
+   Climate Decision Intelligence Platform Section
+   ============================== */
+.cdi-platform-section {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f6fbff 50%, #ffffff 100%);
+  position: relative;
+}
+
+.cdi-platform-title {
+  font-size: 2.5rem;
+  color: #0a4b73;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cdi-platform-subtitle {
+  font-size: 1.1rem;
+  color: #6b6b6b;
+  margin-bottom: 50px;
+}
+
+/* Data Sources Grid */
+.data-sources {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.data-source-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 10px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(10, 75, 115, 0.08);
+  transition: all 0.3s ease;
+}
+
+.data-source-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(10, 75, 115, 0.15);
+}
+
+.data-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0a4b73 0%, #1a6ba0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(10, 75, 115, 0.2);
+}
+
+.data-icon i {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.data-source-item p {
+  font-size: 0.85rem;
+  color: #333;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Platform Bar */
+.platform-bar {
+  background: linear-gradient(135deg, #0a4b73 0%, #1a6ba0 100%);
+  padding: 20px 40px;
+  border-radius: 50px;
+  text-align: center;
+  margin: 50px auto 60px;
+  max-width: 900px;
+  box-shadow: 0 8px 25px rgba(10, 75, 115, 0.25);
+  position: relative;
+}
+
+.platform-bar::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 30px;
+  background: linear-gradient(to bottom, transparent, #0a4b73);
+}
+
+.platform-bar h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Pillars Grid */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.pillar-column {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(10, 75, 115, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pillar-column::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(to bottom, #0a4b73, transparent);
+}
+
+.pillar-column:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(10, 75, 115, 0.2);
+}
+
+.pillar-header {
+  background: linear-gradient(135deg, #e8f4f8 0%, #d4e9f2 100%);
+  padding: 25px 20px;
+  text-align: center;
+  border-bottom: 3px solid #0a4b73;
+}
+
+.pillar-header h4 {
+  color: #0a4b73;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.pillar-header p {
+  color: #4c718a;
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.pillar-components {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.component-item {
+  background: #f8fbfd;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border-left: 3px solid #0a4b73;
+  font-size: 0.9rem;
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(10, 75, 115, 0.05);
+}
+
+.component-item:hover {
+  background: #e8f4f8;
+  transform: translateX(5px);
+  box-shadow: 0 4px 10px rgba(10, 75, 115, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .data-sources {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+  }
+  
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .cdi-platform-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .data-sources {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  
+  .data-source-item {
+    padding: 15px 8px;
+  }
+  
+  .data-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .data-icon i {
+    font-size: 20px;
+  }
+  
+  .data-source-item p {
+    font-size: 0.75rem;
+  }
+  
+  .platform-bar {
+    padding: 15px 25px;
+    margin: 40px auto 50px;
+  }
+  
+  .platform-bar h3 {
+    font-size: 1.2rem;
+  }
+  
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .cdi-platform-title {
+    font-size: 1.8rem;
+  }
+  
+  .cdi-platform-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cdi-platform-section {
+    padding: 50px 0;
+  }
+  
+  .data-sources {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cdi-platform-title {
+    font-size: 1.5rem;
+  }
+  
+  .cdi-platform-subtitle {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+  
+  .pillar-header h4 {
+    font-size: 1.1rem;
+  }
+  
+  .component-item {
+    font-size: 0.85rem;
+    padding: 10px 12px;
+  }
+}
+
+   
+/* ============================================
+   Climate Decision Intelligence Section - Modern Card Design
+   ============================================ */
+.cdi-intelligence-section {
+  padding: 10px 20px 80px;
+  background: #ffffff;
+}
+
+.cdi-main-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #0a4b73;
+  margin-bottom: 15px;
+}
+
+.cdi-subtitle {
+  font-size: 1.1rem;
+  color: #6b6b6b;
+  margin-bottom: 60px;
+}
+
+.section-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0a4b73;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.section-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background: #0a4b73;
+  border-radius: 2px;
+}
+
+/* Data Sources Grid */
+.data-sources-grid {
+  margin-bottom: 80px;
+}
+
+.sources-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.source-card {
+  background: #f8fbfd;
+  border: 2px solid #e8f0f5;
+  border-radius: 12px;
+  padding: 25px 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.source-card:hover {
+  background: #ffffff;
+  border-color: #0a4b73;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(10, 75, 115, 0.12);
+}
+
+.source-card i {
+  font-size: 36px;
+  color: #0a4b73;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.source-card span {
+  font-size: 0.71rem;
+  color: #333;
+  font-weight: 500;
+  display: block;
+  line-height: 1.3;
+}
+
+/* CDI Solutions Grid */
+.cdi-solutions-grid {
+  margin-top: 60px;
+}
+
+.solutions-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Solution Card */
+.solution-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(10, 75, 115, 0.1);
+  transition: all 0.4s ease;
+  border: 1px solid #e8f0f5;
+}
+
+.solution-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(10, 75, 115, 0.18);
+}
+
+/* Card Header */
+.card-header-cdi {
+  padding: 25px;
+  background: linear-gradient(135deg, #0a4b73 0%, #1a6ba0 100%);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 120px;
+}
+
+.icon-badge {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+}
+
+.icon-badge i {
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.card-header-cdi h4 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.card-header-cdi p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Card Body */
+.card-body-cdi {
+  padding: 25px;
+  background: #ffffff;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: #f8fbfd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: #e8f4f8;
+  transform: translateX(5px);
+}
+
+.feature-item i {
+  color: #0a4b73;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.feature-item span {
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .solutions-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .cdi-intelligence-section {
+    padding: 80px 20px;
+  }
+
+  .cdi-main-title {
+    font-size: 2.3rem;
+  }
+
+  .sources-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+  }
+
+  .source-card {
+    padding: 20px 12px;
+  }
+
+  .source-card i {
+    font-size: 32px;
+  }
+
+  .solutions-row {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cdi-intelligence-section {
+    padding: 60px 15px;
+  }
+
+  .cdi-main-title {
+    font-size: 2rem;
+  }
+
+  .cdi-subtitle {
+    font-size: 1rem;
+  }
+
+  .sources-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .source-card {
+    padding: 18px 10px;
+  }
+
+  .source-card i {
+    font-size: 28px;
+  }
+
+  .source-card span {
+    font-size: 0.8rem;
+  }
+
+  .solutions-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .card-header-cdi {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .card-header-cdi h4 {
+    font-size: 1.1rem;
+  }
+
+  .card-body-cdi {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cdi-main-title {
+    font-size: 1.6rem;
+  }
+
+  .cdi-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .sources-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .source-card i {
+    font-size: 24px;
+  }
+
+  .icon-badge {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-badge i {
+    font-size: 24px;
+  }
+
+  .feature-item {
+    padding: 8px 10px;
+  }
+
+  .feature-item span {
+    font-size: 0.85rem;
+  }
+}
+/* ============================================
+   End Climate Decision Intelligence Section
+   ============================================ */
+
+/* ==============================
    Our Pillars (Flow) Section
    ============================== */
 .pillars-section{position:relative;padding:60px 0;background:linear-gradient(180deg,#f6fbff 0%,#ffffff 60%)}
@@ -1475,7 +2132,8 @@ hr.sep {
           height: 50vh;
         }
         .text-content-area {
-            padding-left: 5rem !important; /* Adjust spacing */
+           margin-top: 5rem !important;
+            padding-top: 5rem !important;
         }
 
         .count-number {
@@ -1602,3 +2260,77 @@ hr.sep {
             }
         }
    
+        /* last minitue media query */
+        @media (max-width: 400px) { 
+           .weather-box{
+            padding: 10px;
+            backdrop-filter: blur(1px);
+            width: 100px;
+            right: 5px;
+           }
+           #location{
+            font-size: 10px;
+            margin-bottom: 0px;
+           }
+           #temp{
+            font-size: 16px;
+           }
+           #icon{
+            width: 30px;
+            height: 30px
+           }
+           #desc{
+            font-size: 10px;
+            margin: 0px;
+           }
+           .wrap{
+            gap: 3.5rem;
+           }
+           .section-achievements{
+            margin: 2rem 0;
+           }
+           .owl-carousel{
+            margin-top: 1.5rem;
+           }
+           .services-section{
+            padding-top: 2rem !important;
+           }
+           .text-center h2{
+            font-size: 1.4rem;
+           }
+           .pillars-list .pillar{
+            justify-content: center;
+           }
+           .cdi-intelligence-section{
+            padding-top: 1rem !important;
+           }
+           .product{
+            margin-top: 1rem;
+           }
+           .card-product{
+            width: 100% !important;
+           }
+             .text-content-area {
+           margin-top: 0rem !important;
+            padding-top: 0rem !important;
+        }
+        .furniture-carousel .content-box h2 {
+    font-size: 1.5em;
+    }
+    .furniture-carousel .content-box{
+      text-align: center;
+    }
+    .linked{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .insight-text h2{
+      font-size: 1.5em;
+    }
+    .insight-text p{
+      font-size: 0.9em;
+    }
+}
+
+        
+        

@@ -150,7 +150,7 @@ max-width: 130px;
 
 /* Toggler icon */
 .navbar-toggler {
-    border: none;
+    border: none !important;
     background: none;
     outline: none;
 }
@@ -466,7 +466,14 @@ max-width: 130px;
         }
          .banner-content button {
       padding: 1opx 17px;
-      margin-top: 2rem;
+      
+      
+    }
+    .top-text{
+      margin-left: 0;
+    }
+    .top-text h2{ 
+      font-size: 1.5rem;
       
     }
 

@@ -35,6 +35,7 @@
   <link rel="stylesheet" href="https://unpkg.com/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://unpkg.com/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
 
+
 </head>
 
 <body>
@@ -43,8 +44,17 @@
   <header>
     <div id="navbar"></div>
   </header>
+
   <!-- ===== HOME =====-->
   <div class="home">
+    <div id="weather-box" class="weather-box">
+      <p id="location">Fetching location...</p>
+      <div class="d-flex">
+      <img id="icon" alt="weather icon" />
+      <p id="temp"></p>
+      </div>
+      <p id="desc"></p>
+    </div>
     <div class="parallax home__parallax home__parallax-img1" data-rellax-speed="-9"></div>
     <div class="parallax home__parallax home__parallax-img2" data-rellax-speed="-7"></div>
     <div class="parallax home__parallax home__parallax-img3" data-rellax-speed="-6"></div>
@@ -400,6 +410,216 @@
     </div>
   </section>
 
+  <!-- Climate Decision Intelligence Platform Section -->
+  <section class="cdi-intelligence-section">
+    <div class="container">
+      <!-- Header -->
+      <div class="text-center mb-5">
+        <span class="section-pill">Our Platform</span>
+        <h2 class="cdi-main-title">Climate Decision Intelligence Platform</h2>
+        <p class="cdi-subtitle">Integrating diverse data sources to power intelligent climate solutions</p>
+      </div>
+
+      <!-- Data Sources Grid -->
+      <div class="data-sources-grid">
+        <h3 class="section-label">Data Sources</h3>
+        <div class="sources-wrapper">
+          <div class="source-card">
+            <i class='bx bx-wifi'></i>
+            <span>Satellite Data</span>
+          </div>
+          <div class="source-card">
+            <i class='bx bx-building'></i>
+            <span>Hyper-localised Weather</span>
+          </div>
+          <div class="source-card">
+            <i class='bx bx-chip'></i>
+            <span>IoT Sensors</span>
+          </div>
+          <div class="source-card">
+            <i class='bx bx-cloud-drizzle'></i>
+            <span>Weather Data</span>
+          </div>
+          <div class="source-card">
+            <i class='bx bx-line-chart'></i>
+            <span>Economic Data</span>
+          </div>
+          <div class="source-card">
+            <i class='bx bxs-factory'></i>
+            <span>Livestock</span>
+          </div>
+          <div class="source-card">
+            <i class='bx bx-leaf'></i>
+            <span>Crop Data</span>
+          </div>
+          <div class="source-card">
+            <i class='bx bx-cog'></i>
+            <span>Utility</span>
+          </div>
+          <div class="source-card">
+            <i class='bx bx-wind'></i>
+            <span>Renewables</span>
+          </div>
+          <div class="source-card">
+            <i class='bx bx-car'></i>
+            <span>Mobility</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CDI Solutions Grid -->
+      <div class="cdi-solutions-grid">
+        <h3 class="section-label">CDI Solutions</h3>
+        
+        <div class="solutions-row">
+          <!-- CDI Forecast Card -->
+          <div class="solution-card forecast-card">
+            <div class="card-header-cdi">
+              <div class="icon-badge">
+                <i class='bx bx-cloud-rain'></i>
+              </div>
+              <div>
+                <h4>CDI Forecast</h4>
+                <p>Hyper Local Weather Modelling & Forecasting</p>
+              </div>
+            </div>
+            <div class="card-body-cdi">
+              <div class="feature-list">
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Weather Forecasting</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Long Range Climate Forecasting</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CDI Foresight Card -->
+          <div class="solution-card foresight-card">
+            <div class="card-header-cdi">
+              <div class="icon-badge">
+                <i class='bx bx-target-lock'></i>
+              </div>
+              <div>
+                <h4>CDI Foresight</h4>
+                <p>Early Warning Systems</p>
+              </div>
+            </div>
+            <div class="card-body-cdi">
+              <div class="feature-list">
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Dangerous Weather</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Flood</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Landslide</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Bushfire</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Wet Weather</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Extreme Heat</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CDI Insight Card -->
+          <div class="solution-card insight-card">
+            <div class="card-header-cdi">
+              <div class="icon-badge">
+                <i class='bx bx-bulb'></i>
+              </div>
+              <div>
+                <h4>CDI Insight</h4>
+                <p>Industry Specific Custom Risk Modelling</p>
+              </div>
+            </div>
+            <div class="card-body-cdi">
+              <div class="feature-list">
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Livestock Heat Load Index</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Climate Resilient Agriculture</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Marine Ecology</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Human Heat Load Index</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Physical Transition Risk</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Logistics Occurence Index</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CDI Resilience Card -->
+          <div class="solution-card resilience-card">
+            <div class="card-header-cdi">
+              <div class="icon-badge">
+                <i class='bx bx-shield-alt-2'></i>
+              </div>
+              <div>
+                <h4>CDI Resilience</h4>
+                <p>Weather Parametric Engines</p>
+              </div>
+            </div>
+            <div class="card-body-cdi">
+              <div class="feature-list">
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Infrastructure</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Agriculture</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Livestock</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Healthcare</span>
+                </div>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle'></i>
+                  <span>Global Logistics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Product Section -->
   <div class=" product text-center">
     <span class="section-pill">Our Product Suite</span>
@@ -455,7 +675,7 @@
   <section id="partner-section" class="py-5">
         <div class="container px-0">
             <div class="row main-content-row mx-0">
-                <div class="col-12 col-lg-5 p-4 text-content-area mt-5 pt-5">
+                <div class="col-12 col-lg-5  text-content-area">
                     <h2 class=" display-2 fw-bolder mb-3 count-number">Partnerships & Collaborations</h2>
                     <p class="english-text">We deliver AI-powered climate and weather intelligence to help organizations reduce risk, improve
             resilience, and make faster decisions.</p>
@@ -691,7 +911,7 @@ helping you protect revenue, maintain continuity, and stay competitive.</p>
   <!-- carousel -->
  <section class="furniture-carousel">
   <div class="container">
-    <div class="row align-items-center">
+    <div class="row align-items-center linked">
       
       <!-- Left Carousel -->
       <div class="col-lg-7 ">
@@ -1051,6 +1271,47 @@ document.querySelectorAll('.add-to-cart').forEach(btn => {
                 toggleActions: "restart none none none"
             }
         });
+    </script>
+
+    <script>
+        const apiKey = "31bd44aaa3e58468fe57fa7bde4d6472"; // 🔑 replace with your OpenWeatherMap API key
+
+        function fetchWeather(lat, lon) {
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const city = data.name;
+                    const temp = Math.round(data.main.temp);
+                    const desc = data.weather[0].description;
+                    const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+                    document.getElementById("location").innerText = city;
+                    document.getElementById("temp").innerText = `${temp}°C`;
+                    document.getElementById("desc").innerText = desc;
+                    document.getElementById("icon").src = icon;
+                })
+                .catch(error => {
+                    document.getElementById("location").innerText = "Weather unavailable";
+                    console.error(error);
+                });
+        }
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    fetchWeather(lat, lon);
+                },
+                () => {
+                    document.getElementById("location").innerText = "Location denied";
+                }
+            );
+        } else {
+            document.getElementById("location").innerText = "Geolocation not supported";
+        }
     </script>
 
 </body>

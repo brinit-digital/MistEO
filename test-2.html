@@ -1,196 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Circle Info Section</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blackbox Academy Neon Preloader</title>
+  
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <!-- Google Font similar to “Dream” style -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sacramento&display=swap" rel="stylesheet">
+
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
     }
 
     body {
-      background: #f3f7fa;
-      color: #0a4b73;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      background: #ffffff;
+      overflow: hidden;
+      font-family: "Great Vibes", cursive;
     }
 
-    .circle-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 4rem;
-      flex-wrap: wrap;
-      padding: 50px;
-      position: relative;
-    }
-
-    /* Side Boxes */
-    .info-box {
-      width: 260px;
-      background: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-      backdrop-filter: blur(10px);
-      text-align: left;
-      transition: transform 0.3s ease;
-    }
-
-    .info-box:hover {
-      transform: translateY(-5px);
-    }
-
-    .info-box h3 {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-      color: #0a4b73;
-    }
-
-    .info-box p {
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-      color: #093d5c;
-    }
-
-    .pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .pills span {
-      background: #0a4b73;
-      color: #fff;
-      font-size: 0.75rem;
-      padding: 4px 10px;
-      border-radius: 20px;
-    }
-
-    /* Center Circle */
-    .circle-container {
-      position: relative;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.25);
-      border: 3px solid rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(12px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-    }
-
-    .circle-container img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    /* Small Circles Around */
-    .small-circle {
-      position: absolute;
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      background: #0a4b73;
-      color: #fff;
+    .preloader-container {
+      position: fixed;
+      inset: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-size: 0.65rem;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background: white;
+      z-index: 9999;
     }
 
-    /* Positioning 10 small circles evenly around main circle */
-    .small-circle:nth-child(2) { top: -30px; left: 50%; transform: translateX(-50%); }
-    .small-circle:nth-child(3) { top: 15px; right: -30px; }
-    .small-circle:nth-child(4) { top: 85px; right: -50px; }
-    .small-circle:nth-child(5) { bottom: 85px; right: -50px; }
-    .small-circle:nth-child(6) { bottom: 15px; right: -30px; }
-    .small-circle:nth-child(7) { bottom: -30px; left: 50%; transform: translateX(-50%); }
-    .small-circle:nth-child(8) { bottom: 15px; left: -30px; }
-    .small-circle:nth-child(9) { bottom: 85px; left: -50px; }
-    .small-circle:nth-child(10) { top: 85px; left: -50px; }
-    .small-circle:nth-child(11) { top: 15px; left: -30px; }
+    .preloader-text,
+    .preloader-reflection {
+      font-size: 5rem;
+      letter-spacing: 2px;
+      color: #ff6700;
+      text-transform: capitalize;
+      display: flex;
+      justify-content: center;
+      text-shadow:
+        0 0 5px #ff6700,
+        0 0 10px #ff6700,
+        0 0 20px #ff6700,
+        0 0 40px #ff4500,
+        0 0 60px #ff4500;
+    }
 
-    @media (max-width: 992px) {
-      .circle-section {
-        flex-direction: column;
-        gap: 2rem;
-      }
+    .preloader-reflection {
+      transform: scaleY(-1);
+      opacity: 0.3;
+      filter: blur(3px);
+      margin-top: 8px;
+    }
 
-      .info-box {
-        width: 90%;
-        text-align: center;
+    .letter {
+      display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+      .preloader-text,
+      .preloader-reflection {
+        font-size: 3rem;
       }
     }
   </style>
 </head>
 <body>
-  <section class="circle-section">
-    <!-- Left Side Boxes -->
-    <div>
-      <div class="info-box">
-        <h3>CDI Forecast</h3>
-        <p>Hyper Local Weather Modelling & Forecasting</p>
-        <div class="pills">
-          <span>Design</span><span>UI</span><span>UX</span><span>Brand</span>
-        </div>
-      </div>
-      <div class="info-box" style="margin-top: 30px;">
-        <h3>Heading Two</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <div class="pills">
-          <span>SEO</span><span>Data</span><span>Cloud</span><span>AI</span>
-        </div>
-      </div>
-    </div>
+  <div class="preloader-container">
+    <h1 class="preloader-text" id="mainText"></h1>
+    <h1 class="preloader-reflection" id="reflectionText"></h1>
+  </div>
 
-    <!-- Center Circle -->
-    <div class="circle-container">
-      <img src="assets/images/elements/climate-resilience.jpg" alt="Center Image">
+  <script>
+    const text = "Blackbox Academy";
+    const mainText = document.getElementById("mainText");
+    const reflectionText = document.getElementById("reflectionText");
 
-      <!-- <div class="small-circle">💡<br>Idea</div>
-      <div class="small-circle">⚙️<br>Build</div>
-      <div class="small-circle">🚀<br>Launch</div>
-      <div class="small-circle">📊<br>Grow</div>
-      <div class="small-circle">🧠<br>Think</div>
-      <div class="small-circle">🎨<br>Design</div>
-      <div class="small-circle">🖥️<br>Code</div>
-      <div class="small-circle">🌍<br>Reach</div>
-      <div class="small-circle">💬<br>Share</div>
-      <div class="small-circle">📱<br>Connect</div> -->
-    </div>
+    // Split into letters
+    text.split("").forEach((char) => {
+      const span = document.createElement("span");
+      span.classList.add("letter");
+      span.textContent = char;
+      mainText.appendChild(span);
 
-    <!-- Right Side Boxes -->
-    <div>
-      <div class="info-box">
-        <h3>Heading Three</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <div class="pills">
-          <span>Web</span><span>App</span><span>AI</span><span>Cloud</span>
-        </div>
-      </div>
-      <div class="info-box" style="margin-top: 30px;">
-        <h3>Heading Four</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <div class="pills">
-          <span>Team</span><span>Plan</span><span>Goal</span><span>Result</span>
-        </div>
-      </div>
-    </div>
-  </section>
+      const refSpan = span.cloneNode(true);
+      reflectionText.appendChild(refSpan);
+    });
+
+    const letters = document.querySelectorAll(".letter");
+
+    gsap.set(letters, { y: 50, opacity: 0 });
+    gsap.to(letters, {
+      y: 0,
+      opacity: 1,
+      duration: 0.8,
+      ease: "elastic.out(1, 0.5)",
+      stagger: 0.12,
+      repeat: -1,
+      repeatDelay: 1.4,
+      yoyo: true,
+    });
+
+    // Optional fade-out after few seconds:
+    // gsap.to(".preloader-container", {
+    //   opacity: 0,
+    //   duration: 1.5,
+    //   delay: 4,
+    //   onComplete: () => document.querySelector(".preloader-container").remove(),
+    // });
+  </script>
 </body>
 </html>

@@ -209,10 +209,11 @@ a {
   }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
 
   .home__title {
-    top: 43%;
+    top: 40%;
+    width: 60%;
   }
 
   .home__subtitle {
@@ -223,7 +224,7 @@ a {
 
   .home__title {
     top: 35%;
-    width: 50%;
+    width: 55%;
   }
 
   .home__subtitle {

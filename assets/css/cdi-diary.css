@@ -24,38 +24,117 @@ body {
     margin-top: 14rem;
 }
 
+@media (max-width: 1200px) {
+    .icon-carousel {
+        margin-top: 1rem !important;
+    }
+
+    .api-title {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .icon-carousel {
+        margin-top: 1rem !important;
+    }
+
+    .api-title {
+        font-size: 1.5rem !important;
+    }
+
+    .api-subtitle {
+        font-size: 0.9rem !important;
+    }
+
+    .logo1 img {
+        max-width: 50px !important;
+
+    }
+
+    .logo1 h5 {
+        font-size: 12px !important;
+
+    }
+
+    .img-api {
+        margin-top: 2rem;
+    }
+
+    .section-para {
+        text-align: justify !important;
+        margin: 1rem !important;
+
+    }
+
+    .section-heading {
+        font-size: 26px !important;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 37px;
-        margin-top: 10rem;
+        font-size: 50px;
+        margin-top: 9rem;
     }
-    .hero-subtitle {
-        font-size: 21px;
-        margin-top: 2rem !important;
+
+    .section-heading {
+        font-size: 26px !important;
+        margin-top: 1rem !important;
+
     }
-    .hero-banner{
-        height: 60vh;
+
+    .card1 p {
+        text-align: justify;
     }
+
+    .api-title {
+        font-size: 1.7rem !important;
+    }
+
 }
 
 @media (max-width: 576px) {
     .hero-title {
-        font-size: 30px;
+        font-size: 40px;
         margin-top: 10rem;
     }
+
     .hero-subtitle {
-        font-size: 18px;
-        margin-top: 1rem !important;
+        font-size: 16px;
     }
+
+    .section-heading {
+        font-size: 20px !important;
+        margin-top: 1rem !important;
+
+    }
+
+    .card1 p {
+        text-align: justify;
+    }
+
+    .section-para {
+        text-align: justify !important;
+        margin: 1rem !important;
+
+    }
+
+    .api-title {
+        font-size: 1.7rem !important;
+    }
+
 }
 
 .link-home {
     text-decoration: none;
     color: white;
 }
-.img-left{
+
+.img-left {
     border-radius: 10px;
 }
+
 /* icon section */
 
 
